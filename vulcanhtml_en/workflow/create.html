@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Create</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Production Workflow</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a class="active" href="create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC Programming Reference</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">Laser Technology commands</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Production Workflow</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="create.html">Create</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Create</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page displays all the available DXF files.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image9.png" alt="Create page" width="750">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_job">Create Job</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The user needs to select any of the DXF files or multiple files and then select
+the create job button. After a Job is created, you will be presented with a tab
+interface as shown in the screenshot below. There are four tabs in this window
+as follow:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Parts tab</p>
+</li>
+<li>
+<p>Configuration tab</p>
+</li>
+<li>
+<p>Sheets tab</p>
+</li>
+<li>
+<p>Layouts tab</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_parts_tab">Parts tab</h3>
+<div class="paragraph">
+<p>In this, the user can add as many parts as they want. They need to select all
+the dxf files and select create job to add all the parts. In the parts tab the
+user can change max quantity, set priority, grain direction, part rotation and
+the group. In this tab you will manage the list of the parts (and their required
+quantities) that must be nested.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image10.jpeg" alt="Parts tab" width="750">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_tab">Configuration tab</h3>
+<div class="paragraph">
+<p>Allows you to modify the parameters such as material, thickness, film, treatment and part gap.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image11.jpeg" alt="Configuration tab" width="750">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sheets_tab">Sheets tab</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/image12b.png" alt="Sheets tab" width="750">
+</div>
+</div>
+<div class="paragraph">
+<p>This is the tab where you will manage the list of sheets to be considered for
+nesting. The user can add sheets with different sizes. Increase or decrease the
+quantity. The margin can also be changed.</p>
+</div>
+<div class="paragraph">
+<p>Use <strong>TwinLine</strong> if you need efficient processing of your parts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_layouts_tab">Layouts tab</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/image13.jpeg" alt="layout tab" width="750"></span></p>
+</div>
+<div class="paragraph">
+<p>When you select the Layout tab, TJSCut-90 will automatically start the nesting
+computation, if there are no layouts. Once the computation is done, it will
+present the computed layouts as a list of thumbnails. You can edit any of these
+layouts in the Flux main window by clicking on the thumbnail. You get a
+full-fledged layout editor where you can modify the position/orientation of
+parts, edit tooling, edit sequence etc.</p>
+</div>
+<div class="paragraph">
+<p>Press the <strong>Recompute</strong> button to nest the remaining (un-nested parts). If you
+wish to re-nest from start, delete existing layouts and then press this button.</p>
+</div>
+<div class="paragraph">
+<p>Selecting the edit button will open the edit page for layout which is explained
+in detail in section 3.3 and Selecting the cancel button will not save the
+changes done here.</p>
+</div>
+<div class="paragraph">
+<p>The user can save the layouts using the <strong>save layouts</strong>. Enter the name and click
+<strong>Ok</strong> to save the layouts. The saved layout will be available in programs page.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_create_job">Create Job</a>
+  </li>
+  <li level="2">
+   <a href="#_parts_tab">Parts tab</a>
+  </li>
+  <li level="2">
+   <a href="#_configuration_tab">Configuration tab</a>
+  </li>
+  <li level="2">
+   <a href="#_sheets_tab">Sheets tab</a>
+  </li>
+  <li level="2">
+   <a href="#_layouts_tab">Layouts tab</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="preparation.html">Preparation</a></span>
+ <span class="next"><a href="filemanager.html">File Management</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

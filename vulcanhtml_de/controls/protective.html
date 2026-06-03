@@ -15,14 +15,14 @@
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
-        <div id="header-logo"><img src="../img/logo.png" width="130" height="48" /></div>
-        <div><p>Vulcan Reference Manual</p></div>
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
             <div class="treesite">
  <ul>
-  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei TJSCut-90</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../intro/index.html">Einführung</a>
@@ -108,14 +108,15 @@
    <button class="tree closed"></button>
    <a href="../productionplan/index.html">Produktionsplan</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/material.html">Materialbestand</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../dropncut/index.html">Drop and Cut</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../troubleshooting/index.html">Fehlerbehebung</a>
@@ -123,6 +124,85 @@
     <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
     <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
     <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC-Programmierreferenz</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN-Format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">Lasertechnologie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">Lasertechnologie-Befehle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
@@ -151,7 +231,7 @@
                     <article id="article">
                         <h1>Schutzglasüberwachung</h1>
 <div class="sect1">
-<h2 id="_parametrierung">Parametrierung<a id="h000048"></a></h2>
+<h2 id="_parametrierung">Parametrierung</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Die Schutzglasüberwachung ist ein System, das den Zustand des Schutzglases überwacht. Es kann die Produktion von Teilen minderer Qualität oder sogar Maschinenschäden verhindern.</p>
@@ -159,22 +239,14 @@
 <div class="paragraph">
 <p>Das Verhalten ist wie folgt definiert:</p>
 </div>
-<div id="h000049" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p>Wenn der Qualitätswert des Schutzglases während des Schneidens unter der Fehlerschwelle liegt: Die Maschine stoppt die Bearbeitung, der Strahl schaltet sich aus und im Vordergrund der HMI wird ein Fenster angezeigt.</p>
 </li>
-</ul>
-</div>
-<div id="h000050" class="ulist">
-<ul>
 <li>
 <p>Wenn die Schaltfläche <strong>Schließen</strong> im Fenster angeklickt wird, fährt die Maschine mit dem Schneiden der aktuellen Tafel fort. Bevor die nächste Tafel bearbeitet wird, wird eine Schutzglasmessung durchgeführt. Liegt die Qualität immer noch unter der Fehlerschwelle, wird das Fenster erneut angezeigt. Wenn Sie auf „Schließen“ klicken, kann die Maschine mit der Bearbeitung fortfahren, und das Fenster erscheint am Ende der Tafel erneut.</p>
 </li>
-</ul>
-</div>
-<div id="h000051" class="ulist">
-<ul>
 <li>
 <p>Wenn das Glas von Anfang an verschmutzt ist, stoppt die Maschine nach dem Schneiden der ersten Kontur und führt eine Schutzglasmessung durch. Liegt die Qualität unter der Fehlerschwelle, wird ein Fenster angezeigt. Wenn die Schaltfläche <strong>Schließen</strong> angeklickt wird, erlaubt das der Maschine die Fortsetzung des Schneidens der aktuellen Tafel.</p>
 </li>
@@ -219,11 +291,11 @@
 </tr>
 </tbody>
 </table>
-<div id="h000052" class="paragraph">
+<div class="paragraph">
 <p><strong>Offline-Messung</strong>: Die Offline-Messung wird verwendet, um die Glasqualität unter stabilen Bedingungen zu überprüfen. Bei der Offline-Messung wird Laserleistung auf drei verschiedenen Stufen emittiert, jeweils für einen bestimmten Zeitraum – üblicherweise 500 ms. Das vom Glas reflektierte Licht wird bei jeder Leistungsstufe gemessen, und es wird die normierte Reflexionshelligkeit berechnet und mit einem Referenzwert verglichen, der mit der gleichen Methode ermittelt wird. In diese Berechnung wird auch ein Offline-Grenzwert einbezogen, um die Glasqualität zu bestimmen. Bei gleichem Reflexionshelligkeitswert deutet ein höherer Grenzwert auf bessere Glasqualität hin. Daher wird nur bei erheblicher Verschmutzung des Glases eine Warnung bzw. eine Fehlermeldung getriggert.</p>
 </div>
-<div id="h000053" class="paragraph">
-<p><strong>Online-Überwachung</strong>: Mit der Online-Messung wird die Glasqualität beim Schneiden überprüft. Immer wenn Laserleistung vorhanden ist, wird der Mittelwert des reflektierten Lichts über einen Zeitraum berechnet, und auf diesen Wert wird ein Tiefpassfilter angewendet. Dann wird der Online-Grenzwert berücksichtigt, um die endgültige Glasqualität zu bestimmen. Aufgrund der Instabilität der Laserleistung und der Rückreflexion der geschnittenen Tafel liegt der Online-Grenzwert erheblich über dem Offline-Grenzwert.</p>
+<div class="paragraph">
+<p><strong>Online-Überwachung</strong>: Mit der Online-Messung wird die Glasqualität beim Schneiden überprüft. Immer wenn Laserleistung vorhanden ist, wird der Mittelwert des reflektierten Lichts über einen Zeitraum berechnet, und auf diesen Wert wird ein Tiefpassfilter angewendet. Aufgrund der Instabilität der Laserleistung und der Rückreflexion der geschnittenen Tafel liegt der Online-Grenzwert erheblich über dem Offline-Grenzwert.</p>
 </div>
 <div class="paragraph">
 <p>Die Parametrierung erfolgt auf der Einstellungsseite:</p>
@@ -234,7 +306,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_luminositätsmessung">Luminositätsmessung<a id="h000054"></a></h2>
+<h2 id="_luminositätsmessung">Luminositätsmessung</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Die Schutzfenstermessung basiert auf einer Luminositätsmessung. Wenn der Zustand <strong>Sauber</strong> ist, erlaubt der Status des Schutzfensters das Fortsetzen des Schneidens im Hinblick auf gute Schneidergebnisse. Wenn der Zustand <strong>Kontaminiert</strong> ist, ist der Status des Schutzfensters unzureichend und es ist ratsam, das Schutzfenster auszuwechseln, um gute Schneidergebnisse zu erzielen.</p>
@@ -245,7 +317,7 @@
 <div class="paragraph">
 <p>Reinigen oder ersetzen Sie das Schutzglas, je nach Prozentsatz des Qualitätswerts.</p>
 </div>
-<div id="h000055" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p>80 % - 90 % &#8594; sauber<br></p>
@@ -272,8 +344,8 @@
 <p>Beim Ausführen des Programms werden die Daten von Frequenz und Tastverhältnis gemäß den Bedieneranforderungen befolgt. Der Leistungsparameter ist vordefiniert als aufsteigender Schritt von 500 W, 1000 W und 1500 W.</p>
 </div>
 <div class="paragraph">
-<p>Fokusdurchmesser, Fokusabstand und Verweilzeit wurden ebenfalls entsprechend den Bedieneranforderungen modifiziert. Eingegebene Werte können während des Programmablaufs überwacht werden.
-Die angegebene Verweilzeit hält das Programm bis zur konfigurierten Verweilzeit an, und dann erfolgt der Abbruch.</p>
+<p>Fokusdurchmesser, Fokusabstand und Verweilzeit können ebenfalls entsprechend den Bedieneranforderungen modifiziert werden. Eingegebene Werte können während des Programmablaufs überwacht werden.
+Das Programm hält an, bis die konfigurierte Verweilzeit abgelaufen ist, und wird dann abgebrochen.</p>
 </div>
 <div class="paragraph">
 <p>Der Messmodus verfügt über Offline- und Referenzdaten. In der Offline-Auswahl kann der Bediener das Programm ausführen und den Status des Schutzfensters überprüfen. In der Referenzauswahl kann der Bediener die Daten und Werte von Qualität und Linearität überprüfen und sie mit der Option Speichern speichern. Im Allgemeinen wird die Referenzauswahl ausgewählt, wenn das Schutzfenster neuer ist, was gute Ergebnisse liefert.</p>
@@ -282,8 +354,10 @@ Die angegebene Verweilzeit hält das Programm bis zur konfigurierten Verweilzeit
 <p>Wenn das Luminositätsmessprogramm läuft, protokolliert es die Daten, die in <strong>LumiMeasurelog.txt</strong> über den Pfad <code>C:\ProgramData\Metamation{APPNAME}\Log\Currentyear\Currentmonth\Currentday</code> oder in der Bedienoberfläche gelesen werden können.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/lumi1.png" alt="t" width="300"></span>
-<span class="image"><img src="img/lumi2.png" alt="lumi2" width="550"></span></p>
+<p><span class="image"><img src="img/lumi1.png" alt="t" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi2.png" alt="lumi2" width="550"></span></p>
 </div>
 <div class="paragraph">
 <p>Bezüglich der obigen Berechnung werden zur Optimierung der Überwachungsfunktion in der MK-Datei die folgenden Parameter hinzugefügt:</p>
@@ -343,7 +417,7 @@ Die angegebene Verweilzeit hält das Programm bis zur konfigurierten Verweilzeit
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 JFY International. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

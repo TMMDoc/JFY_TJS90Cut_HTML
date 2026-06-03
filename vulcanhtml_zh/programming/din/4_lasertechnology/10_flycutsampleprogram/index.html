@@ -1,0 +1,841 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../../img/flux-icon.png">
+  <title>Fly Cut 示例程序：</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">欢迎来到 TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../../../../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../../../../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../../../../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../../../../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../../../../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../../../../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../../../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../../../../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../../../../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../../../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../../../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../../../../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../../../../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../../../../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../../../../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../../../../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../productionplan/create.html">创建生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../../../../productionplan/lock.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../../../../productionplan/run.html">运行生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../../../../productionplan/sequence.html">运行顺序</a></li>
+    <li><button class="tree blank"></button><a href="../../../../productionplan/loading.html">板材装载</a></li>
+    <li><button class="tree blank"></button><a href="../../../../productionplan/material.html">材料库存</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../../../../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../../../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">NC 编程参考</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">DIN 格式</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../3_dinprogramstructure/index.html">DIN 程序结构</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../3_dinprogramstructure/programnum.html">程序号 %</a></li>
+        <li><button class="tree blank"></button><a href="../../3_dinprogramstructure/blocknumbe.html">程序块号 N</a></li>
+        <li><button class="tree blank"></button><a href="../../3_dinprogramstructure/gfunctions.html">G 功能</a></li>
+        <li><button class="tree blank"></button><a href="../../3_dinprogramstructure/mfunctions.html">M 功能</a></li>
+        <li><button class="tree blank"></button><a href="../../3_dinprogramstructure/parametera.html">参数数组</a></li>
+        <li><button class="tree blank"></button><a href="../../3_dinprogramstructure/graphicale.html">图形元素 – 显示标记线</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">激光技术</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../programhea.html">程序头</a></li>
+        <li><button class="tree blank"></button><a href="../technology.html">技术表（TT）传输</a></li>
+        <li><button class="tree blank"></button><a href="../checkforbo.html">检查边界程序是否激活</a></li>
+        <li><button class="tree blank"></button><a href="../blockjump.html">程序块跳转</a></li>
+        <li><button class="tree blank"></button><a href="../blocknumbe.html">程序块号</a></li>
+        <li><button class="tree blank"></button><a href="../startofapa.html">零件信息开始</a></li>
+        <li><button class="tree blank"></button><a href="../laserparam.html">激光参数选择与更新</a></li>
+        <li><button class="tree blank"></button><a href="../contoursta.html">轮廓指令</a></li>
+        <li><button class="tree blank"></button><a href="../programend.html">程序结束</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../5_remnantcut/index.html">残料切割</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../5_remnantcut/startremna.html">起始残料切割</a></li>
+          <li><button class="tree blank"></button><a href="../5_remnantcut/endremnant.html">结束残料切割</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../7_onlypiercinginthecon/index.html">仅在轮廓中穿孔</a></li>
+        <li><button class="tree blank"></button><a href="../8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../9_sampleprogramwithmul/index.html">多零件示例程序</a></li>
+        <li><button class="tree blank"></button><a class="active" href="index.html">Fly Cut 示例程序：</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../lst/index.html">LST 格式</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../lst/1_lst/index.html">LST 程序结构</a></li>
+      <li><button class="tree blank"></button><a href="../../../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../../../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../../../lst/6_incrementalcommandic/index.html">增量命令 (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../../../lst/7_softmicrojointsnanoj/index.html">软微连接与 Nano Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../lsttechno/index.html">激光技术命令</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../lsttechno/lasercutting.html">激光切割</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/identifyparts.html">零件标识</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/multiprogstruc.html">多程序结构</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/cuttingdistance.html">切割距离</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/kerfcorrection.html">切口补偿</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/overshootheight.html">回退高度</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/timing.html">零件计时</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/bevelcut.html">斜角切割</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/beamsuppression.html">光束抑制</a></li>
+      <li><button class="tree blank"></button><a href="../../../lsttechno/flyingfocus.html">飞行焦点位置调整</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">NC 编程参考</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">DIN 格式</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">激光技术</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Fly Cut 示例程序：</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Fly Cut 示例程序：</h1>
+<div class="paragraph">
+<p><span class="image"><img src="img/image9.png" alt="image9" width="435"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image10.png" alt="image10" width="382"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-Din hljs" data-lang="Din">%1 (FlyCut_Circle.DIN)
+Sheet_Size_X = 120
+Sheet_Size_Y = 120
+Job_Size_X = 85
+Job_Size_Y = 85
+X_Limit_Minus = 10
+X_Limit_Plus = 130
+Y_Limit_Minus = 10
+Y_Limit_Plus = 130
+G90
+M15
+G17 D=SheetRotation
+G253 F="TT:SS_0.8mm" H0
+CheckBoundPrg
+G20 X1
+N1
+BlockNo=1
+M01 (start part 1)
+PM=0.000 CM=100.400
+EM=1.000 ZRH=30
+Update_Param
+G61
+Lead_In=0
+G41 R0 E0
+G00 X13.517Y14.932
+M14
+Q0=1
+G01 X17.054 Y18.468
+Q0=0
+G01 X20.591 Y22.006
+Q0=1
+G01 X24.129 Y25.544
+Q0=0
+G01 X27.668 Y29.083
+Q0=1
+G01 X31.210 Y32.624
+Q0=0
+G01 X34.757 Y36.171
+Q0=1
+G01 X38.329 Y39.743
+Q0=0
+G01 X45.257 Y46.671
+Q0=1
+G01 X48.829 Y50.243
+Q0=0
+G01 X52.376 Y53.790
+Q0=1
+G01 X55.917 Y57.332
+Q0=0
+G01 X59.456 Y60.871
+Q0=1
+G01 X62.994 Y64.409
+Q0=0
+G01 X66.532 Y67.946
+Q0=1
+G01 X70.068 Y71.483
+Q0=0
+G02 X71.483 Y70.068 I0.707 J-0.707
+Q0=1
+G01 X67.946 Y66.532
+Q0=0
+G01 X64.409 Y62.994
+Q0=1
+G01 X60.871 Y59.456
+Q0=0
+G01 X57.332 Y55.917
+Q0=1
+G01 X53.790 Y52.376
+Q0=0
+G01 X50.243 Y48.829
+Q0=1
+G01 X46.671 Y45.257
+Q0=0
+G01 X39.743 Y38.329
+Q0=1
+G01 X36.171 Y34.757
+Q0=0
+G01 X32.624 Y31.210
+Q0=1
+G01 X29.083 Y27.668
+Q0=0
+G01 X25.544 Y24.129
+Q0=1
+G01 X22.006 Y20.591
+Q0=0
+G01 X18.468 Y17.054
+Q0=1
+G01 X14.932 Y13.517
+Q0=0
+G03 X41.500 Y2.513 I11.005 J-11.005
+Q0=1
+G01 Y7.514
+Q0=0
+G01 Y12.517
+Q0=1
+G01 Y17.520
+Q0=0
+G01 Y22.525
+Q0=1
+G01 Y27.533
+Q0=0
+G01 Y32.550
+Q0=1
+G01 Y37.601
+Q0=0
+G01 Y47.399
+Q0=1
+G01 Y52.450
+Q0=0
+G01 Y57.467
+Q0=1
+G01 Y62.475
+Q0=0
+G01 Y67.480
+Q0=1
+G01 Y72.483
+Q0=0
+G01 Y77.486
+Q0=1
+G01 Y82.487
+Q0=0
+G02 X43.500 I1.000 J0.000
+Q0=1
+G01 Y77.486
+Q0=0
+G01 Y72.483
+Q0=1
+G01 Y67.480
+Q0=0
+G01 Y62.475
+Q0=1
+G01 Y57.467
+Q0=0
+G01 Y52.450
+Q0=1
+G01 Y47.399
+Q0=0
+G01 Y37.601
+Q0=1
+G01 Y32.550
+Q0=0
+G01 Y27.533
+Q0=1
+G01 Y22.525
+Q0=0
+G01 Y17.520
+Q0=1
+G01 Y12.517
+Q0=0
+G01 Y7.514
+Q0=1
+G01 Y2.513
+Q0=0
+G03 X70.068 Y13.517 I15.563 J0.000
+Q0=1
+G01 X66.532 Y17.054
+Q0=0
+G01 X62.994 Y20.591
+Q0=1
+G01 X59.456 Y24.129
+Q0=0
+G01 X55.917 Y27.668
+Q0=1
+G01 X52.376 Y31.210
+Q0=0
+G01 X48.829 Y34.757
+Q0=1
+G01 X45.257 Y38.329
+Q0=0
+G01 X38.329 Y45.257
+Q0=1
+G01 X34.757 Y48.829
+Q0=0
+G01 X31.210 Y52.376
+Q0=1
+G01 X27.668 Y55.917
+Q0=0
+G01 X24.129 Y59.456
+Q0=1
+G01 X20.591 Y62.994
+Q0=0
+G01 X17.054 Y66.532
+Q0=1
+G01 X13.517 Y70.068
+Q0=0
+G02 X14.932 Y71.483 I0.707 J0.707
+Q0=1
+G01 X18.468 Y67.946
+Q0=0
+G01 X22.006 Y64.409
+Q0=1
+G01 X25.544 Y60.871
+Q0=0
+G01 X29.083 Y57.332
+Q0=1
+G01 X32.624 Y53.790
+Q0=0
+G01 X36.171 Y50.243
+Q0=1
+G01 X39.743 Y46.671
+Q0=0
+G01 X46.671 Y39.743
+Q0=1
+G01 X50.243 Y36.171
+Q0=0
+G01 X53.790 Y32.624
+Q0=1
+G01 X57.332 Y29.083
+Q0=0
+G01 X60.871 Y25.544
+Q0=1
+G01 X64.409 Y22.006
+Q0=0
+G01 X67.946 Y18.468
+Q0=1
+G01 X71.483 Y14.932
+Q0=0
+G03 X82.487 Y41.500 I11.005 J11.005
+Q0=1
+G01 X77.486
+Q0=0
+G01 X72.483
+Q0=1
+G01 X67.480
+Q0=0
+G01 X62.475
+Q0=1
+G01 X57.467
+Q0=0
+G01 X52.450
+Q0=1
+G01 X47.399
+Q0=0
+G01 X37.601
+Q0=1
+G01 X32.550
+Q0=0
+G01 X27.533
+Q0=1
+G01 X22.525
+Q0=0
+G01 X17.520
+Q0=1
+G01 X12.517
+Q0=0
+G01 X7.514
+Q0=1
+G01 X2.513
+Q0=0
+G02 Y43.500 I0.000 J1.000
+Q0=1
+G01 X7.514
+Q0=0
+G01 X12.517
+Q0=1
+G01 X17.520
+Q0=0
+G01 X22.525
+Q0=1
+G01 X27.533
+Q0=0
+G01 X32.550
+Q0=1
+G01 X37.601
+Q0=0
+G01 X47.399
+Q0=1
+G01 X52.450
+Q0=0
+G01 X57.467
+Q0=1
+G01 X62.475
+Q0=0
+G01 X67.480
+Q0=1
+G01 X72.483
+Q0=0
+G01 X77.486
+Q0=1
+G01 X82.487
+G03 X71.483 Y70.068 I-39.987 J-1.000
+Q0=0
+G03 X70.068 Y71.483 I-28.983 J-27.568
+Q0=1
+G03 X43.500 Y82.487 I-27.568 J-28.983
+Q0=0
+G03 X41.500 I-1.000 J-39.987
+Q0=1
+G03 X14.932 Y71.483 I1.000 J-39.987
+Q0=0
+G03 X13.517 Y70.068 I27.568 J-28.983
+Q0=1
+G03 X2.513 Y43.500 I28.983 J-27.568
+Q0=0
+G03 Y41.500 I39.987 J-1.000
+Q0=1
+G03 X13.517 Y14.932 I39.987 J1.000
+Q0=0
+G03 X14.932 Y13.517 I28.983 J27.568
+Q0=1
+G03 X41.500 Y2.513 I27.568 J28.983
+Q0=0
+G03 X43.500 I1.000 J39.987
+Q0=1
+G03 X70.068 Y13.517 I-1.000 J39.987
+Q0=0
+G03 X71.483 Y14.932 I-27.568 J28.983
+Q0=1
+G03 X82.487 Y41.500 I-28.983 J27.568
+Q0=0
+G01 X77.486
+Q0=1
+G02 X67.946 Y18.468 I-34.986 J1.000
+Q0=0
+G02 X66.532 Y17.054 I-25.446 J24.032
+Q0=1
+G02 X43.500 Y7.514 I-24.032 J25.446
+Q0=0
+G02 X41.500 I-1.000 J34.986
+Q0=1
+G02 X18.468 Y17.054 I1.000 J34.986
+Q0=0
+G02 X17.054 Y18.468 I24.032 J25.446
+Q0=1
+G02 X7.514 Y41.500 I25.446 J24.032
+Q0=0
+G02 Y43.500 I34.986 J1.000
+Q0=1
+G02 X17.054 Y66.532 I34.986 J-1.000
+Q0=0
+G02 X18.468 Y67.946 I25.446 J-24.032
+Q0=1
+G02 X41.500 Y77.486 I24.032 J-25.446
+Q0=0
+G02 X43.500 I1.000 J-34.986
+Q0=1
+G02 X66.532 Y67.946 I-1.000 J-34.986
+Q0=0
+G02 X67.946 Y66.532 I-24.032 J-25.446
+Q0=1
+G02 X77.486 Y43.500 I-25.446 J-24.032
+Q0=0
+G01 X72.483
+Q0=1
+G03 X64.409 Y62.994 I-29.983 J-1.000
+Q0=0
+G03 X62.994 Y64.409 I-21.909 J-20.494
+Q0=1
+G03 X43.500 Y72.483 I-20.494 J-21.909
+Q0=0
+G03 X41.500 I-1.000 J-29.983
+Q0=1
+G03 X22.006 Y64.409 I1.000 J-29.983
+Q0=0
+G03 X20.591 Y62.994 I20.494 J-21.909
+Q0=1
+G03 X12.517 Y43.500 I21.909 J-20.494
+Q0=0
+G03 Y41.500 I29.983 J-1.000
+Q0=1
+G03 X20.591 Y22.006 I29.983 J1.000
+Q0=0
+G03 X22.006 Y20.591 I21.909 J20.494
+Q0=1
+G03 X41.500 Y12.517 I20.494 J21.909
+Q0=0
+G03 X43.500 I1.000 J29.983
+Q0=1
+G03 X62.994 Y20.591 I-1.000 J29.983
+Q0=0
+G03 X64.409 Y22.006 I-20.494 J21.909
+Q0=1
+G03 X72.483 Y41.500 I-21.909 J20.494
+Q0=0
+G01 X67.480
+Q0=1
+G02 X60.871 Y25.544 I-24.980 J1.000
+Q0=0
+G02 X59.456 Y24.129 I-18.371 J16.956
+Q0=1
+G02 X43.500 Y17.520 I-16.956 J18.371
+Q0=0
+G02 X41.500 I-1.000 J24.980
+Q0=1
+G02 X25.544 Y24.129 I1.000 J24.980
+Q0=0
+G02 X24.129 Y25.544 I16.956 J18.371
+Q0=1
+G02 X17.520 Y41.500 I18.371 J16.956
+Q0=0
+G02 Y43.500 I24.980 J1.000
+Q0=1
+G02 X24.129 Y59.456 I24.980 J-1.000
+Q0=0
+G02 X25.544 Y60.871 I18.371 J-16.956
+Q0=1
+G02 X41.500 Y67.480 I16.956 J-18.371
+Q0=0
+G02 X43.500 I1.000 J-24.980
+Q0=1
+G02 X59.456 Y60.871 I-1.000 J-24.980
+Q0=0
+G02 X60.871 Y59.456 I-16.956 J-18.371
+Q0=1
+G02 X67.480 Y43.500 I-18.371 J-16.956
+Q0=0
+G01 X62.475
+Q0=1
+G03 X57.332 Y55.917 I-19.975 J-1.000
+Q0=0
+G03 X55.917 Y57.332 I-14.832 J-13.417
+Q0=1
+G03 X43.500 Y62.475 I-13.417 J-14.832
+Q0=0
+G03 X41.500 I-1.000 J-19.975
+Q0=1
+G03 X29.083 Y57.332 I1.000 J-19.975
+Q0=0
+G03 X27.668 Y55.917 I13.417 J-14.832
+Q0=1
+G03 X22.525 Y43.500 I14.832 J-13.417
+Q0=0
+G03 Y41.500 I19.975 J-1.000
+Q0=1
+G03 X27.668 Y29.083 I19.975 J1.000
+Q0=0
+G03 X29.083 Y27.668 I14.832 J13.417
+Q0=1
+G03 X41.500 Y22.525 I13.417 J14.832
+Q0=0
+G03 X43.500 I1.000 J19.975
+Q0=1
+G03 X55.917 Y27.668 I-1.000 J19.975
+Q0=0
+G03 X57.332 Y29.083 I-13.417 J14.832
+Q0=1
+G03 X62.475 Y41.500 I-14.832 J13.417
+Q0=0
+G01 X57.467
+Q0=1
+G02 X53.790 Y32.624 I-14.967 J1.000
+Q0=0
+G02 X52.376 Y31.210 I-11.290 J9.876
+Q0=1
+G02 X43.500 Y27.533 I-9.876 J11.290
+Q0=0
+G02 X41.500 I-1.000 J14.967
+Q0=1
+G02 X32.624 Y31.210 I1.000 J14.967
+Q0=0
+G02 X31.210 Y32.624 I9.876 J11.290
+Q0=1
+G02 X27.533 Y41.500 I11.290 J9.876
+Q0=0
+G02 Y43.500 I14.967 J1.000
+Q0=1
+G02 X31.210 Y52.376 I14.967 J-1.000
+Q0=0
+G02 X32.624 Y53.790 I11.290 J-9.876
+Q0=1
+G02 X41.500 Y57.467 I9.876 J-11.290
+Q0=0
+G02 X43.500 I1.000 J-14.967
+Q0=1
+G02 X52.376 Y53.790 I-1.000 J-14.967
+Q0=0
+G02 X53.790 Y52.376 I-9.876 J-11.290
+Q0=1
+G02 X57.467 Y43.500 I-11.290 J-9.876
+Q0=0
+G01 X52.450
+Q0=1
+G03 X50.243 Y48.829 I-9.950 J-1.000
+Q0=0
+G03 X48.829 Y50.243 I-7.743 J-6.329
+Q0=1
+G03 X43.500 Y52.450 I-6.329 J-7.743
+Q0=0
+G03 X41.500 I-1.000 J-9.950
+Q0=1
+G03 X36.171 Y50.243 I1.000 J-9.950
+Q0=0
+G03 X34.757 Y48.829 I6.329 J-7.743
+Q0=1
+G03 X32.550 Y43.500 I7.743 J-6.329
+Q0=0
+G03 Y41.500 I9.950 J-1.000
+Q0=1
+G03 X34.757 Y36.171 I9.950 J1.000
+Q0=0
+G03 X36.171 Y34.757 I7.743 J6.329
+Q0=1
+G03 X41.500 Y32.550 I6.329 J7.743
+Q0=0
+G03 X43.500 I1.000 J9.950
+Q0=1
+G03 X48.829 Y34.757 I-1.000 J9.950
+Q0=0
+G03 X50.243 Y36.171 I-6.329 J7.743
+Q0=1
+G03 X52.450 Y41.500 I-7.743 J6.329
+Q0=0
+G01 X47.399
+Q0=1
+G02 X46.671 Y39.743 I-4.899 J1.000
+Q0=0
+G02 X45.257 Y38.329 I-4.171 J2.757
+Q0=1
+G02 X43.500 Y37.601 I-2.757 J4.171
+Q0=0
+G02 X41.500 I-1.000 J4.899
+Q0=1
+G02 X39.743 Y38.329 I1.000 J4.899
+Q0=0
+G02 X38.329 Y39.743 I2.757 J4.171
+Q0=1
+G02 X37.601 Y41.500 I4.171 J2.757
+Q0=0
+G02 Y43.500 I4.899 J1.000
+Q0=1
+G02 X38.329 Y45.257 I4.899 J-1.000
+Q0=0
+G02 X39.743 Y46.671 I4.171 J-2.757
+Q0=1
+G02 X41.500 Y47.399 I2.757 J-4.171
+Q0=0
+G02 X43.500 I1.000 J-4.899
+Q0=1
+G02 X45.257 Y46.671 I-1.000 J-4.899
+Q0=0
+G02 X46.671 Y45.257 I-2.757 J-4.171
+Q0=1
+G02 X47.399 Y43.500 I-4.171 J-2.757
+Q0=0
+G00 X91.000Y42.500
+Q0=1
+G01 X85.000
+G02 I-42.500 J0.000
+Q0=0
+M15
+G40 E1
+G99 (program end)
+N65535
+CallBoundPrg
+G99</code></pre>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../9_sampleprogramwithmul/index.html">多零件示例程序</a></span>
+ <span class="next"><a href="../../../lst/index.html">LST 格式</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

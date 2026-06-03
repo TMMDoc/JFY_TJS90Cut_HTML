@@ -1,0 +1,874 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Drop and Cut</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">欢迎来到 TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/create.html">创建生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/lock.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/run.html">运行生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">运行顺序</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/loading.html">板材装载</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/material.html">材料库存</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a class="active" href="index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC 编程参考</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN 格式</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN 程序结构</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">程序号 %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">程序块号 N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G 功能</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M 功能</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">参数数组</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">图形元素 – 显示标记线</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">激光技术</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">程序头</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">技术表（TT）传输</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">检查边界程序是否激活</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">程序块跳转</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">程序块号</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">零件信息开始</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">激光参数选择与更新</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">轮廓指令</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">程序结束</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">残料切割</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">起始残料切割</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">结束残料切割</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">仅在轮廓中穿孔</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">多零件示例程序</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut 示例程序：</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST 格式</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST 程序结构</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">增量命令 (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">软微连接与 Nano Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">激光技术命令</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">激光切割</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">零件标识</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">多程序结构</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">切割距离</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">切口补偿</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">回退高度</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">零件计时</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">斜角切割</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">光束抑制</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">飞行焦点位置调整</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Drop and Cut</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Drop and Cut</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Drop and Cut 功能使用安装在机器内部的网络摄像头，提供托盘上板材的实时视图。校准摄像头后，您可以在后处理中将零件直接放置到摄像头图像上，Vulcan 会自动捕获工件偏移——无需手动输入偏移量。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_摄像头型号和规格">摄像头型号和规格</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>型号名称：</strong> Hikvision DS-2CD1027G2-L</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">规格</th>
+<th class="tableblock halign-left valign-top">参数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">摄像头</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">图像传感器</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1/2.8" 逐行扫描 CMOS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大分辨率</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920 x 1080</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最低照度</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">彩色：0.001 Lux @（F1.0，AGC 开启），带补光灯时 0 Lux</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">快门时间</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1/3 秒至 1/100,000 秒</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">日夜模式</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">全天候彩色成像</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">角度调整</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">水平旋转：0° 至 360°，垂直倾斜：0° 至 90°，图像旋转：0° 至 360°</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">镜头</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">镜头类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定焦镜头，可选 2.8 mm 和 4 mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">焦距与视场角</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8 mm，水平视场角：106°，垂直视场角：57°，对角视场角：126°<br>
+4 mm，水平视场角：83°，垂直视场角：44°，对角视场角：99°</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">镜头接口</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M12</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">光圈类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">固定光圈</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">光圈值</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">F1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">景深</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8 mm：1.5 m 至 ∞<br>
+4 mm：2.1 m 至 ∞</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">DORI</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DORI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8 mm，D：44 m，O：17 m，R：8 m，I：4 m<br>
+4 mm，D：56 m，O：22 m，R：11 m，I：5 m</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">补光灯</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">补光灯类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">白光</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">补光灯照射距离</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最远 30 m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">智能补光</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">视频</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">主码流</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50 Hz：25 fps（1920 x 1080，1280 x 720）<br>
+60 Hz：30 fps（1920 x 1080，1280 x 720）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">子码流</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50 Hz：25 fps（640 x 480，640 x 360）<br>
+60 Hz：30 fps（640 x 480，640 x 360）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">视频压缩</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">主码流：H.265+/H.265/H.264+/H.264<br>
+子码流：H.265/H.264/MJPEG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">视频码率</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 Kbps 至 8 Mbps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H.264 类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Baseline Profile、Main Profile、High Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H.265 类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">码率控制</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CBR、VBR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">感兴趣区域（ROI）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">主码流 1 个固定区域</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_在机器内安装摄像头">在机器内安装摄像头</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>摄像头安装在机器内部，位于门的内侧右上方，距离为 50 mm。它从机器内部提供视角。视角经过倾斜调整，以对准半张板材的放置位置。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cameraposition.png" alt="Camera Position" width="400">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cameraposition2.png" alt="Camera Position" width="400">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_在_vulcan_中连接网络摄像头">在 Vulcan 中连接网络摄像头</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要建立摄像头与 Vulcan 之间的通信，必须将摄像头的 IP 地址配置为与机器 IP 地址在同一网段内。</p>
+</div>
+<div class="sect2">
+<h3 id="_检查机器_ip_地址">检查机器 IP 地址</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>切换到 <strong>Service User Active</strong> 模式：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>打开 <strong>Settings</strong></p>
+</li>
+<li>
+<p>选择 <strong>Switch User</strong></p>
+</li>
+<li>
+<p>将用户组更改为 <strong>Service User Active</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>打开 <strong>Command Shell</strong>：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>进入 <strong>Windows Tools</strong></p>
+</li>
+<li>
+<p>选择 <strong>Command Shell</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>输入 <code>ipconfig</code> 并按 <strong>Enter</strong>。系统将显示机器的网络详细信息，包括局域网中连接的 IP 地址。</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineip.png" alt="Machine IP Address" width="800">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_配置摄像头_ip_地址">配置摄像头 IP 地址</h3>
+<div class="paragraph">
+<p>摄像头的 IP 地址必须配置为与机器在同一网段。</p>
+</div>
+<div class="paragraph">
+<p><strong>示例：</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>机器 IP：<code>192.168.1.176</code></p>
+</li>
+<li>
+<p>摄像头 IP：<code>192.168.1.xxx</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+请确保摄像头 IP 地址是唯一的，未被分配给其他设备。请联系 IT 团队确认唯一性。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+默认情况下，Hikvision DS-2CD1027G2-L 摄像头使用 IP <code>192.168.1.64</code>，该地址已在正确的网段内。除非 IP 地址不同，否则无需手动配置。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_配置系统_ip_地址如有需要">配置系统 IP 地址（如有需要）</h3>
+<div class="paragraph">
+<p>如果摄像头具有不同的 IP 地址：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>通过以太网将摄像头直接连接到系统。</p>
+</li>
+<li>
+<p>使用摄像头手册中提供的默认 IP 地址。</p>
+</li>
+<li>
+<p>将系统 IP 配置为同一网段：</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>IP 地址：</strong> <code>192.168.1.176</code></p>
+</li>
+<li>
+<p><strong>子网掩码：</strong> <code>255.255.255.0</code></p>
+</li>
+<li>
+<p><strong>默认网关：</strong> 根据需要设置</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/systemip.png" alt="System IP Configuration" width="600">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+请确保系统 IP 地址与摄像头 IP 地址在同一网段内。请勿分配网络中已被其他设备使用的 IP 地址。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_在_vulcan_中配置摄像头">在 Vulcan 中配置摄像头</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>导航到 <code>C:\ProgramData\Metamation\Vulcan\Data</code> 并使用文本编辑器打开 <code>CamSettings.xml</code>。</p>
+</li>
+<li>
+<p>更新配置详细信息：</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;Camera id="1" description="Camera 1" enable="true"&gt;
+  &lt;Configuration&gt;
+    &lt;LiveStream enable="false"
+      url="http://192.168.1.64/ISAPI/Streaming/channels/101/picture" /&gt;
+    &lt;LiveStreamDefault enable="true"
+      url="http://192.168.1.64/ISAPI/Streaming/channels/101/picture" /&gt;
+    &lt;Authentification username="admin" password="your_password" /&gt;
+  &lt;/Configuration&gt;
+&lt;/Camera&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>将 <code>url</code> 字段中的 IP 地址替换为实际的摄像头 IP。</p>
+</li>
+<li>
+<p>如有需要，更新身份验证信息。</p>
+</li>
+<li>
+<p>保存文件并关闭编辑器。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_验证摄像头连接">验证摄像头连接</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>打开 <strong>Vulcan</strong> &#8594; <strong>Calibration</strong> 页面。</p>
+</li>
+<li>
+<p>确认摄像头画面正确显示。</p>
+</li>
+<li>
+<p>确保：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>摄像头 IP 与 XML 配置一致</p>
+</li>
+<li>
+<p>系统与摄像头在同一网段内</p>
+</li>
+<li>
+<p>用户名和密码正确</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_校正摄像头畸变">校正摄像头畸变</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Vulcan 目前不支持摄像头去畸变功能。该功能将在未来版本中实现。Vulcan 支持所有 IP 摄像头，但使用存在畸变的摄像头可能会有一些偏差。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>要校正镜头畸变：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>打印棋盘格图案并将其粘贴在平整、坚硬的黑板上。确保表面平整，不会弯曲。</p>
+</li>
+<li>
+<p>拍摄棋盘格的多张图像。拍摄时：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>移动黑板，使棋盘格的不同部分出现在摄像头视野的中心、边缘和角落位置。</p>
+</li>
+<li>
+<p>以略有不同的角度倾斜黑板，以捕获更多变化。</p>
+<div class="paragraph">
+<p>这有助于校准过程理解摄像头在整个视野范围内的成像特性。</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_运行去畸变功能">运行去畸变功能</h3>
+<div class="paragraph">
+<p>将拍摄的图像通过去畸变代码进行处理。代码将计算：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>K（内参矩阵）</strong> — 表示摄像头的焦距和光学中心</p>
+</li>
+<li>
+<p><strong>畸变系数</strong> — 表示摄像头中存在的镜头畸变</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>这些值描述了摄像头如何成像以及如何产生畸变。所有矩阵都可以保存为 XML 格式，并在之后重复使用，前提是摄像头设置保持不变（未移动、未改变焦距等）。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_验证去畸变效果">验证去畸变效果</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>去畸变完成后，检查畸变是否已被正确校正，输出图像是否准确。</p>
+</li>
+<li>
+<p>镜头畸变通常在图像的边缘和角落区域更为明显，因此请特别关注这些区域。</p>
+</li>
+<li>
+<p>如果畸变未被正确校正，请使用质量更好的图像重新进行去畸变处理。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_校准步骤">校准步骤</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>进入 <strong>Configure</strong> &#8594; <strong>Calibration</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/calibrate.png" alt="Calibration Page" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>① 显示位置指示激光的实时坐标。<br>
+② 引导用户完成校准过程的状态消息。<br>
+③ 显示已保存的边界区域。<br>
+④ 捕获新的边界区域。</p>
+</div>
+</li>
+<li>
+<p>摄像头的实时图像将显示在控制屏幕上。</p>
+</li>
+<li>
+<p>单击 <strong>Show Bound</strong> 查看已保存的校准边界。这有助于验证可见区域并确认摄像头是否正确定位以捕获所需的板材区域。</p>
+</li>
+<li>
+<p>如果显示的边界与所需的板材区域不匹配，请单击 <strong>Capture</strong> 重置并提供新的边界点。</p>
+</li>
+<li>
+<p>通过逐一测量板材上的四个参考点来进行校准，引导位置指示激光并单击该位置，从而形成精确的矩形边界。</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_捕获模式">捕获模式</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/capturemode.png" alt="Capture Mode" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>① 引导捕获点的顺序。<br>
+② 退出捕获模式且不保存更改。</p>
+</div>
+<div class="paragraph">
+<p>将位置指示激光放置在所需位置并单击该点后，系统将自动捕获相应点的位置指示激光坐标。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+如果在校准页面移动激光头时位置指示激光点未更新，文本框将提示用户手动输入机器坐标，必须手动输入并按 <strong>Enter</strong> 或单击文本框外部进行确认。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>输入所有四个点后，将出现确认弹窗。如果确认，边界将被添加；如果取消，将保留之前的边界。确认后，边界将被显示。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+校准是一次性过程，除非摄像头位置或托盘发生更改，否则始终有效。
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/capturemode2.png" alt="Calibration Confirmation" width="600">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_在后处理中使用校准视图">在后处理中使用校准视图</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/postproduction.png" alt="Postproduction Page" width="600">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>保存边界后，通过从 <strong>Programs</strong> 中选择所需的 LST 文件进入 <strong>Postproduction</strong>。</p>
+</li>
+<li>
+<p>后处理中的摄像头视图使用已保存的边界，在此范围内可以添加和保存零件。</p>
+</li>
+<li>
+<p>单击 <strong>Save NC</strong> — 工件偏移将相对于边界区域被捕获。保存的零件随后可以直接切割，无需手动捕获工件偏移。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_摄像头型号和规格">摄像头型号和规格</a>
+  </li>
+  <li level="1">
+   <a href="#_在机器内安装摄像头">在机器内安装摄像头</a>
+  </li>
+  <li level="1">
+   <a href="#_在_vulcan_中连接网络摄像头">在 Vulcan 中连接网络摄像头</a>
+  </li>
+  <li level="2">
+   <a href="#_检查机器_ip_地址">检查机器 IP 地址</a>
+  </li>
+  <li level="2">
+   <a href="#_配置摄像头_ip_地址">配置摄像头 IP 地址</a>
+  </li>
+  <li level="2">
+   <a href="#_配置系统_ip_地址如有需要">配置系统 IP 地址（如有需要）</a>
+  </li>
+  <li level="2">
+   <a href="#_在_vulcan_中配置摄像头">在 Vulcan 中配置摄像头</a>
+  </li>
+  <li level="2">
+   <a href="#_验证摄像头连接">验证摄像头连接</a>
+  </li>
+  <li level="1">
+   <a href="#_校正摄像头畸变">校正摄像头畸变</a>
+  </li>
+  <li level="2">
+   <a href="#_运行去畸变功能">运行去畸变功能</a>
+  </li>
+  <li level="2">
+   <a href="#_验证去畸变效果">验证去畸变效果</a>
+  </li>
+  <li level="1">
+   <a href="#_校准步骤">校准步骤</a>
+  </li>
+  <li level="2">
+   <a href="#_捕获模式">捕获模式</a>
+  </li>
+  <li level="2">
+   <a href="#_在后处理中使用校准视图">在后处理中使用校准视图</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../productionplan/material.html">材料库存</a></span>
+ <span class="next"><a href="../troubleshooting/index.html">故障排除</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

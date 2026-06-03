@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Tafelbeladung</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Produktionsplan</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a class="active" href="loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="material.html">Materialbestand</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC-Programmierreferenz</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN-Format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">Lasertechnologie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">Lasertechnologie-Befehle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Produktionsplan</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="loading.html">Tafelbeladung</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Tafelbeladung</h1>
+<div class="sect1">
+<h2 id="_tafelkantenmessung">Tafelkantenmessung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Funktion Tafelkantenmessung muss angepasst werden, um sowohl den Einzelauftragsmodus
+als auch den Produktionsplanmodus zu unterstützen.</p>
+</div>
+<div class="paragraph">
+<p>Einzelauftragsmodus: Aktuellen Arbeitsablauf beibehalten.
+Positionierung CU → Produktion starten → Popups bestätigen → Tafelkantenmessung starten</p>
+</div>
+<div class="paragraph">
+<p>Produktionsplanmodus: Es sollte keine Bestätigungsmeldung für
+weitere Benutzeraktionen erscheinen, d.h. die Tafelkantenmessung
+wird beim Produktionsstart automatisch ausgeführt.</p>
+</div>
+<div class="paragraph">
+<p>Keine CU-Positionierung erforderlich → Tafelkantenmessung basierend auf der Tafelanschlagsecke
+starten und mit dem Messabstandsoffset kombinieren. (Der Abstand kann in den
+MK-Einstellungen angepasst werden, um bestimmte Sonderfälle abzudecken.)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/p10.png" alt="p10" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beladetyp">Beladetyp</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_automatisierungskonfiguration">Automatisierungskonfiguration</h3>
+<div class="paragraph">
+<p>Wenn ein Automatisierungsgerät angeschlossen ist, wird der Produktionsplan
+durch Automatisierungsschnittstellensignale beeinflusst (z.B. Beladung abgeschlossen, Entladung
+abgeschlossen&#8230;&#8203;).</p>
+</div>
+<div class="paragraph">
+<p>Daher muss eine Konfiguration zur Aktivierung/Deaktivierung der Automatisierungskonfiguration
+bereitgestellt werden. Der Parameter sollte vom Kunden änderbar sein und kann daher
+auf der Seite Allgemein der Maschinenkonfigurationen abgelegt werden.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/p11.png" alt="p11" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Beladetyp:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Manuelle Beladung ohne Palettenwechsel - Für den Einzelprogrammbetrieb</p>
+</li>
+<li>
+<p>Manuelle Beladung mit Palettenwechsel - Für den Produktionsplanbetrieb</p>
+</li>
+<li>
+<p>Beladung mit externem Lader - Für den Betrieb mit externem Lader</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tafelanschlagsposition">Tafelanschlagsposition</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_definition_der_tafelbeladeposition">Definition der Tafelbeladeposition</h3>
+<div class="paragraph">
+<p>Der Tafelanschlag für den Rohmaterialstapel im gesamten Maschinenlayout kann in
+verschiedenen Ecken eingestellt werden. Das Automatisierungsgerät hat die entsprechende Tafelanschlagsecke,
+wodurch die Tafelbeladeposition in der Maschine ebenfalls beeinflusst wird.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/p13.png" alt="p13" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>In diesem Fall muss ein Parameter zur Einstellung der Beladeecke vorhanden sein, damit
+die Steuerung die Tafelkantenmessung entsprechend berechnen kann.</p>
+</div>
+<div class="paragraph">
+<p>Beim Ausführen eines Einzelprogramms kann die aktuelle Implementierung beibehalten werden. Die
+Tafelkantenmessung für den Einzelprogrammbetrieb wird nicht beeinflusst.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/p14.png" alt="p14" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>In der Dropdown-Auswahl stehen 4 Optionen zur Verfügung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Position 1</p>
+</li>
+<li>
+<p>Position 2</p>
+</li>
+<li>
+<p>Position 3</p>
+</li>
+<li>
+<p>Position 4</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Nach der Konfiguration wird die Strategie der Tafelkantenmessung
+im Produktionsplanmodus entsprechend angepasst.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tafelkantenmessung">Tafelkantenmessung</a>
+  </li>
+  <li level="1">
+   <a href="#_beladetyp">Beladetyp</a>
+  </li>
+  <li level="2">
+   <a href="#_automatisierungskonfiguration">Automatisierungskonfiguration</a>
+  </li>
+  <li level="1">
+   <a href="#_tafelanschlagsposition">Tafelanschlagsposition</a>
+  </li>
+  <li level="2">
+   <a href="#_definition_der_tafelbeladeposition">Definition der Tafelbeladeposition</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="sequence.html">Ablaufsequenz</a></span>
+ <span class="next"><a href="material.html">Materialbestand</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

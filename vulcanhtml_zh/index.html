@@ -11,18 +11,18 @@
   <link rel="stylesheet" href="res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="img/flux-icon.png">
-  <title>欢迎来到 Vulcan Control</title>
+  <title>欢迎来到 TJSCut-90</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
-        <div id="header-logo"><img src="img/logo.png" width="200" height="78" /></div>
-        <div><p>Vulcan Reference Manual</p></div>
+        <div id="header-logo"><img src="img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
             <div class="treesite">
  <ul>
-  <li><button class="tree blank"></button><a class="active" href="index.html">欢迎来到 Vulcan Control</a></li>
+  <li><button class="tree blank"></button><a class="active" href="index.html">欢迎来到 TJSCut-90</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="intro/index.html">介绍</a>
@@ -108,14 +108,15 @@
    <button class="tree closed"></button>
    <a href="productionplan/index.html">生产计划</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="productionplan/pp_activation.html">激活/停用</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_buttons.html">修改</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_stoponsheet.html">停止在板材上</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_machinesettings.html">机床设置</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_materialstatusacknowledgement.html">材料状态确认</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_generalworkflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/create.html">创建生产计划</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/lock.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/run.html">运行生产计划</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/sequence.html">运行顺序</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/loading.html">板材装载</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/material.html">材料库存</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="dropncut/index.html">Drop and Cut</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="troubleshooting/index.html">故障排除</a>
@@ -123,6 +124,85 @@
     <li><button class="tree blank"></button><a href="troubleshooting/collisions.html">频繁碰撞</a></li>
     <li><button class="tree blank"></button><a href="troubleshooting/workoffset.html">工作偏移</a></li>
     <li><button class="tree blank"></button><a href="troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="programming/index.html">NC 编程参考</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="programming/din/index.html">DIN 格式</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="programming/din/3_dinprogramstructure/index.html">DIN 程序结构</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/programnum.html">程序号 %</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/blocknumbe.html">程序块号 N</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/gfunctions.html">G 功能</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/mfunctions.html">M 功能</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/parametera.html">参数数组</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/graphicale.html">图形元素 – 显示标记线</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="programming/din/4_lasertechnology/index.html">激光技术</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/programhea.html">程序头</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/technology.html">技术表（TT）传输</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/checkforbo.html">检查边界程序是否激活</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/blockjump.html">程序块跳转</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/blocknumbe.html">程序块号</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/startofapa.html">零件信息开始</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/laserparam.html">激光参数选择与更新</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/contoursta.html">轮廓指令</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/programend.html">程序结束</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="programming/din/4_lasertechnology/5_remnantcut/index.html">残料切割</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/5_remnantcut/startremna.html">起始残料切割</a></li>
+          <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/5_remnantcut/endremnant.html">结束残料切割</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">仅在轮廓中穿孔</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">多零件示例程序</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut 示例程序：</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="programming/lst/index.html">LST 格式</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="programming/lst/1_lst/index.html">LST 程序结构</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/6_incrementalcommandic/index.html">增量命令 (IC)</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/7_softmicrojointsnanoj/index.html">软微连接与 Nano Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="programming/lsttechno/index.html">激光技术命令</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="programming/lsttechno/lasercutting.html">激光切割</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/identifyparts.html">零件标识</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/multiprogstruc.html">多程序结构</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/cuttingdistance.html">切割距离</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/kerfcorrection.html">切口补偿</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/overshootheight.html">回退高度</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/timing.html">零件计时</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/bevelcut.html">斜角切割</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/beamsuppression.html">光束抑制</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/flyingfocus.html">飞行焦点位置调整</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li><button class="tree blank"></button><a href="impressum.html">版本说明</a></li>
@@ -138,20 +218,20 @@
   </button>
  </div>
  <div>
-  <a href="index.html">欢迎来到 Vulcan Control</a>
+  <a href="index.html">欢迎来到 TJSCut-90</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>欢迎来到 Vulcan Control</h1>
+                        <h1>欢迎来到 TJSCut-90</h1>
 <div class="paragraph">
 <p><span class="image right"><img src="img/l99.jpg" alt="Logo" width="354"></span>
-Vulcan Control 控制系统在编程、操作和控制您的 JFY 激光加工机床的效率方面达到了新的水平。易用性与最先进的工艺齐头并进，提高了生产率。通过触摸屏可访问成熟的触摸用户界面，并可直接在编程和生产之间进行导航。功能直接位于您需要的地方，在整个应用过程中提供优化的人体工程学设计。</p>
+TJSCut-90 控制系统在编程、操作和控制您的 JFY 激光加工机床的效率方面达到了新的水平。易用性与最先进的工艺齐头并进，提高了生产率。通过触摸屏可访问成熟的触摸用户界面，并可直接在编程和生产之间进行导航。功能直接位于您需要的地方，在整个应用过程中提供优化的人体工程学设计。</p>
 </div>
 <div class="paragraph">
-<p>Vulcan Control 是数控激光切割机的高级控制系统，
+<p>TJSCut-90 是数控激光切割机的高级控制系统，
 针对以下方面进行了优化：</p>
 </div>
 <div id="h000070" class="ulist">
@@ -201,11 +281,11 @@ Vulcan Control 控制系统在编程、操作和控制您的 JFY 激光加工机
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 JFY International. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
-            <p>Compiled 2025.09.10 by Bento 58</p>
+            <p>Compiled 2026.06.03 by Bento 58</p>
             <img src="res/bento.png" />
         </div>
     </footer>

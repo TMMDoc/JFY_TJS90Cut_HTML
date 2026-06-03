@@ -15,14 +15,14 @@
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
-        <div id="header-logo"><img src="img/logo.png" width="130" height="48" /></div>
-        <div><p>Vulcan Reference Manual</p></div>
+        <div id="header-logo"><img src="img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
             <div class="treesite">
  <ul>
-  <li><button class="tree blank"></button><a href="index.html">Willkommen bei Vulcan Control</a></li>
+  <li><button class="tree blank"></button><a href="index.html">Willkommen bei TJSCut-90</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="intro/index.html">Einführung</a>
@@ -108,14 +108,15 @@
    <button class="tree closed"></button>
    <a href="productionplan/index.html">Produktionsplan</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_buttons.html">Änderung</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
-    <li><button class="tree blank"></button><a href="productionplan/pp_generalworkflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="productionplan/material.html">Materialbestand</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="dropncut/index.html">Drop and Cut</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="troubleshooting/index.html">Fehlerbehebung</a>
@@ -123,6 +124,85 @@
     <li><button class="tree blank"></button><a href="troubleshooting/collisions.html">Häufige Kollisionen</a></li>
     <li><button class="tree blank"></button><a href="troubleshooting/workoffset.html">Arbeitsversatz</a></li>
     <li><button class="tree blank"></button><a href="troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="programming/index.html">NC-Programmierreferenz</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="programming/din/index.html">DIN-Format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="programming/din/3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="programming/din/4_lasertechnology/index.html">Lasertechnologie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="programming/din/4_lasertechnology/5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="programming/lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="programming/lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="programming/lsttechno/index.html">Lasertechnologie-Befehle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="programming/lsttechno/lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="programming/lsttechno/flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
    </ul>
   </li>
   <li><button class="tree blank"></button><a class="active" href="impressum.html">Impressum</a></li>
@@ -147,7 +227,7 @@
                     <article id="article">
                         <h1>Impressum</h1>
 <div class="sect1">
-<h2 id="_corporate_information">Corporate Information</h2>
+<h2 id="_firmeninformationen">Firmeninformationen</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>JFY International GmbH
@@ -155,33 +235,33 @@ Schulze-Delitzsch-Straße 41
 70565 Stuttgart, Germany</p>
 </div>
 <div class="paragraph">
-<p>Phone: +49 7156 303 30576
-Email: <a href="mailto:sales@jfy-international.com">sales@jfy-international.com</a></p>
+<p>Telefon: +49 7156 303 30576
+E-Mail: <a href="mailto:sales@jfy-international.com">sales@jfy-international.com</a></p>
 </div>
 <div class="paragraph">
-<p>Editorial responsibility: Florian Schaede</p>
+<p>Redaktionelle Verantwortung: Florian Schaede</p>
 </div>
 <div class="paragraph">
-<p>Managing Director:
+<p>Geschäftsführer:
 Dr. Andreas Aschenbrücker</p>
 </div>
 <div class="paragraph">
-<p>HRB (Commercial Register Number) : 206070 at the District Court of Stuttgart</p>
+<p>HRB (Handelsregisternummer): 206070 beim Amtsgericht Stuttgart</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_protection_officer">Data protection officer</h2>
+<h2 id="_datenschutzbeauftragter">Datenschutzbeauftragter</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The appointed Data Protection Officer is:</p>
+<p>Der bestellte Datenschutzbeauftragte ist:</p>
 </div>
 <div class="paragraph">
 <p>Kevin Koch
-Email: <a href="mailto:data-protection@jfy-international.com">data-protection@jfy-international.com</a></p>
+E-Mail: <a href="mailto:data-protection@jfy-international.com">data-protection@jfy-international.com</a></p>
 </div>
 <div class="paragraph">
-<p>The substitute for the Data Protection Officer in case of absence is:</p>
+<p>Die Vertretung des Datenschutzbeauftragten im Falle der Abwesenheit ist:</p>
 </div>
 <div class="paragraph">
 <p>Florian Schaede
@@ -190,13 +270,20 @@ E-Mail: <a href="mailto:data-protection@jfy-international.com">data-protection@j
 </div>
 </div>
 <div class="sect1">
-<h2 id="_copyright_and_trademarks">Copyright and Trademarks</h2>
+<h2 id="_urheberrecht_und_markenzeichen">Urheberrecht und Markenzeichen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>All texts, pictures, graphics, animation, videos, sounds and any other contents of this website and their layout are protected by copyright and other protective laws. The afore-mentioned contents may not be duplicated, modified or used in other electronic or printed publications without the prior consent of JFY International GmbH.</p>
+<p>Alle Texte, Bilder, Grafiken, Animationen, Videos, Töne und sonstige Inhalte
+dieser Website sowie deren Gestaltung sind durch das Urheberrecht und andere
+Schutzgesetze geschützt. Die vorgenannten Inhalte dürfen ohne vorherige
+Zustimmung der JFY International GmbH nicht vervielfältigt, verändert oder in
+anderen elektronischen oder gedruckten Publikationen verwendet werden.</p>
 </div>
 <div class="paragraph">
-<p>All patents, trademarks and works protected by copyright which are presented on this website are the intellectual property of JFY International GmbH unless otherwise stated. This applies in particular for JFY trademarks, logos, emblems and name plates.</p>
+<p>Alle auf dieser Website dargestellten Patente, Marken und urheberrechtlich
+geschützten Werke sind geistiges Eigentum der JFY International GmbH, sofern
+nicht anders angegeben. Dies gilt insbesondere für JFY-Marken, Logos, Embleme
+und Typenschilder.</p>
 </div>
 </div>
 </div>
@@ -208,13 +295,13 @@ E-Mail: <a href="mailto:data-protection@jfy-international.com">data-protection@j
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_corporate_information">Corporate Information</a>
+   <a href="#_firmeninformationen">Firmeninformationen</a>
   </li>
   <li level="1">
-   <a href="#_data_protection_officer">Data protection officer</a>
+   <a href="#_datenschutzbeauftragter">Datenschutzbeauftragter</a>
   </li>
   <li level="1">
-   <a href="#_copyright_and_trademarks">Copyright and Trademarks</a>
+   <a href="#_urheberrecht_und_markenzeichen">Urheberrecht und Markenzeichen</a>
   </li>
  </ul>
 </aside>
@@ -222,7 +309,7 @@ E-Mail: <a href="mailto:data-protection@jfy-international.com">data-protection@j
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="troubleshooting/extreme.html">Extrem kleine Konturen</a></span>
+ <span class="prev"><a href="programming/lsttechno/flyingfocus.html">Änderung der Fokuslage</a></span>
 </nav>
 
         </div>
@@ -233,7 +320,7 @@ E-Mail: <a href="mailto:data-protection@jfy-international.com">data-protection@j
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2025 JFY International. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">

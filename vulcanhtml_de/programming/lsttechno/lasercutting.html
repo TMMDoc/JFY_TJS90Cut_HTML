@@ -1,0 +1,1239 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Laserschneiden</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Willkommen bei TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/material.html">Materialbestand</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">NC-Programmierreferenz</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../din/index.html">DIN-Format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/4_lasertechnology/index.html">Lasertechnologie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../din/4_lasertechnology/5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Lasertechnologie-Befehle</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a href="beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">NC-Programmierreferenz</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Lasertechnologie-Befehle</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="lasercutting.html">Laserschneiden</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Laserschneiden</h1>
+<div class="sect1">
+<h2 id="_tc_laser_on">TC_LASER_ON</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Mit dem Zyklusaufruf TC_LASER_ON werden folgende Maschinenbefehle
+unabhängig von den eingegebenen Zyklusparametern ausgeführt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Abstandsregelung einschalten.</p>
+</li>
+<li>
+<p>Einstechtgas anwählen.</p>
+</li>
+<li>
+<p>Z-Achse in Einstechposition fahren.</p>
+</li>
+<li>
+<p>Strahl zum Einstechen einschalten.</p>
+</li>
+<li>
+<p>Schneidgas anwählen.</p>
+</li>
+<li>
+<p>Z-Achse in Schneidposition fahren.</p>
+</li>
+<li>
+<p>Strahl zum Schneiden einschalten.</p>
+</li>
+<li>
+<p>Fokuslage anwählen.</p>
+</li>
+<li>
+<p>Strahldurchmesser anwählen.</p>
+</li>
+<li>
+<p>Laserleistung anwählen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_LASER_ON (Laserverfahren,"Technologietabelle",Einstechtyp,Schneidtyp)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Parameter der Technologietabelle für TC_LASER_ON
+für verschiedene Materialien und Materialstärken stehen
+an der Maschinensteuerung zur Verfügung. Der Name der passenden Technologietabelle
+muss zum Zeitpunkt der Programmierung angegeben werden.</p>
+</li>
+<li>
+<p>Werden reine Schneid- oder Einstechzyklen aufgerufen, muss der Wert "0"
+für den Zyklusparameter "Einstechtyp" oder
+"Schneidtyp" eingegeben werden.</p>
+</li>
+<li>
+<p>Wird durch TC_LASER_OFF gelöscht.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Laserverfahren</div>
+<p>Folgende Laserverfahren stehen zur Verfügung:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Laserverfahren</th>
+<th class="tableblock halign-left valign-top">Funktionen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 oder 9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen und Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 oder 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen und Schneiden ohne Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen ohne Abstandsregelung, Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen mit Abstandsregelung, Schneiden ohne Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 oder 11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6 oder 12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden ohne Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen mit Abstandsregelung, Strahl AUS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen ohne Abstandsregelung, Strahl AUS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microweld</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Einstechtyp</div>
+<p>Zyklusparameter: Daten werden über den Einstechtyp aus der aktiven
+Technologietabelle ausgewählt. Dort sind mehrere Einstechtypen hinterlegt:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Nummer</th>
+<th class="tableblock halign-left valign-top">Funktionen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normales Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sanftes Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Punktmarkierung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sonderbearbeitung hartes Microweld</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sonderbearbeitung weiches Microweld</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Schneidtyp</div>
+<p>Zyklusparameter: Daten werden über den Schneidtyp aus der aktiven
+Technologietabelle ausgewählt. Schneiddaten (z. B. Laserleistung, Schneid- und
+Anfahrparameter) sind dort für verschiedene Bearbeitungsanforderungen
+hinterlegt. Unterschieden wird nach:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Große, mittlere oder kleine Kontur.</p>
+</li>
+<li>
+<p>Normale oder reduzierte Schneidgeschwindigkeit.</p>
+</li>
+<li>
+<p>Normale oder reduzierte Beschleunigungswerte.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Der Schneidtyp wird über eine dreistellige Zahl ausgewählt, wobei jede Ziffer
+eine bestimmte Bedeutung hat:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">1. Ziffer: Kontur</th>
+<th class="tableblock halign-left valign-top">2. Ziffer: Schneidgeschwindigkeit</th>
+<th class="tableblock halign-left valign-top">3. Ziffer: Beschleunigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 = große Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = normal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 = mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 = reduziert ab Einstechloch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 = reduziert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 = kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 = hoch</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiele Standard-Schneidtypen</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Schneiden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Große Kontur schneiden mit normaler Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Große Kontur schneiden mit reduzierter Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mittlere Kontur schneiden mit normaler Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mittlere Kontur schneiden mit reduzierter Anfahrgeschwindigkeit ab Einstechloch und normaler Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">211</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mittlere Kontur schneiden mit reduzierter Anfahrgeschwindigkeit ab Einstechloch und reduzierter Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">310</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kleine Kontur schneiden mit reduzierter Anfahrgeschwindigkeit ab Einstechloch und normaler Beschleunigung.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Zusätzlich zu diesen Standard-Schneidtypen gibt es 3 Sonderschneidtypen:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Sonderschneidtypen</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Sonderschneidtyp</th>
+<th class="tableblock halign-left valign-top">Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sonderbearbeitung: Verdampfung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sonderbearbeitung: Markierung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sonderbearbeitung: Geometrische Punktmarkierung.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2">TC_LASER_ON(1,"1778",10,100)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laserverfahren 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen und Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechtyp 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normales Einstechen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneidtyp 100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Große Kontur schneiden mit normaler Beschleunigung.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Schneiden mit "fliegendem Datenaustausch"</div>
+<p>Mit den Laserverfahren 5 oder 11 und 6 oder 12 kann das Schneiden mit
+"fliegendem Datenaustausch" programmiert werden. Wird ein weiterer
+TC_LASER_ON-Aufruf mit den Verfahren 5 oder 11 und 6 oder 12 programmiert und
+der Strahl bereits gezündet, kann wie folgt umgeschaltet werden:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Umschalten zwischen verschiedenen Schneiddaten innerhalb einer
+Technologietabelle (z. B. aufgrund einer Konturänderung).</p>
+</li>
+<li>
+<p>Umschalten zwischen verschiedenen Technologietabellen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bei Änderungen der Laserleistung und Taktfrequenz sowie bei geringfügigen
+Änderungen der Schneidparameter wie Gasdruck, Taktfrequenz und Schneidabstand
+ist kein Achsstillstand erforderlich. Die Umschaltung auf die neuen Parameter
+erfolgt <strong>während der Bearbeitung</strong>.</p>
+</div>
+<div class="ulist">
+<div class="title">Vorteile</div>
+<ul>
+<li>
+<p>Keine Kerben durch Reduzierung der Schneidgeschwindigkeit beim Datenaustausch.</p>
+</li>
+<li>
+<p>Schnellere Bearbeitung durch "fliegenden Datenaustausch".</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"1778",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen und Schneiden großer Konturen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(5,"1778",0,300)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Fliegender Datenaustausch": Kleine Kontur schneiden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 I0 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_laser_off">TC_LASER_OFF</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Abhängig von den eingegebenen Parametern werden mit dem Zyklusaufruf TC_LASER_OFF folgende Maschinenbefehle ausgeführt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Laserstrahl ausschalten.</p>
+</li>
+<li>
+<p>Z-Achse positionieren.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>Der Zyklus TC_LASER_OFF wird mit einem Zyklusparameter im NC-Programm aufgerufen:<br>
+TC_LASER_OFF(Laserverfahren)</p>
+</div>
+<div class="paragraph">
+<div class="title">Laserverfahren</div>
+<p>Folgende TC_LASER_OFF-Zyklen stehen zur Verfügung:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Laserverfahren</th>
+<th class="tableblock halign-left valign-top">Funktionen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl aus, Z-Achse auf Überfahrhöhe (Standard-Überfahrhöhe = 40 mm).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl aus, Schneidgas aus, Hochspannung aus, Z-Achse in Ausgangsposition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entspricht Verfahren 1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl aus, Z-Achse bleibt auf Bearbeitungsabstand (auf Einstechhöhe für folgende Einstechvorgänge / auf Schneidhöhe für folgende Schnitte).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bei RotoLas: Laserstrahl aus, Z-Achse auf Überfahrhöhe (bezogen auf den Außenkreis).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl aus, Vorbereitung für hartes Microweld.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl aus, Vorbereitung für weiches Microweld.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Die Laserverfahren werden wie folgt eingesetzt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wird <strong>Laserverfahren 1</strong> programmiert, muss die Überfahrhöhe zum Anfahren der
+Z-Achse zuvor mit TC_POS_LEVEL programmiert werden. Dieses Verfahren wird
+verwendet, um den Laserstrahl nach einem bearbeiteten Teil auszuschalten und
+das nächste Teil zu positionieren.</p>
+</li>
+<li>
+<p><strong>Laserverfahren 2</strong> wird verwendet, um den Laserstrahl am Ende der
+Teileprogrammierung auszuschalten und die Z-Achse in die Ausgangsposition zu
+fahren.</p>
+</li>
+<li>
+<p><strong>Laserverfahren 3</strong> entspricht <strong>Laserverfahren 1</strong>.</p>
+</li>
+<li>
+<p><strong>Laserverfahren 4</strong> wird bei der Bearbeitung von "Gemeinsamen Schnitten" und
+für SprintLine verwendet. Während der Positionierung dürfen sich niemals
+Löcher oder Umformungen im Verfahrweg des Schneidkopfes befinden.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_wait">TC_WAIT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Laserzyklus zur Eckenabkühlung zur Vermeidung von Einbränden. Der Laserstrahl wird ausgeschaltet.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_WAIT (Funktion, Zeit)</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Funktionen</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keine Angabe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wartezeit aus der Lasertechnologietabelle wird verwendet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wartezeit aus der Lasertechnologietabelle wird verwendet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verzögerungszeit wird aus dem Übergabeparameter "Zeit" verwendet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warten auf Starttaste (unbedingter Halt M0).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Funktion ist optional.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Funktionen</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zeit</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zeitangabe in Sekunden.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_g823_flyline">G823 (FlyLine)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Programmierung einer konturbezogenen Strahlunterdrückung. Mit der Funktion G823 kann der Laserstrahl blockbezogen unterdrückt werden. Gleichzeitig wird der Strahl am Blockübergang ungestützt abgeschaltet. Folgt auf einen Verfahrblock mit dieser Funktion ein weiterer Verfahrblock ohne G823-Funktion, wird der Strahl am Blockübergang ungestützt gezündet. Die jeweiligen Prozessparameter bleiben dabei unverändert. Die Strahlunterdrückung ist dabei nicht auf Linearblöcke beschränkt.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p><strong>G823</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Funktion G823 ist einer Gruppe von G-Befehlen zugeordnet. Aus dieser Gruppe darf nur ein G-Befehl innerhalb eines NC-Blocks verwendet werden. Zu dieser Gruppe gehören die G-Befehle G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Funktion wird nur wirksam, wenn die Laserbearbeitung zuvor durch TC_LASER_ON aktiviert wurde.</p>
+</li>
+<li>
+<p>Ein Einstechvorgang muss ohne Achsstillstand möglich sein, wenn das Material oder die Materialstärke gewählt ist.</p>
+</li>
+<li>
+<p>Je nach Maschine kann FlyLine für verschiedene Materialstärken eingesetzt werden (genaue Angaben zur Materialstärke finden Sie in der Datensammlung der betreffenden Maschine).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Beispielkontur Perforationsnaht</div>
+<p><span class="image"><img src="img/image14.png" alt="image14" width="400"></span></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 G90 X10 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(5,"4711",0,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser EIN.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X30 G823</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X50 G823</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(3)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_pos_mode">TC_POS_MODE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Der Zyklus TC_POS_MODE steuert den Positioniervorgang des
+Schneidkopfes zwischen den Schneidvorgängen.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_POS_MODE (Wert)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Selbsthaltende (modale) Wirkung.</p>
+</li>
+<li>
+<p>Wird durch erneute Programmierung des Zyklus, das
+Programmende oder Betätigung der Reset-Taste deaktiviert.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Wert</th>
+<th class="tableblock halign-left valign-top">Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standardverhalten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ungestütztes Wegfahren von der Kontur nach TC_LASER_OFF.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Voraussetzung für die Programmierung dieses Werts ist, dass ohne Einstechen und mit TC_LASER_OFF(4) programmiert wird.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fliegendes Anfahren der Kontur mit TC_LASER_ON.</p>
+</li>
+<li>
+<p>Ungestütztes Wegfahren von der Kontur nach TC_LASER_OFF.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Optimale Positionierwege sind bei Verwendung von TC_POS_MODE(1) dringend erforderlich.
+Achten Sie besonders auf mögliche herabfallende Teile und Löcher im Verfahrweg des Schneidkopfes.</p>
+</li>
+<li>
+<p>Wird bei Verwendung von TC_POS_MODE(2) kein TC_LASER_OFF(4) programmiert, wird
+die Funktion G823 für den Konturstart automatisch deaktiviert. Es wird kein Fehler
+ausgegeben.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_fluid_on_option">TC_FLUID_ON (Option)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Der Zyklus TC_FLUID_ON aktiviert die Wasserbesprühung. Die Wasserbesprühung
+wird beim Laserbrennschneiden eingesetzt.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_FLUID_ON</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Wasserbesprühung wird generell über die Maschinentechnologietabellen
+gesteuert (Programmeigenschaften). Modus 0 oder 1 schaltet die Wasserbesprühung
+generell im Gesamtprogramm ein oder aus. Ist in der Maschinentechnologietabelle
+Modus 2 aktiv, kann die Wasserbesprühung programmgesteuert über den Zyklus
+TC_FLUID_ON aktiviert und über TC_FLUID_OFF deaktiviert werden.</p>
+</li>
+<li>
+<p>Wird durch Programmende, Programmunterbrechung oder TC_FLUID_OFF deaktiviert.</p>
+</li>
+<li>
+<p>Konturbezogen: Muss vor TC_LASER_ON programmiert werden.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_TECH("SHT-1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_LOAD("SHL-1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Palettenwechsel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_HEAD("LHT-1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneidköpfe aktivieren</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X500 Y300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Positionierbewegung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_FLUID_ON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wasserbesprühung aktivieren</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"T2D-5102",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X&#8230;&#8203; Y&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konturbearbeitung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_FLUID_OFF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wasserbesprühung deaktivieren</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_fluid_off_option">TC_FLUID_OFF (Option)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Der Zyklus TC_FLUID_OFF deaktiviert die Wasserbesprühung.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_FLUID_OFF</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Wasserbesprühung wird generell über die Maschinentechnologietabellen
+gesteuert (Programmeigenschaften). Modus 0 oder 1 schaltet die Wasserbesprühung
+generell im Gesamtprogramm ein oder aus. Ist in der Maschinentechnologietabelle
+Modus 2 aktiv, kann die Wasserbesprühung programmgesteuert über den Zyklus
+TC_FLUID_ON aktiviert und über TC_FLUID_OFF deaktiviert werden.</p>
+</li>
+<li>
+<p>Deaktiviert TC_FLUID_ON.</p>
+</li>
+<li>
+<p>Wird durch Programmende oder Programmabbruch deaktiviert.</p>
+</li>
+<li>
+<p>Konturbezogen: Muss nach TC_LASER_OFF programmiert werden.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_TECH("SHT-1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_LOAD("SHL-1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Palettenwechsel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_HEAD("LHT-1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneidköpfe aktivieren</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X500 Y300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Positionierbewegung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_FLUID_ON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wasserbesprühung aktivieren</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"T2D-5102",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X&#8230;&#8203; Y&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konturbearbeitung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_FLUID_OFF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wasserbesprühung deaktivieren</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tc_laser_on">TC_LASER_ON</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_laser_off">TC_LASER_OFF</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_wait">TC_WAIT</a>
+  </li>
+  <li level="1">
+   <a href="#_g823_flyline">G823 (FlyLine)</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_pos_mode">TC_POS_MODE</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_fluid_on_option">TC_FLUID_ON (Option)</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_fluid_off_option">TC_FLUID_OFF (Option)</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Lasertechnologie-Befehle</a></span>
+ <span class="next"><a href="identifyparts.html">Teile kennzeichnen</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

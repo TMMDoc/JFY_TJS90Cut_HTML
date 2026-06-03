@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/flux-icon.png">
+  <title>Program Header</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../workflow/index.html">Production Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../workflow/preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">NC Programming Reference</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">DIN format</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Laser Technology</a>
+       <ul>
+        <li><button class="tree blank"></button><a class="active" href="programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsttechno/index.html">Laser Technology commands</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsttechno/lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">NC Programming Reference</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">DIN format</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Laser Technology</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="programhea.html">Program Header</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Program Header</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The program header is the start of the program and executed only once during
+program running and it consists of following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>Program Number</em></strong></p>
+</li>
+<li>
+<p><strong><em>Program Name as comment</em></strong></p>
+</li>
+<li>
+<p><strong><em>ID of the Controller (Tandem operation)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Program Specification</em></strong></p>
+</li>
+<li>
+<p><strong><em>XY Program Limits</em></strong></p>
+</li>
+<li>
+<p><strong><em>Program Dimensioning</em></strong></p>
+</li>
+<li>
+<p><strong><em>Dual head Synchronization (Tandem operation)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Check Work Offset &amp; Special functions</em></strong></p>
+</li>
+<li>
+<p><strong><em>Activation of G17 (XY-Plane) with Sheet rotation</em></strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong><em>Structure:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 59%;">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%1 (Sample.DIN)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Number &amp; Program Name as comment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CNC ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ID of the Controller (1 or 2)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet_Size_X</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Program Specification</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet_Size_Y</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Job_Size_X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Job_Size_Y</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X_Limit_Minus</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">XY Program Limits</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X_Limit_Plus</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y_Limit_Minus</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y_Limit_Plus</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Dimensioning (ABS)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual Head Synchronization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Check Work Offset &amp; Special functions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G17 D=SheetRotation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XY Plane is rotated w.r.t Sheet</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_program_number">Program Number</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The program number is always assigned with the value %<strong>1.</strong> Since all the Laser
+technology programs are assigned as Sub Programs and called from the Main
+program using the number <strong>1</strong>. Hence it is important to make sure the program
+number.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>Program Number must be always %1</em></strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_program_name">Program Name</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The program name is defined in the program as a comment and will be useful for
+block search functions. Depends on the name, the PLC will save the current block
+numbers, Co- ordinates, etc., of the program and when loaded again, their
+respective values are retrieved from the PLC.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>Program Name must be in comment</em></strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cnc_id">CNC ID</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For Dual head tandem operation, 2 programs will be generated for a single job
+and the CNC ID will specify which program to be loaded in the controller as
+follows:</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>CNC_ID = 1, will contain the first half of the program and to be loaded in the
+controller, where the X-axis machine origin point starts.</p>
+</li>
+<li>
+<p>CNC_ID = 2, will contain the second half of the program and to be loaded in
+the controller, where the X-axis machine positive stroke limit is possible.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The Values are assigned to P-fields and for better understanding the P-fields
+are <strong><em>globally declared internally</em></strong> in the program as follows:</p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> CNC_ID P1909</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The CNC_ID is required only for Dual head tandem operation</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_program_specification">Program Specification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The program specification defines the sheet size &amp; Job size along X &amp; Y axis.
+Based on the Machine Origin, the positive or negative sign in the size to be
+indicated.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image3.png" alt="image3" width="222"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bottom Left = X&#43;, Y&#43;</p>
+</li>
+<li>
+<p>Bottom Right = X&#43;, Y-</p>
+</li>
+<li>
+<p>Top Left = X-, Y&#43;</p>
+</li>
+<li>
+<p>Top Right = X- Y-</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Values are assigned to P-fields and for better understanding the P-fields
+are <strong><em>globally declared internally</em></strong> in the program as follows:</p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> Sheet_Size_X P1900</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> Sheet_Size_Y P1901</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> Job_Size_X P1902</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> Job_Size_Y P1903</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>This information will be useful for Scrap cut &amp; Boundary check programs</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xy_program_limits">XY Program Limits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The X &amp; Y-axis program limits are defined to ensure the machine strokes are
+within the limits. They are most useful in Dual head tandem operation, where a
+single job is separated between 2 heads and their limits are defined for the
+safety, boundary check program and Auto Lubrication program .</p>
+</div>
+<div class="paragraph">
+<p>The Values are assigned to P-fields and for better understanding the P-fields
+are <strong><em>globally declared internally</em></strong> in the program as follows:</p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> X_Limit_Minus P1910</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> X_Limit_Plus P1911</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> Y_Limit_Minus P1912</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong> Y_Limit_Plus P1913</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>This information will be more useful for Dual head tandem operation</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_program_dimensioning">Program Dimensioning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The program dimensioning defines the dimensions of axes in the program is
+absolute or incremental.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G90/G91</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dual_head_synchronization">Dual Head Synchronization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If there is any dual head tandem operation, then ‘M50’ command will synchronize
+between two controllers and check for the program name, work offset etc., and
+then proceed further for cutting.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     M50</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The M50 command will be used only for Tandem Operation, else not required</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_work_offset_and_special_functions">Check Work Offset and Special functions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first M15 command in the program will check for the following:</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>With captured work offset and job size, the maximum stroke limits of X &amp; Y
+axis in the program are calculated and then cross checked with their end limits.
+If the Stroke are within the limits, then proceed further else the program will
+be aborted.</p>
+</li>
+<li>
+<p>Check for any special sub program functions such as Nozzle cleaning, Auto
+lubrication etc., is active before start of the cutting. Generally, during
+normal cutting, if any of the special functions are active, they will wait for
+M15 command where the tool will be up.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     M15</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_activation_of_g17_xy_plane_with_sheet_rotation">Activation of G17 (XY-Plane) with Sheet rotation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Activates the XY-Plane with required rotation with respect to sheet, such that
+the program is also rotated during cutting and the jobs are fitted within the
+rotated sheet.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G17 D=SheetRotation</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>From the Edge detection function, the rotation of sheet is calculated</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_program_header_example">Program Header Example:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><em>%1 (PP_Sample_Pgm.DIN)</em></strong><br>
+<strong><em>CNC_ID=1 (Only for Tandem Operation)</em></strong><br>
+<strong><em>Sheet_Size_X = 120</em></strong><br>
+<strong><em>Sheet_Size_Y = 600</em></strong><br>
+<strong><em>Job_Size_X = 105</em></strong><br>
+<strong><em>Job_Size_Y = 573</em></strong><br>
+<strong><em>X_Limit_Minus = 10</em></strong><br>
+<strong><em>X_Limit_Plus = 115</em></strong><br>
+<strong><em>Y_Limit_Minus = 10</em></strong><br>
+<strong><em>Y_Limit_Plus = 583</em></strong><br>
+<strong><em>G90</em></strong><br>
+<strong><em>M50 (Only for Tandem Operation)</em></strong><br>
+<strong><em>M15</em></strong><br>
+<strong><em>G17 D=SheetRotation</em></strong><br></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_program_number">Program Number</a>
+  </li>
+  <li level="1">
+   <a href="#_program_name">Program Name</a>
+  </li>
+  <li level="1">
+   <a href="#_cnc_id">CNC ID</a>
+  </li>
+  <li level="1">
+   <a href="#_program_specification">Program Specification</a>
+  </li>
+  <li level="1">
+   <a href="#_xy_program_limits">XY Program Limits</a>
+  </li>
+  <li level="1">
+   <a href="#_program_dimensioning">Program Dimensioning</a>
+  </li>
+  <li level="1">
+   <a href="#_dual_head_synchronization">Dual Head Synchronization</a>
+  </li>
+  <li level="1">
+   <a href="#_check_work_offset_and_special_functions">Check Work Offset and Special functions</a>
+  </li>
+  <li level="1">
+   <a href="#_activation_of_g17_xy_plane_with_sheet_rotation">Activation of G17 (XY-Plane) with Sheet rotation</a>
+  </li>
+  <li level="1">
+   <a href="#_program_header_example">Program Header Example:</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Laser Technology</a></span>
+ <span class="next"><a href="technology.html">Technology Table (TT) Transfer</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

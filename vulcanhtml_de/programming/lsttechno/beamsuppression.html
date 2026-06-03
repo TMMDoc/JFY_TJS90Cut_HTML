@@ -1,0 +1,1558 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Strahlunterdrückung</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Willkommen bei TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/material.html">Materialbestand</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">NC-Programmierreferenz</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../din/index.html">DIN-Format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/4_lasertechnology/index.html">Lasertechnologie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../din/4_lasertechnology/5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Lasertechnologie-Befehle</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a class="active" href="beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">NC-Programmierreferenz</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Lasertechnologie-Befehle</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="beamsuppression.html">Strahlunterdrückung</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Strahlunterdrückung</h1>
+<div class="sect1">
+<h2 id="_tc_microjoint">TC_MICROJOINT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Microjoints/Nanojoints</div>
+<p>Microjoints sind Mikrostege, die normalerweise nur mit dem
+Programmiersystem TruTops programmiert werden konnten. Die so definierten
+Microjoints sind fest im NC-Programm verankert. Sie können während der
+Teilebearbeitung an der Maschine nicht verändert oder abgewählt werden.</p>
+</div>
+<div class="paragraph">
+<p>Nanojoints erzeugen gezielt kleine Verbindungen an der Blechunterseite
+zwischen dem Schnittteil und dem Restgitter. Nanojoint ist nur für bestimmte
+Schneidverfahren und Blechstärken verfügbar (siehe "Schneiddaten" in den
+Datensammlungstabellen).</p>
+</div>
+<div class="paragraph">
+<p>Je nach Maschine ist es auch möglich, Microjoints/Nanojoints direkt an der
+Maschine zu programmieren und bei Bedarf an- oder abzuwählen. Es gibt zwei
+verschiedene Arten von Microjoints:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Programmierte Microjoints/Nanojoints, die innerhalb der Kontur oder am
+Ende der Kontur über G-Funktionen definiert werden. Dabei wird die Kontur
+direkt im NC-Text des Teileprogramms markiert.</p>
+</li>
+<li>
+<p>Automatische Microjoints/Nanojoints, die immer am Ende der Kontur gesetzt
+und ohne G-Funktionen definiert werden. Die Definition erfolgt hier über die
+Abmessung der Kontur in X- und Y-Richtung. Die Kontur wird nicht im NC-Text
+markiert.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Folgende Punkte gelten:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Microjoints, die nur an der Maschine geändert werden können, sind nur an der
+Maschine auf Flächen von Rechteckrohren oder bei der Planbearbeitung möglich.</p>
+</li>
+<li>
+<p>Die Daten für programmierte Microjoints werden in einer programmspezifischen
+Tabelle gespeichert. Die Daten können über die Benutzeroberfläche der Steuerung
+angezeigt und geändert werden. Mit dieser Tabelle können die Microjoint-Typen
+einzeln aktiviert und deaktiviert werden. Die Tabelle wird über den NC-Zyklus
+TC_MICROJOINT ("Tabellenname") aufgerufen.</p>
+</li>
+<li>
+<p>Der Aktivierungsstatus der Microjoints in der Tabelle wird mit dem Programm
+gespeichert. Dadurch wird sichergestellt, dass ein vorhandenes Programm nach
+jedem Programmwechsel unter den gleichen Bedingungen bearbeitet wird, auch beim
+Einsatz von Vollautomat-Systemen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Tabelle mit Microjoint-Daten direkt an der Steuerung aufrufen und programmierte
+oder automatische Microjoints im NC-Text aktivieren oder deaktivieren.</p>
+</div>
+<div class="paragraph">
+<p>Der Zyklus TC_MICROJOINT im NC-Programm ruft die Tabelle mit allen Parametern
+und dem Aktivierungsstatus der Funktionen auf. Daten können in der Tabelle
+geändert werden. Die geänderte Tabelle wird automatisch im NC-Kern aktualisiert.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_MICROJOINT("Tabellenname"):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Selbsthaltende (modale) Wirkung.</p>
+</li>
+<li>
+<p>So früh wie möglich vor der erforderlichen Konturbearbeitung aufrufen.</p>
+</li>
+<li>
+<p>Wird durch Programmende oder durch Auswahl einer neuen Tabelle abgewählt.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Parameter der Technologietabelle MICROJOINT</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Werte</th>
+<th class="tableblock halign-left valign-top">Einheit</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tabellenkennung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name der Tabelle, z. B. "MIJO-1"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Programmierte MicroJoints aktiv</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmierte MicroJoints nicht aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmierte MicroJoints aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Automatische Microjoints aktiv</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatische Microjoints nicht aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatische Microjoints aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MicroJoint-Größe kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microjoint-Größe kleine Kontur</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MicroJoint-Größe mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microjoint-Größe mittlere Kontur</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MicroJoint-Größe große Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microjoint-Größe große Kontur</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. Konturabmessung in X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. Konturabmessung in X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. Konturabmessung in X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. Konturabmessung in X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. Konturabmessung in Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. Konturabmessung in Y</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. Konturabmessung in Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. Konturabmessung in Y</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">190</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Einstechtyp nach Microjoints (PiercingTypeAfterMicrojoint)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechtyp nach Microjoints</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normales Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sanftes Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">270</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Automatische Nanojoints aktiv (AutomaticNanoJointActive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatische Nanojoints nicht aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatische Nanojoints aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">280</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Programmierte Nanojoints aktiv (NanoJointProgramActive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmierte Nanojoints nicht aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmierte Nanojoints aktiv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">290</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Stabilität der Nanojoints (NanoJointStabilityLargeContour)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stabilität der Nanojoints großer Konturen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erhöht.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduziert.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_g821">G821</h3>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Definition von programmierbaren, konturbezogenen Microjoints.</p>
+</div>
+<div class="paragraph">
+<p>Mit dieser G-Funktion wird der NC-Block innerhalb der Kontur durch Setzen eines
+Microjoints markiert. Der Microjoint kann innerhalb der Kontur oder am Ende der
+Kontur gesetzt werden.</p>
+</div>
+<div class="paragraph">
+<p>Wird der Microjoint innerhalb der Kontur gesetzt, erfolgt automatisch ein
+erneutes Einstechen.</p>
+</div>
+<div class="paragraph">
+<div class="title">Einschränkungen</div>
+<p>Einschränkungen für Microjoints innerhalb der Kontur:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sonderformen des Einstechens, wie z. B. der "Rückschritt", werden nicht
+unterstützt. Dies liegt daran, dass das Anfahrverfahren danach in der Kontur
+nicht möglich ist.</p>
+</li>
+<li>
+<p>Das Anfahren mit reduzierten Schneidparametern und anschließendes
+Umschalten auf normale Parameter ist nicht möglich.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Je nach Maschine sind Sonderformen über den Zyklus
+TC_LEAD_IN möglich (siehe "TC_LEAD_IN", S. 5-34).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>G821:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Funktion G821 ist einer Gruppe von G-Befehlen zugeordnet. Aus dieser
+Gruppe darf nur ein G-Befehl innerhalb eines NC-Blocks verwendet werden. Zu
+dieser Gruppe gehören die G-Befehle G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wird berücksichtigt, wenn programmierte Microjoints über die
+Microjoint-Tabelle aktiviert oder deaktiviert werden.</p>
+</li>
+<li>
+<p>Ist in der Microjoint-Tabelle standardmäßig nicht aktiviert. Standard: 0 =
+nicht aktiviert; 1 = aktiviert.</p>
+</li>
+<li>
+<p>Wird in den NC-Block der Kontur geschrieben, an dessen Ende der Microjoint
+gesetzt werden soll.</p>
+</li>
+<li>
+<p>Wird nach der Aktivierung sofort wirksam, wenn sich der Laserschneidkopf
+innerhalb der Positionierbewegung zwischen zwei Konturen befindet. Befindet sich
+der Laserschneidkopf jedoch direkt bei der Bearbeitung einer Kontur, wird die
+Funktion erst bei der nächsten Konturbearbeitung wirksam.</p>
+</li>
+<li>
+<p>Wird die Funktion während der Bearbeitung einer Kontur deaktiviert, wird in
+dieser Kontur ein weiterer Microjoint gesetzt. Die folgende Kontur wird ohne
+Microjoint bearbeitet. Befindet sich der Bearbeitungskopf innerhalb einer
+Positionierbewegung zwischen zwei Konturen, wird die folgende Kontur ohne
+Microjoint bearbeitet.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Beispiel</div>
+<p>Programmierte Microjoints am Ende der Kontur:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_MICROJOINT ("MJT1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vollkreis mit Microjoint am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Langloch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Langloch mit Microjoint am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Programmierte Microjoints in der Kontur:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LEAD_IN("LIT-1", T_LEFT)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y40 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Halbkreis des Vollkreises mit Microjoint innerhalb der Kontur</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2. Halbkreis des Vollkreises ohne Microjoint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X40 Y30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Langloch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Teil des Langlochs mit Microjoint innerhalb der Kontur</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N450</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_g822">G822</h3>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Überspringen des automatischen Microjoints konturbezogen.</p>
+</div>
+<div class="paragraph">
+<p>Das Kriterium für einen automatisch am Konturende gesetzten Microjoint ist die
+Abmessung der Kontur in X- und Y-Richtung. Liegt die maximale Abmessung der
+Kontur in X- oder Y-Richtung innerhalb eines ebenfalls in der
+Microjoint-Tabelle definierten Bereichs, wird automatisch am Ende jeder Kontur
+ein Microjoint gesetzt.</p>
+</div>
+<div class="paragraph">
+<p>Da die Steuerung nicht zwischen geschlossenen und offenen Konturen
+unterscheiden kann, muss jede offene Kontur bereits im Programmiersystem als
+solche gekennzeichnet werden. Andernfalls werden auch an offenen Konturen
+Microjoints gesetzt, d. h. diese offenen Konturen werden verkürzt.</p>
+</div>
+<div class="paragraph">
+<p>Mit der G-Funktion G822 können unerwünschte, automatische Microjoints
+an der Steuerung übersprungen werden.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>G822:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Funktion G822 ist einer Gruppe von G-Befehlen zugeordnet. Aus dieser
+Gruppe darf nur ein G-Befehl innerhalb eines NC-Blocks verwendet werden. Zu
+dieser Gruppe gehören die G-Befehle G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wird berücksichtigt, wenn automatische Microjoints über die
+Microjoint-Tabelle aktiviert oder deaktiviert werden. Die Tabelle wird über
+TC_MICROJOINT ("Tabellenname") aufgerufen.</p>
+</li>
+<li>
+<p>Ist in der Microjoint-Tabelle standardmäßig nicht aktiviert. Standard: 0 =
+nicht aktiviert; 1 = aktiviert.</p>
+</li>
+<li>
+<p>Kann für die jeweilige Kontur in einem separaten Block oder am Ende eines
+NC-Blocks geschrieben werden, aber nach TC_LASER_ON und vor TC_LASER_OFF.</p>
+</li>
+<li>
+<p>Wird nach der Aktivierung sofort wirksam, wenn sich der Laserschneidkopf
+innerhalb der Positionierbewegung zwischen zwei Konturen befindet. Befindet sich
+der Laserschneidkopf jedoch direkt bei der Bearbeitung einer Kontur, wird die
+Funktion erst bei der nächsten Konturbearbeitung wirksam.</p>
+</li>
+<li>
+<p>Wird die Funktion während der Bearbeitung einer Kontur deaktiviert, wird in
+dieser Kontur ein weiterer Microjoint gesetzt. Die folgende Kontur wird ohne
+Microjoint bearbeitet. Befindet sich der Bearbeitungskopf innerhalb einer
+Positionierbewegung zwischen zwei Konturen, wird die folgende Kontur ohne
+Microjoint bearbeitet.</p>
+</li>
+<li>
+<p>Wird mit dem nächsten TC_LASER_OFF gelöscht.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N205</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G822</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatischen Microjoint überspringen, separater NC-Block</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vollkreis mit Microjoint am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10 G822</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Langloch mit Unterdrückung eines automatischen Microjoints am Ende des NC-Blocks</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Langloch mit Microjoint am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_g824">G824</h3>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Programmierbare Nanojoints setzen.</p>
+</div>
+<div class="paragraph">
+<p>Nanojoints halten das Teil nur im unteren Schnittbereich. Dies wird durch
+kurzzeitige Reduzierung der Laserleistung erreicht. Nanojoints sind für
+anspruchsvolle Teile geeignet oder wenn es möglich sein soll, Teile einfach
+aus dem Restblech herauszubrechen.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>G824:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Funktion G824 ist einer Gruppe von G-Befehlen zugeordnet. Aus dieser
+Gruppe darf nur ein G-Befehl innerhalb eines NC-Blocks verwendet werden. Zu
+dieser Gruppe gehören die G-Befehle G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wird berücksichtigt, wenn programmierbare Nanojoints über die
+Nanojoint-Tabelle aktiviert oder deaktiviert werden. Die Tabelle wird über
+TC_MICROJOINT ("Tabellenname") aufgerufen.</p>
+</li>
+<li>
+<p>Ist in der Nanojoint-Tabelle standardmäßig nicht aktiviert. Standard: 0 =
+nicht aktiviert; 1 = aktiviert.</p>
+</li>
+<li>
+<p>Kann für die jeweilige Kontur in einem separaten Block oder am Ende eines
+NC-Blocks geschrieben werden, aber nach TC_LASER_ON und vor TC_LASER_OFF.</p>
+</li>
+<li>
+<p>Wird nach der Aktivierung sofort wirksam, wenn sich der Laserschneidkopf
+innerhalb der Positionierbewegung zwischen zwei Konturen befindet. Befindet sich
+der Laserschneidkopf jedoch direkt bei der Bearbeitung einer Kontur, wird die
+Funktion erst bei der nächsten Konturbearbeitung wirksam.</p>
+</li>
+<li>
+<p>Wird die Funktion während der Bearbeitung einer Kontur deaktiviert, wird in
+dieser Kontur ein weiterer Nanojoint gesetzt. Die folgende Kontur wird ohne
+Nanojoint bearbeitet. Befindet sich der Bearbeitungskopf innerhalb einer
+Positionierbewegung zwischen zwei Konturen, wird die folgende Kontur ohne
+Nanojoint bearbeitet.</p>
+</li>
+<li>
+<p>Wird mit dem nächsten TC_LASER_OFF gelöscht.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Beispiel</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC-Programm</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G90 X20 Y60 F100000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"HUGO",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G2 X20 Y60 J-10 G824; full circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vollkreis mit Nanojoint am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"HUGO",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10; oblong hole</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Langloch mit Unterdrückung eines automatischen Nanojoints<br>
+Am Ende des NC-Blocks</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G824</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Langloch mit Nanojoint am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G1 X0 Y0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_lead_in">TC_LEAD_IN</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Mit dem Zyklusaufruf TC_LEAD_IN im NC-Programm werden Technologieparameter für
+die optimale Anfahrstrategie nach einem Microjoint ausgewählt.</p>
+</div>
+<div class="paragraph">
+<p>Der Zyklus ist bei folgenden Maschinen möglich:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruLaser Serie 1000</p>
+</li>
+<li>
+<p>TruLaser Serie 3000</p>
+</li>
+<li>
+<p>TruLaser Serie 5000</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Programmierung</div>
+<p>TC_LEAD_IN("Anfahrtabelle", Anfahrrichtung):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Anfahrtabelle:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Tabellen enthalten alle relevanten Informationen über Parameter
+und Methoden des Anfahrverfahrens.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Anfahrrichtung:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Je nach Parametereinstellung wird die programmierte
+Kontur links oder rechts von der Bearbeitungsrichtung angefahren.</p>
+</li>
+<li>
+<p>TC_LEAD_IN ("Anfahrtabelle", T_LEFT): Anfahren der
+programmierten Kontur links von der Bewegungsrichtung.</p>
+</li>
+<li>
+<p>TC_LEAD_IN ("Anfahrtabelle", T_RIGHT): Anfahren der
+programmierten Kontur rechts von der Bewegungsrichtung.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Der Parameter Anfahrrichtung kennzeichnet den Bereich für das Fertigteil und den Abfall eines Teils.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Parameter der Technologietabelle LEAD_IN</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Werte</th>
+<th class="tableblock halign-left valign-top">Einheit</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tabellenkennung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name der Tabelle, z. B. "LI-1"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Anfahrstrategie kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vollständiges Anfahren ohne Vorschnitt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduziertes Anfahren auf den ersten 80 % des linearen Anfahrwegs ohne Vorschnitt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahren mit Vorschnitt, reduziertes Anfahren bis der Einstechpunkt wieder erreicht ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrstrategie mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID20.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrstrategie große Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID20.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Einstechtyp kleine Kontur (PiercingTypeSmall)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normales Einstechen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sanftes Einstechen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechtyp mittlere Kontur (PiercingTypeMedium)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID50.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechtyp große Kontur (PiercingTypeLarge)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID50.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">Anfahrverfahren kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen und Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen und Schneiden ohne Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen ohne Abstandsregelung, Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen mit Abstandsregelung, Schneiden ohne Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Einstechen, Schneiden mit Abstandsregelung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen ohne Rampenzyklus, Schneiden mit Abstandsregelung mit analoger Laserleistungssteuerung (SprintLine).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Einstechen ohne Rampenzyklus, Schneiden ohne Abstandsregelung mit analoger Laserleistungssteuerung (SprintLine).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Einstechen, Schneiden mit Abstandsregelung mit analoger Laserleistungssteuerung (SprintLine).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrverfahren mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID80.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrverfahren große Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID80.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">Anfahrschneidtyp kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Die Codierung enthält drei Ziffern:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1. Ziffer: Kontur</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1: Große Kontur.</p>
+</li>
+<li>
+<p>2: Mittlere Kontur.</p>
+</li>
+<li>
+<p>3: Kleine Kontur.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2. Ziffer: Schneidgeschwindigkeit</p>
+<div class="ulist">
+<ul>
+<li>
+<p>0: Normal.</p>
+</li>
+<li>
+<p>1: Reduziert ab Einstechloch.</p>
+</li>
+<li>
+<p>3: Reduziert bei dickem Blech.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3. Ziffer: Beschleunigung</p>
+</li>
+<li>
+<p>0: Normal.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Schneiden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden kleine Kontur, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">310</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden kleine Kontur, reduziertes Anfahren ab Einstechloch, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">330</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden kleine Kontur, reduziertes Anfahren bei dickem Blech, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">120</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Anfahrschneidtyp mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Schneiden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden mittlere Kontur, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden mittlere Kontur, reduziertes Anfahren ab Einstechloch, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden mittlere Kontur, reduziertes Anfahren bei dickem Blech, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Anfahrschneidtyp große Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Schneiden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden große Kontur, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden große Kontur, reduziertes Anfahren ab Einstechloch, normale Beschleunigung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schneiden große Kontur, reduziertes Anfahren bei dickem Blech, normale Beschleunigung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140, 150, 160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdampfungstyp</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verdampfungstyp<br>
+Bestimmt, wie die Verdampfung beim Anfahren erfolgt</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ID kleine Kontur = 140</p>
+</li>
+<li>
+<p>ID mittlere Kontur = 150</p>
+</li>
+<li>
+<p>ID große Kontur = 160</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Verdampfungstyp kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keine Verdampfung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kreisförmige Verdampfung nur am Einstechloch.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdampfung der gesamten Anfahrfahne.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdampfungstyp mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID140.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdampfungstyp große Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Für Wertebereich und Beschreibung siehe ID140.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geradenlänge kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Länge des linearen Teils der Anfahrfahne.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geradenlänge mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Länge des linearen Teils der Anfahrfahne.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">190</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geradenlänge große Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Länge des linearen Teils der Anfahrfahne.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bogenradius kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius der Übergangskurve zwischen dem linearen Teil der Anfahrfahne und dem Eintrittspunkt in die Kontur.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bogenradius mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius der Übergangskurve zwischen dem linearen Teil der Anfahrfahne und dem Eintrittspunkt in die Kontur.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bogenradius große Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius der Übergangskurve zwischen dem linearen Teil der Anfahrfahne und dem Eintrittspunkt in die Kontur.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrwinkel kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Winkel zwischen dem linearen Teil der Anfahrfahne und dem Werkzeugweg (entspricht dem Bogenwinkel).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrwinkel mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Winkel zwischen dem linearen Teil der Anfahrfahne und dem Werkzeugweg (entspricht dem Bogenwinkel).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anfahrwinkel große Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Winkel zwischen dem linearen Teil der Anfahrfahne und dem Werkzeugweg (entspricht dem Bogenwinkel).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">260</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorschnittlänge kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Länge des Weges, der bei Anfahrstrategie 3 auf dem linearen Teil der Anfahrfahne im reduzierten Modus vorgeschnitten wird. Die Vorschnittlänge ist auf den Wert des Parameters "Geradenlänge" begrenzt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">270</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorschnittlänge mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Länge des Weges, der bei Anfahrstrategie 3 auf dem linearen Teil der Anfahrfahne im reduzierten Modus vorgeschnitten wird. Die Vorschnittlänge ist auf den Wert des Parameters "Geradenlänge" begrenzt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">280</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorschnittlänge große Kontur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Länge des Weges, der bei Anfahrstrategie 3 auf dem linearen Teil der Anfahrfahne im reduzierten Modus vorgeschnitten wird. Die Vorschnittlänge ist auf den Wert des Parameters "Geradenlänge" begrenzt.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/image12.png" alt="image12" width="400">
+</div>
+<div class="title">Beispiel Anfahrrichtung</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tc_microjoint">TC_MICROJOINT</a>
+  </li>
+  <li level="2">
+   <a href="#_g821">G821</a>
+  </li>
+  <li level="2">
+   <a href="#_g822">G822</a>
+  </li>
+  <li level="2">
+   <a href="#_g824">G824</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_lead_in">TC_LEAD_IN</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="bevelcut.html">Fasenschnitt</a></span>
+ <span class="next"><a href="flyingfocus.html">Änderung der Fokuslage</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

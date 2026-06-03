@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Work offsets</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Production Workflow</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a class="active" href="offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC Programming Reference</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">Laser Technology commands</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Production Workflow</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="offset.html">Work offsets</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Work offsets</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The machine could determine the work offset in multiple ways.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/wo.png" alt="WO"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_position_diode">Position diode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The most common way is to jog the green laser pointer to the desired position
+and press the <strong>Set</strong> button. The machine will use it as the work offset.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nozzle_center">Nozzle center</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Especially in the situation when the machine already positioned the nozzle to
+the zero point this option might be useful. The machine will use the nozzle
+center as the work offset.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manual">Manual</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In special operations or if you work with fixtures this option will give you a
+possibility to set the work offset manually.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_point_edge_detection">2-point edge detection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This option is useful when you need to set the work offset on the edge of the
+material. The machine will ask you to jog the nozzle to the first point and
+automatically determine the corner of the sheet. This function is fast and
+geared to small parts to be placed on one corner of the sheet.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The accuracy of the 2-point strategy is limited by the accuracy of the
+machine and therefore not to be used on a full sheet to be cut.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The logic works as follows:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/2pt.svg" alt="2pt" width="650"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You select with the laser a position close to the desired zero position.</p>
+</li>
+<li>
+<p>The machine does a corner search in X direction from the position where you
+started.</p>
+</li>
+<li>
+<p>The machine does a corner search on <strong>the closest center between two slats</strong>.
+This will maximize a accurate corner measuring.</p>
+</li>
+<li>
+<p>The machine goes to the corner it found and cuts the part after confirmation.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="test">3-point edge detection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The 3 point method is much more accurate and takes 3 measurement points on a
+full sheet. It assumes we have a full sheet (&gt;1000x2000) on the table and does
+three corner searches at x300, x1500 and y300 to find the zero point. It is the
+preferred method to cut a full sheet.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/3pt.png" alt="3pt" width="650"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the edge detection is performed on top of a slat it will produce
+inaccurate results. Therefore the machine picks automatically a position between
+two slats.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Before applying three-point edge detection in the laser machine, the sheet
+size must be specified in the Flux software. Ensure that the sheet size
+specified in the program matches the actual sheet loaded in the machine, Make
+sure that pilot diode is placed in the corner of the sheet
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/3point.png" alt="3point" width="650">
+</div>
+</div>
+<div class="paragraph">
+<p>Selecting the 3-point Edge Detection in the work offset menu, the following
+operation will be carried out:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, move the cutting head to the pilot diode at the (0,0) position on the sheet edge.</p>
+</li>
+<li>
+<p>The cutting head will move to this position to find the first edge of the sheet.</p>
+</li>
+<li>
+<p>After detecting the first edge in, the cutting head will then move to the second
+position to find the second edge of the sheet.</p>
+</li>
+<li>
+<p>After detecting the second edge, the cutting head will find the third edge of
+the sheet (to find the slope of the sheet).</p>
+</li>
+<li>
+<p>Upon confirmation, the head position will automatically move to the start
+position and executes the cutting process.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_position_diode">Position diode</a>
+  </li>
+  <li level="1">
+   <a href="#_nozzle_center">Nozzle center</a>
+  </li>
+  <li level="1">
+   <a href="#_manual">Manual</a>
+  </li>
+  <li level="1">
+   <a href="#_2_point_edge_detection">2-point edge detection</a>
+  </li>
+  <li level="1">
+   <a href="#test">3-point edge detection</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="simulation.html">Simulation run</a></span>
+ <span class="next"><a href="run.html">Run</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

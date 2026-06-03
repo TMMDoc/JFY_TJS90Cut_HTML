@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Identifying parts</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">Production Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">NC Programming Reference</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../din/index.html">DIN format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/4_lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../din/4_lasertechnology/5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Laser Technology commands</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a class="active" href="identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">NC Programming Reference</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Laser Technology commands</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="identifyparts.html">Identifying parts</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Identifying parts</h1>
+<div class="sect1">
+<h2 id="_tc_write">TC_WRITE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Variable text can be engraved on the workpiece with the TC_WRITE cycle.</p>
+</div>
+<div class="paragraph">
+<p>The TC_WRITE cycle outputs the text at the current position in positive X
+direction. The laser technology table, the font height in mm and the text
+direction in degrees can be changed via the cycle&#8217;s corresponding transfer
+parameter.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Plane processing should be selected for round tubes.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>TC_WRITE(T_TEXT,T_TABNAME,T_HEIGHT,T_ANGLE)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TC_WRITE must be programmed before contour machining (TC_LASER_ON).</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Transfer parameters</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T_TEXT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text to be engraved on the workpiece (max. 255 characters).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T_TABNAME</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the laser technology table.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T_HEIGHT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Font size in mm or inch.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T_ANGLE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default value: 0°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter for text rotation in degrees.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Example</div>
+<p>TC_WRITE("Teil Nr. 17","TTBC-8252O2",5,0)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image4.jpeg" alt="image4" width="400">
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Counting parts using a variable</div>
+<p>int actNumber = 13<br>
+TC_WRITE("Part No.: ”&lt;&lt; actNumber,"TTBC-8252O2",10,0)</p>
+</div>
+<div class="paragraph">
+<div class="title">Special macros</div>
+<p>The following macros are stored at the machine. They allow production
+information to be output (date and/or time of the production of a workpiece):</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Macro</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engrave name of the current main program with program suffix *MPF.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM_MAINPROG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_WRITE(TM_MAINPROG,"TTBC-8252O2",10,0)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engrave name of the current main program.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM_MAINPROG_SHORT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_WRITE(TM_MAINPROG_SHORT,"TTBC-8252O2",10,0)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engrave current time. Format: hh:mm:ss.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM_TIME</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_WRITE(TM_TIME,"TTBC-8252O2",10,0)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engrave current date. Metric format: dd.mm.yyyy / Inch format: mm/dd/yyyy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM_DATE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Metric programming:<br>
+TC_WRITE(TM_DATE,"TTBC-8252O2",10,0)<br>
+Inch programming:<br>
+TC_WRITE(TM_DATE,"TTBC-8252O2",0.393,0)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engrave time and current date (formatting depends on the unit of measurement).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM_TIMEDATE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Metric programming:<br>
+TC_WRITE(TM_TIMEDATE,"TTBC-8252O2",5,0)<br>
+Inch programming:<br>
+TC_WRITE(TM_TIMEDATE,"TTBC-8252O2",0.197,0)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engrave the name of the machine.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM_MACHINE_NUMBER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_WRITE(TM_MACHINE_NUMBER,"TTBC-8252O2",0.197,0)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_label">TC_LABEL</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This function is available for 2D laser machines of the TruLaser Series
+5000 and TruLaser Series 3000 with the SINUMERIK ONE control.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>The TC_LABEL cycle can be used to identify workpieces with the following labels:
+* Data Matrix Code.
+* Plain text.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>TC_LABEL</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LabelGroup ID: Parameter ID 10 (consecutive number of the part) from the
+PARTS_IN_PROGRAM_POS table.</p>
+</li>
+<li>
+<p>TC_LABEL is in the main program.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">LABEL_DATA technology table parameters</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Parameters</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Unit</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LabelGroupID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Each different label has a number (LabelGroupID). A data record for the LABEL_DATA table contains the parameters for a label.<br>
+If multiple labels are to be applied to a part, there are multiple data records for one LabelGroupID.<br>
+If a label is to be applied to multiple parts, the same LabelGroupID is called up in multiple PARTS_IN_PROGRAM_POS data records.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of the first label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of the nth label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sequence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 - n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the sequence in which the labels are to be applied to the part (if there are multiple data records for one LabelGroupID).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset X position</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the X position of the left lower corner of the circumscribing rectangle of the label relative to the center of gravity of the part in the part coordinate system (PARTS_IN_PROGRAM_POS).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset Y position</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the Y position of the left lower corner of the circumscribing rectangle of the label relative to the center of gravity of the part in the part coordinate system (PARTS_IN_PROGRAM_POS).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset angle</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the angular position of the label relative to the part coordinate system (PARTS_IN_PROGRAM_POS), relative to the left lower corner of the circumscribing rectangle of the label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text to be printed on the parts copy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label box length X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum expansion of the label in the X direction in the label coordinate system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label box length Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum expansion of the label in the Y direction in the label coordinate system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label type</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of identification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text (label text is Base64 coded).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Matrix Code (Label text is Base64 coded).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text height</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Height of the proposed text. The cap height is given (height of the capital letters).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tc_write">TC_WRITE</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_label">TC_LABEL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="lasercutting.html">Laser cutting</a></span>
+ <span class="next"><a href="multiprogstruc.html">Multiple program structure</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

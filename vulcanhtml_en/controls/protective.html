@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Protective Glass Monitoring</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Production Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Controls</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a class="active" href="protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC Programming Reference</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">Laser Technology commands</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Controls</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="protective.html">Protective Glass Monitoring</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Protective Glass Monitoring</h1>
+<div class="sect1">
+<h2 id="_parametrization">Parametrization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The protective glass monitoring is a system that monitors the condition of the
+protective glass. It could prevent you to produce parts of low quality or even
+machine damage.</p>
+</div>
+<div class="paragraph">
+<p>The behavior is defined as follows :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When the quality value of the protective glass is lower than the error level
+during cutting: The machine will stop processing, the beam will turn off, and a
+window will pop up on the front of the HMI.</p>
+</li>
+<li>
+<p>If the <strong>Close</strong> button on the window is clicked, the machine will continue
+cutting the current sheet. Before processing the next sheet, it will perform a
+protective glass measurement. If the quality is still below the error level, the
+window will pop up again. Clicking "Close" will allow the machine to continue
+processing, and the window will appear again at the end of the sheet.</p>
+</li>
+<li>
+<p>If the glass is contaminated from the beginning, after cutting the first
+contour, the machine will stop and perform a protective glass measurement. If
+the quality is below the error level, a window will pop up. Clicking the <strong>Close</strong>
+button will allow the machine to continue cutting the current sheet.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is offline measurement and a online measurement possible :</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Offline Measurement</th>
+<th class="tableblock halign-left valign-top">Online Monitoring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Measurement type</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed measurement conditions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In situ measurement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Triggers</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relative limit to clean reference value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relative limit to clean reference value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Effect</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result in percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reaction at contour end</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Purpose</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prevents production of material scrap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Triggers offline measurement</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Offline Measurement</strong> : Offline measurement is used to check the glass quality
+under stable conditions. During offline measurement, three different levels of
+laser power are emitted, each for a specific time period — typically 500 ms. The
+reflected light from the glass is measured at each power level, and the
+normalized reflection luminosity is calculated and compared with a reference
+value, which is obtained using the same method. An offline broken factor is also
+involved in this calculation to determine the glass quality. For the same
+reflection luminosity value, a higher broken factor indicates better glass
+quality. Therefore, only when the glass is significantly dirty will a warning or
+error be triggered.</p>
+</div>
+<div class="paragraph">
+<p><strong>Online Monitoring</strong> : Online measurement is used to check the glass quality
+during cutting. Whenever there is laser output, the average value of the
+reflected light over a time period is calculated, and a low-pass filter is
+applied to this value. Due to the unstable nature of the laser output and back
+reflection from the cutting sheet, the online value is significantly higher than
+the offline one.</p>
+</div>
+<div class="paragraph">
+<p>The parametrization is done in the setting page :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/protective.png" alt="protective" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_luminosity_measurement">Luminosity measurement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The protective window measurement is based on a luminosity measurement.  If
+condition is <strong>Clean</strong>, protective window status is good to proceed with cutting
+in terms of good cutting results. If condition is <strong>Contaminated</strong>, protective
+window status is poor and its advisable to change the protective window to
+experience good cutting results.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi0.png" alt="lumi0" width="650"></span></p>
+</div>
+<div class="paragraph">
+<p>Depending on the result of quality value percentage, clean or replace the
+protective glass.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>80%-90% &#8594; clean<br></p>
+</li>
+<li>
+<p>&lt; 80% &#8594; replace</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lumimeasure.png" alt="LumiMeasure" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>With the above entries, X and Y axis moves towards the positioned value.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lumierror.png" alt="LumiError" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Running the program will follow the data of frequency and duty as per the user
+requirement. Power parameter is pre-defined as step up of  500W, 1000W and
+1500W.</p>
+</div>
+<div class="paragraph">
+<p>Focus diameter, Focus distance and dwell time also has been modified according
+to the user requirements. Entered values can be monitored when the program runs.
+The specified Dwell time will hold the program and then abort the program.</p>
+</div>
+<div class="paragraph">
+<p>Measure mode has offline and reference data. In offline selection, user can run
+the program and check the status of protective window. In reference selection,
+user can cross verify the data and values of quality and linearity and it can be
+saved using save option. Generally, reference selection will be opted when the
+protective window is newer which gives fine set of results.</p>
+</div>
+<div class="paragraph">
+<p>When lumi measure program runs, it takes the log of the data and it can be read
+in <strong>LumiMeasurelog.txt</strong> from the path
+<code>C:\ProgramData\Metamation{APPNAME}\Log\Currentyear\Currentmonth\Currentday</code> or
+in the UI.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi1.png" alt="t" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi2.png" alt="lumi2" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>With reference to the above calculation, the following parameters will be added
+in the MK file to optimize the monitoring function :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Offline broken factor</p>
+</li>
+<li>
+<p>Online broken factor</p>
+</li>
+<li>
+<p>Warning limit in percentage</p>
+</li>
+<li>
+<p>Error limit in percentage</p>
+</li>
+<li>
+<p>Delay time in secs to report warning</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi3.png" alt="lumi3" width="750"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_parametrization">Parametrization</a>
+  </li>
+  <li level="1">
+   <a href="#_luminosity_measurement">Luminosity measurement</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="lubricationcycle.html">Lubrication Cycle</a></span>
+ <span class="next"><a href="scrapcut.html">Scrap Cut</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

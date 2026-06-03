@@ -1,0 +1,687 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/flux-icon.png">
+  <title>Laserparameter-Auswahl & Aktualisierung</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Willkommen bei TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../productionplan/create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/material.html">Materialbestand</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">NC-Programmierreferenz</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">DIN-Format</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Lasertechnologie</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a class="active" href="laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsttechno/index.html">Lasertechnologie-Befehle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsttechno/lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">NC-Programmierreferenz</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">DIN-Format</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Lasertechnologie</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="laserparam.html">Laserparameter-Auswahl & Aktualisierung</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Laserparameter-Auswahl & Aktualisierung</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vor dem Start der Lasertechnologie-Bearbeitung einer Kontur ist es wichtig, die
+geeigneten Parameter für die jeweilige Kontur auszuwählen und zu aktualisieren.
+Diese Parameter werden für jede Kontur im Programm aktualisiert.</p>
+</div>
+<div class="paragraph">
+<p>Die funktionalen Parameter der Lasertechnologie sind wie folgt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Einstechverfahren (PM)</p>
+</li>
+<li>
+<p>Schneidverfahren (CM)</p>
+</li>
+<li>
+<p>Endverfahren (EM)</p>
+</li>
+<li>
+<p>Z_Rückzugshöhe (ZRH)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Parameterwerte werden in den P-Feldern gespeichert und zum besseren
+Verständnis werden die P-Felder <strong><em>intern im Programm global deklariert</em></strong>:</p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   PM P1904</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   CM P1905</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   EM P1906</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   ZRH P1907</em></p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   Update_Param G22 L9400 (ruft Unterprogramm %9400 zur Parameteraktualisierung auf)</em></p>
+</div>
+<div class="paragraph">
+<p><strong><em><span class="underline">Parameterstruktur:</span></em></strong></p>
+</div>
+<div class="paragraph">
+<p><strong><em>PM=20.000 CM=100.000</em></strong></p>
+</div>
+<div class="paragraph">
+<p><strong><em>EM=1.000 ZRH=20</em></strong></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Update_Param</em></strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_einstechverfahren">Einstechverfahren</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Einstechverfahren werden basierend auf der Kombination verschiedener
+verfügbarer Einstecharten definiert.</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Die Einstechverfahren werden als Fließkommazahlen = 20.123 definiert</p>
+</li>
+<li>
+<p>Die Ziffern vor dem Dezimalpunkt stellen die <strong>"Einstech-ID"</strong> dar</p>
+</li>
+<li>
+<p>Die Ziffern nach dem Dezimalpunkt stellen die <strong>"Einstech-AID"</strong> dar</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong><em><span class="underline">Einstech-ID:</span></em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 69%;">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 13%;">
+<col style="width: 72%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Nr.</strong></th>
+<th class="tableblock halign-center valign-top"><strong>ID</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kein Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normales Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sanftes Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peck-Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mehrstufiges Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mehrstufiges + Peck-Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">7.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leistungsvariiertes Rampen-Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tastverhältnis-variiertes Rampen-Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Düsenhöhe-variiertes Rampen-Einstechen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Punkt-Stanz-Einstechen</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong><em><span class="underline">Einstech-AID:</span></em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 83%;">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 35%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>1. Stelle: Höhenregelung, Strahl AUS, Abkühlzeit</strong></th>
+<th class="tableblock halign-center valign-top"><strong>2. Stelle: Seitenluftblasen, Gratentfernung</strong></th>
+<th class="tableblock halign-center valign-top"><strong>3. Stelle: Frei</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit0 = 1 = Höhenregelung EIN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit0 = 1 = Seitenluftblasen EIN</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit1 = 1 = Strahl EIN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit1 = 1 = Gratentfernung EIN</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit2 = 1 = Abkühlzeit AUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit2 = 1 = Frei</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schneidverfahren">Schneidverfahren</h2>
+<div class="sectionbody">
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Die Schneidverfahren werden basierend auf Prozess &amp; Konturlänge definiert.</p>
+</li>
+<li>
+<p>Die Schneidverfahren werden als Fließkommazahlen = 123.123 dargestellt</p>
+</li>
+<li>
+<p>Die Ziffern vor dem Dezimalpunkt stellen die <strong>"Prozessverfahren"</strong> dar</p>
+</li>
+<li>
+<p>Die Ziffern nach dem Dezimalpunkt stellen die <strong>"Verschiedene Steuerung"</strong> dar</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong><em><span class="underline">Prozessverfahren:</span></em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 81%;">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 28%;">
+<col style="width: 42%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>1. Stelle: Prozess</strong></th>
+<th class="tableblock halign-center valign-top"><strong>2. Stelle: Kontur</strong></th>
+<th class="tableblock halign-center valign-top"><strong>3. Stelle: Abstandsregelung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Kein Prozess</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Große Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 – Höhenregelung (HC) EIN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 = Schneiden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 = Mittlere Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 – HC Einfrieren bei Lead-In &amp; EIN beim Schneiden</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 = *Sonderschneiden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 = Kleine Kontur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 – HC EIN positive Richtung &amp; AUS negative Richtung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 = Markieren</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 – Höhenregelung (HC) AUS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 = *Sondermarkieren</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 = Verdampfen</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong><em><span class="underline">Verschiedene Steuerung:</span></em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+<colgroup>
+<col style="width: 34%;">
+<col style="width: 35%;">
+<col style="width: 31%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>1. Stelle: Lead IN, Loch &amp; Fly</strong></th>
+<th class="tableblock halign-center valign-top"><strong>2. Stelle: Rücklauf</strong></th>
+<th class="tableblock halign-center valign-top"><strong>3. Stelle: Frei</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit0 = 1 = Lead IN</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Bit0 = 1 = Lead IN Rücklauf</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit1 = 1 = Vorloch</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Bit1 = 1 = Restschnitt</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit2 = 1 = Fly-Steuerung</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endverfahren">Endverfahren</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Endverfahren werden basierend auf der Rückzugsdistanz der Z-Achse zusammen
+mit dem Froschsprung, HC-Einfrieren usw. am Ende definiert.</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Die Endverfahren werden als Fließkommazahlen = 20.123 definiert</p>
+</li>
+<li>
+<p>Die Ziffern vor dem Dezimalpunkt stellen die <strong>"End-ID"</strong> dar</p>
+</li>
+<li>
+<p>Die Ziffern nach dem Dezimalpunkt stellen die <strong>"Endsteuerung"</strong> dar</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong><em><span class="underline">End-ID:</span></em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 75%;">
+<colgroup>
+<col style="width: 14%;">
+<col style="width: 14%;">
+<col style="width: 72%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Nr.</strong></th>
+<th class="tableblock halign-center valign-top"><strong>End-ID</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Funktionen</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl AUS, Z-Achse Rückzug = P1906</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl AUS, Hochspannung AUS, Z-Achse in Ausgangsposition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strahl AUS, Z-Achse verbleibt auf der gleichen Bearbeitungshöhe für den nächsten Prozess. Intern in der SPS wird sie aus Sicherheitsgründen auf den minimalen In-Range-Abstand verfahren</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong><em><span class="underline">Endsteuerung:</span></em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 81%;">
+<colgroup>
+<col style="width: 36%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>1. Stelle: Froschsprung, HC einfrieren, Endparameter</strong></th>
+<th class="tableblock halign-center valign-top"><strong>2. Stelle: Nicht verwendet</strong></th>
+<th class="tableblock halign-center valign-top"><strong>3. Stelle: Nicht verwendet</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 = Alle Funktionen deaktiviert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit0 = 1 = Froschsprung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit0 = 1 = Strahl AUS</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit1 = 1 = HC einfrieren</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit2 = 1 = Endparameter</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_einstechverfahren">Einstechverfahren</a>
+  </li>
+  <li level="1">
+   <a href="#_schneidverfahren">Schneidverfahren</a>
+  </li>
+  <li level="1">
+   <a href="#_endverfahren">Endverfahren</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="startofapa.html">Start einer Teilinformation</a></span>
+ <span class="next"><a href="contoursta.html">Konturanweisungen</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

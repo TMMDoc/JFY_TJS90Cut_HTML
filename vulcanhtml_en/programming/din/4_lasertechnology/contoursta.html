@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/flux-icon.png">
+  <title>Contour Statements</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../workflow/index.html">Production Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../workflow/preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">NC Programming Reference</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">DIN format</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Laser Technology</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a class="active" href="contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsttechno/index.html">Laser Technology commands</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsttechno/lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">NC Programming Reference</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">DIN format</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Laser Technology</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="contoursta.html">Contour Statements</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Contour Statements</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This part of NC code contains the axis motion blocks and before that it prepares
+the above blocks with all required parameters ready to process the contour. They
+are further classified as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>Stop Pre-processing (G61)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Contour Lead-In length (Lead_In)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Activate Kerf compensation (G41/G42)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Approach contour (G0/G1)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Laser ON function (M14)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Process contour (G1, G2, G3)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Laser OFF function (M15)</em></strong></p>
+</li>
+<li>
+<p><strong><em>Cancel Kerf compensation (G40)</em></strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stop_pre_processing">Stop Pre-processing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong><em>G61</em></strong> function can be used for temporarily stopping the block preparation
+of the interpreter. This means that the interpretation of the next block is
+stopped until the last block in the coarse interpolator&#8217;s job buffer has been
+processed.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G61</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contour_lead_in_length">Contour Lead-In length</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Laser technology, each contour is processed with some lead-in for better
+finish of the contour. It is possible to process the lead-in length with
+different laser parameters and it is activated via cutting method as explained
+above.</p>
+</div>
+<div class="paragraph">
+<p>The lead-in length value is stored in the P-fields and for better understanding
+the P- field is <strong><em>globally declared</em></strong> <strong><em>internally</em></strong> in the program as follows:</p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   Lead_In P1908</em></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     Lead_In = 5.0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_activate_kerf_compensation_g41g42">Activate Kerf compensation (G41/G42)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Laser technology, the width of the beam diameter need to be compensated in order to achieve the perfect dimensions of the contour. Depends on the size of contour defined in the program, the kerf will be changed.</p>
+</div>
+<div class="paragraph">
+<p>The Kerf-width value is stored in the P-fields and for better understanding the P- field is <strong><em>globally declared</em></strong> <strong><em>internally</em></strong> in the program as follows:</p>
+</div>
+<div class="paragraph">
+<p><em><strong>#globdef</strong>   Kerf P1300</em></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G41 R = Kerf E0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_approach_contour_g0g1">Approach Contour (G0/G1)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The approach contour starts the actual motion of the axis and use the rapid traverse command <strong><em>G0</em></strong> or Linear command <strong><em>G1</em></strong> to position the axis to the piercing point. During this motion, the head is positioned along with the tool offset value (kerf width) The approach point can be reached with single statement by simultaneous interpolation of the axis, there may be a case where it may take more than one statement is also possible.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G0/G1 X0 Y0</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>The approach contour should be always followed by M14 command for the ‘Frog Jump’ function of head.</em>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laser_on_function_m14">Laser ON Function (M14)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Laser ON function is called via M-command “<strong>M14</strong>”. The call of M14 will
+activate the following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Switch on the Height regulation control</p>
+</li>
+<li>
+<p>Switch on the Piercing Gas solenoid &amp; pressure valve</p>
+</li>
+<li>
+<p>Move the Z-axis to Piercing Position</p>
+</li>
+<li>
+<p>Switch on the Laser beam for Piercing</p>
+</li>
+<li>
+<p>Switch to the Cutting Gas parameters</p>
+</li>
+<li>
+<p>Move the Z-axis to Cutting Position</p>
+</li>
+<li>
+<p>Set focal position</p>
+</li>
+<li>
+<p>Set Beam diameter</p>
+</li>
+<li>
+<p>Set Laser power</p>
+</li>
+<li>
+<p>Switch on the Laser beam for Cutting</p>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     M14</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_process_contour_g1_g2_g3">Process Contour (G1, G2, G3…,)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The complete set of contour statements between <strong>M14 &amp; M15</strong> constitutes the
+process contour, where the actual laser technology take place. It is possible to
+identify the Acc/Dec phase, Corner, End of approach etc., for the complete
+process of contour.</p>
+</div>
+<div class="paragraph">
+<p>Also, before the start of contour statements, it is possible to define the type
+of process as Cutting/Marking for DIN program display in HMI as dashed lines.
+<strong><em>Please refer <a href="../3_dinprogramstructure/graphicale.html">Graphical Element</a> topic for more details.</em></strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G1 X124.5 Y35.5
+            G3 X115.5 Y35.5 I-4.5 J0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laser_off_function_m15">Laser OFF Function (M15)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Laser OFF function is called via M-command “<strong>M15</strong>”. The call of M15 will
+activate the following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Switch Off the Laser beam</p>
+</li>
+<li>
+<p>Switch Off the Gas</p>
+</li>
+<li>
+<p>Retract the Z-axis to defined position</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No other M-function must be set before a M15. The M15 must always be set after a
+positioning block/contour block.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cancel_kerf_compensation">Cancel Kerf Compensation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The activated Kerf compensation at the start of contour need to be cancelled at
+the end in order to position the head for the next contour without compensation.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax:     G40 E1</pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_stop_pre_processing">Stop Pre-processing</a>
+  </li>
+  <li level="1">
+   <a href="#_contour_lead_in_length">Contour Lead-In length</a>
+  </li>
+  <li level="1">
+   <a href="#_activate_kerf_compensation_g41g42">Activate Kerf compensation (G41/G42)</a>
+  </li>
+  <li level="1">
+   <a href="#_approach_contour_g0g1">Approach Contour (G0/G1)</a>
+  </li>
+  <li level="1">
+   <a href="#_laser_on_function_m14">Laser ON Function (M14)</a>
+  </li>
+  <li level="1">
+   <a href="#_process_contour_g1_g2_g3">Process Contour (G1, G2, G3…,)</a>
+  </li>
+  <li level="1">
+   <a href="#_laser_off_function_m15">Laser OFF Function (M15)</a>
+  </li>
+  <li level="1">
+   <a href="#_cancel_kerf_compensation">Cancel Kerf Compensation</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="laserparam.html">Laser parameters selection & Update</a></span>
+ <span class="next"><a href="programend.html">Program End (G99)</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

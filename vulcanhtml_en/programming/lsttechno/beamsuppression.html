@@ -1,0 +1,1557 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Beam suppression</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">Production Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">NC Programming Reference</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../din/index.html">DIN format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/4_lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../din/4_lasertechnology/5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lst/index.html">LST format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lst/1_lst/index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../lst/6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Laser Technology commands</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a class="active" href="beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">NC Programming Reference</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Laser Technology commands</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="beamsuppression.html">Beam suppression</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Beam suppression</h1>
+<div class="sect1">
+<h2 id="_tc_microjoint">TC_MICROJOINT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Microjoints/Nanojoints</div>
+<p>Microjoints are microwebs that could usually be programmed only with the
+programming system TruTops. The microjoints defined in this way are permanently
+anchored in the NC program. They cannot be modified or deselected during the
+machining of parts at the machine.</p>
+</div>
+<div class="paragraph">
+<p>Nanojoints specifically create small connections on the underside of the sheet
+between the cut part and the scrap skeleton. Nanojoint is only available for
+certain cutting processes and sheet thicknesses (see "Cutting data" in the data
+collection tables).</p>
+</div>
+<div class="paragraph">
+<p>Depending on the machine, it may also be possible to program
+microjoints/nanojoints directly on the machine and select or deselect them as
+required. There are two different types of microjoints:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Programmed microjoints/nanojoints that are defined within the contour or at
+the end of the contour via G functions. The contour is marked here directly in
+the NC text for the part program.</p>
+</li>
+<li>
+<p>Automatic microjoints/nanojoints that are always set at the end of the contour
+and defined without G functions. The definition is made here via the dimension
+of the contour in X- and Y-direction. The contour is not marked in the NC text.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following points are valid:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Microjoints that can only be modified at the machine are only possible on the
+machine on surfaces of rectangular tubes or for plane processing.</p>
+</li>
+<li>
+<p>The data for programmed microjoints is stored in a programspecific table. The
+data can be displayed and modified via the user interface of the control. This
+table can be used to activate and deactivate the microjoint types separately.
+The table is called up using the NC cycle TC_MICROJOINT ("table name").</p>
+</li>
+<li>
+<p>The activation status of the microjoints in the table is stored with the
+program. In this way, an available program is guaranteed to be processed under
+the same conditions after every program change, even when fully automatic
+systems are used.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Call up table with microjoint data directly at the control system and activate
+or deactivate programmed- or automatic microjoints in the NC text.</p>
+</div>
+<div class="paragraph">
+<p>The cycle TC_MICROJOINT in the NC program calls up the table containing all the
+parameters and the activation status of the functions. Data can be modified in
+the table. The modified table is updated automatically in the NC core.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>TC_MICROJOINT("Table name"):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Self-holding (modal) operation.</p>
+</li>
+<li>
+<p>Call up as early as possible before the required contour machining.</p>
+</li>
+<li>
+<p>Is deselected using program end or with the selection of a new table.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">MICROJOINT technology table parameters</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Values</th>
+<th class="tableblock halign-left valign-top">Unit</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Table identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the table, e.g. "MIJO-1"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Programmed MicroJoints active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmed MicroJoints not active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmed MicroJoints active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Automatic Microjoints active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatic Microjoints not active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatic Microjoints active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large MicroJoint small contour</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microjoint size small contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large MicroJoint medium contour</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microjoint size medium contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large MicroJoint large contour</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microjoint size large contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. contour dimension in X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. contour dimension in X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. contour dimension in X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. contour dimension in X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. contour dimension in Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. contour dimension in Y</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. contour dimension in Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. contour dimension in Y</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">190</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Piercing type after Microjoints (PiercingTypeAfterMicrojoint)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing type after Microjoints</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal piercing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gentle piercing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">270</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Automatic nanojoints active (AutomaticNanoJointActive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatic nanojoints not active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automatic nanojoints active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">280</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Programmed nanojoints active (NanoJointProgramActive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmed nanojoints not active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programmed nanojoints active</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">290</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Stability of the nanojoints (NanoJointStabilityLargeContour)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stability of large contour nanojoints.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Increased.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduced.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_g821">G821</h3>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Defining programmable, contour related microjoints.</p>
+</div>
+<div class="paragraph">
+<p>With this G function, the NC block within the contour is marked by setting a
+microjoint. The microjoint can be set within the contour or at the end of the
+contour.</p>
+</div>
+<div class="paragraph">
+<p>If the microjoint is set within the contour, then piercing is automatically
+renewed.</p>
+</div>
+<div class="paragraph">
+<div class="title">Restrictions</div>
+<p>Restrictions for microjoints within the contour:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Special forms of piercing, such as the "back-step", for example, are not
+supported. This is due to the approach procedure not being possible afterwards
+in the contour.</p>
+</li>
+<li>
+<p>Approaching with reduced cutting parameters and subsequent
+switching to normal parameters is not possible.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Depending on the machine, special shapes are possible via the
+TC_LEAD_IN cycle (see "TC_LEAD_IN", pg. 5‐34).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>G821:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The G821 function is assigned to a group of G commands. Only one G command
+may be used from this group within an NC block. The G commands belong to this
+group G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Is considered if programmed microjoints are activated or deactivated
+via the microjoint table.</p>
+</li>
+<li>
+<p>Is not activated in the microjoint table as default. Standard: 0 = not
+activated; 1 = activated.</p>
+</li>
+<li>
+<p>Is written into the contour&#8217;s NC block, at the end of which the microjoint is
+to be set.</p>
+</li>
+<li>
+<p>Is immediately effective after activation if the laser cutting head within the
+positioning motion is located between two contours. If the laser cutting head
+is, however, found directly at the machining of a contour, then the function
+only becomes effective for the next contour machining.</p>
+</li>
+<li>
+<p>Should the function be deactivated when a contour is being machined, then
+another microjoint will be set in this contour. The following contour is
+machined without a microjoint. If the machining head is found between two
+contours within a positioning motion, then the following contour will be
+machined without a microjoint.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Example</div>
+<p>Programmed microjoints at the end of the contour:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC program</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_MICROJOINT ("MJT1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full circle with microjoint at the end of the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oblong</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oblong hole with microjoint at the end of the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Programmed microjoints in the contour:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC program</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LEAD_IN("LIT-1", T_LEFT)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y40 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Semicircle of full circle with microjoint within the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2. Semicircle of full circle without microjoint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X40 Y30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oblong</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Part of the oblong hole with microjoint within the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N450</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_g822">G822</h3>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Skipping automatic microjoint in relation to the contour.</p>
+</div>
+<div class="paragraph">
+<p>The criteria for an automatically set microjoint at the end of a contour is the
+dimension of the contour in X- and Y-direction. If the maximum dimension of the
+contour in X- or Y-direction lies within a range also defined in the microjoint
+table, then a microjoint is automatically set at the end of every contour.</p>
+</div>
+<div class="paragraph">
+<p>Because the control system cannot differentiate between closed and open
+contours, every open contour must already be marked as such in the programming
+system. Otherwise, microjoints will also be set at open contours, i.e. these
+open contours will be shortened.</p>
+</div>
+<div class="paragraph">
+<p>With G function G822, unwanted, automatic microjoints can now be skipped on the
+control.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>G822:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The G822 function is allocated to a group of G commands. Only one G
+command may be used from this group within an NC block. The G commands belong to
+this group G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Is considered if automatic microjoints are activated or deactivated via the
+microjoint table. The table is called via TC_MICROJOINT ("table name").</p>
+</li>
+<li>
+<p>Is not activated in the microjoint table as default. Standard: 0 = not
+activated; 1 = activated.</p>
+</li>
+<li>
+<p>Can be written for the respective contour in a separate block or at the end of
+an NC block, but after TC_LASER_ON and before TC_LASER_OFF.</p>
+</li>
+<li>
+<p>Is immediately effective after activation if the laser cutting head within the
+positioning motion is located between two contours. If the laser cutting head
+is, however, found directly at the machining of a contour, then the function
+only becomes effective for the next contour machining.</p>
+</li>
+<li>
+<p>Should the function be deactivated when a contour is being machined, then
+another microjoint will be set in this contour. The following contour is
+machined without a microjoint. If the machining head is found between two
+contours within a positioning motion, then the following contour will be
+machined without a microjoint.</p>
+</li>
+<li>
+<p>Is cleared with the next TC_LASER_OFF.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Example</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC program</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N205</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G822</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skipping automatic microjoint Separate NC block</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full circle with microjoint at the end of the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10 G822</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oblong hole with suppression of an automatic microjoint At the end of the NC block</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oblong hole with microjoint at the end of the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_g824">G824</h3>
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>Set programmable nanojoints.</p>
+</div>
+<div class="paragraph">
+<p>Nanojoints hold the part only at the lower cutting area. This is achieved by
+reducing the laser power for a short time. Nanojoints are suitable for
+sophisticated parts, or if it should be possible to break parts out of the
+remainder sheet easily.</p>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>G824:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The G824 function is allocated to a group of G commands. Only one G
+command may be used from this group within an NC block. The G commands belong to
+this group G820 – G829.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It is taken into account if programmable nanojoints are activated or
+deactivated via the nanojoint table. The table is called via TC_MICROJOINT
+("table name").</p>
+</li>
+<li>
+<p>It is not activated in the nanojoint table by default. Standard: 0 = not
+activated; 1 = activated.</p>
+</li>
+<li>
+<p>Can be written for the respective contour in a separate block or at the end of
+an NC block, but after TC_LASER_ON and before TC_LASER_OFF.</p>
+</li>
+<li>
+<p>Is immediately effective after activation if the laser cutting head within the
+positioning motion is located between two contours. If the laser cutting head
+is, however, found directly at the machining of a contour, then the function
+only becomes effective for the next contour machining.</p>
+</li>
+<li>
+<p>Should the function be deactivated when a contour is being processed, another
+nanojoint will be set in this contour. The following contour is processed
+without nanojoint. If the processing head is within a positioning motion between
+two contours, then the following contour will be processed without a nanojoint.</p>
+</li>
+<li>
+<p>Is cleared with the next TC_LASER_OFF.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Example</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Block</th>
+<th class="tableblock halign-left valign-top">NC program</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G90 X20 Y60 F100000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"HUGO",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G2 X20 Y60 J-10 G824; full circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full circle with nanojoint at the end of the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"HUGO",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10; oblong hole</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Oblong hole with suppression of an automatic nanojoint<br>
+At the end of the NC block</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G824</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oblong hole with nanojoint at the end of the contour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G1 X0 Y0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_lead_in">TC_LEAD_IN</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Definition</div>
+<p>With the TC_LEAD_IN cycle call-up in the NC program, technology parameters for
+the optimum approach strategy are selected after a microjoint.</p>
+</div>
+<div class="paragraph">
+<p>The cycle is possible in the following machines:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruLaser 1000 series</p>
+</li>
+<li>
+<p>TruLaser Series 3000</p>
+</li>
+<li>
+<p>TruLaser Series 5000</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Programming</div>
+<p>TC_LEAD_IN("Approach table", approach direction):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Approach table:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The tables contain all relevant information about parameters
+and methods of the approach procedure.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Approach direction:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Depending on the parameter setting, the programmed
+contour is approached to the left or right of the direction
+of machining.</p>
+</li>
+<li>
+<p>TC_LEAD_IN ("Approach table", T_LEFT): Approaching
+the programmed contour on the left of the direction
+of movement.</p>
+</li>
+<li>
+<p>TC_LEAD_IN ("Approach table", T_RIGHT): Approaching
+the programmed contour on the right of the direction
+of movement.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The parameter Approach direction marks the range for the finished part and
+scrap of a part.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">LEAD_IN parameter technology table</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Values</th>
+<th class="tableblock halign-left valign-top">Unit</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Table identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the table, e.g. "LI-1"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Small contour approach strategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full approach without precut.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduced approach on the first 80% of the linear approach path without precut.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Approach with precut, reduced approach until the piercing point is reached again.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour approach strategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID20.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour approach strategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID20.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Small contour piercing type (PiercingTypeSmall)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal piercing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gentle piercing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour piercing type (PiercingTypeMedium)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID50.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour piercing type (PiercingTypeLarge)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID50.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">Small contour approach method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing and cutting with distance regulation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing and cutting without distance regulation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing without distance regulation, cutting with distance regulation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing with distance regulation, cutting without distance regulation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No piercing, cut with distance regulation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing without ramp cycle, cut with distance regulation with analog laser power control (SprintLine).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piercing without ramp cycle, cut without distance regulation with analog laser power control (SprintLine).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No piercing, cut with distance regulation with analog laser power control (SprintLine).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour approach method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID80.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour approach method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID80.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">Small contour approach cutting type</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The coding contains three digits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1st digit: contour</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1: Large contour.</p>
+</li>
+<li>
+<p>2: Medium contour.</p>
+</li>
+<li>
+<p>3: Small contour.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2nd digit: cutting speed</p>
+<div class="ulist">
+<ul>
+<li>
+<p>0: Normal.</p>
+</li>
+<li>
+<p>1: Reduced from piercing hole.</p>
+</li>
+<li>
+<p>3: Reduced from thick sheet.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3rd digit: Acceleration</p>
+</li>
+<li>
+<p>0: Normal.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No cutting.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting small contour, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">310</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting small contour, reduced approach from the piercing hole, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">330</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting small contour, reduced approach in the thick sheet, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">120</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Medium contour approach cutting type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No cutting.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting medium contour, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting medium contour, reduced approach from the piercing hole, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting medium contour, reduced approach in the thick sheet, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Large contour approach cutting type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No cutting.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting large contour, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting large contour, reduced approach from the piercing hole, normal acceleration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cutting large contour, reduced approach in the thick sheet, normal acceleration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140, 150, 160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaporizing Type</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Vaporizing type<br>
+Determines how vaporizing is done during approach</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ID small contour = 140</p>
+</li>
+<li>
+<p>ID medium contour = 150</p>
+</li>
+<li>
+<p>ID large contour = 160</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Small contour vaporizing type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No vaporizing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Circular vaporizing only at the piercing hole.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaporizing of the entire approach flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour vaporizing type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID140.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour vaporizing type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For value range and description, see ID140.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Small contour length of straight lines</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length of the linear part of the approach flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour length of straight lines</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length of the linear part of the approach flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">190</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour straight line length</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length of the linear part of the approach flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Small contour arc radius</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius of the transition curve between the linear part of the approach flag and the entry point in the contour.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour arc radius</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius of the transition curve between the linear part of the approach flag and the entry point in the contour.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour arc radius</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius of the transition curve between the linear part of the approach flag and the entry point in the contour.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Small contour approach angle</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angle between linear part of the approach flag and tool path (corresponds to the angle of the arc).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour approach angle</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angle between linear part of the approach flag and tool path (corresponds to the angle of the arc).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour approach angle</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angle between linear part of the approach flag and tool path (corresponds to the angle of the arc).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">260</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Small contour precut length</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length of the path that is precut during approach strategy 3 on the linear part of the approach flag cut in reduced mode. The precut length is limited to the value of the parameter "Straight line length".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">270</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium contour precut length</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length of the path that is precut during approach strategy 3 on the linear part of the approach flag cut in reduced mode. The precut length is limited to the value of the parameter "Straight line length".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">280</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large contour precut length</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length of the path that is precut during approach strategy 3 on the linear part of the approach flag cut in reduced mode. The precut length is limited to the value of the parameter "Straight line length".</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/image12.png" alt="image12" width="400">
+</div>
+<div class="title">Example of approach direction</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tc_microjoint">TC_MICROJOINT</a>
+  </li>
+  <li level="2">
+   <a href="#_g821">G821</a>
+  </li>
+  <li level="2">
+   <a href="#_g822">G822</a>
+  </li>
+  <li level="2">
+   <a href="#_g824">G824</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_lead_in">TC_LEAD_IN</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="bevelcut.html">Bevel cut</a></span>
+ <span class="next"><a href="flyingfocus.html">Flying focus position alteration</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

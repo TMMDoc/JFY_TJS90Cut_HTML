@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/flux-icon.png">
+  <title>LST Program Structure</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Welcome to TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../intro/home.html">User interface</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/jog.html">Machine Operation</a></li>
+    <li><button class="tree blank"></button><a href="../../../intro/controlpanel.html">Control panel</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../workflow/index.html">Production Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../workflow/preparation.html">Preparation</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/create.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/filemanager.html">File Management</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/programs.html">Select Program</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/edit.html">Edit NC Code</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/laserfunct.html">Edit Laser Technology</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/layout.html">Edit layout</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/simulation.html">Simulation run</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/offset.html">Work offsets</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/run.html">Run</a></li>
+    <li><button class="tree blank"></button><a href="../../../workflow/reentry.html">Re-entry</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../ltt/index.html">Laser Technology Tables (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../ltt/general.html">Terminology</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../ltt/laserdata/index.html">Laser Data items</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/piercing.html">Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/cutting.html">Cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../../ltt/laserdata/special.html">Special Processes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../ltt/selection.html">Modifying Laser Data</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/export.html">LTT Management</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/rampcycles.html">Ramp Cycles</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../../ltt/dca.html">Acceleration control (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../technology/index.html">Technology functions</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../technology/vaporize.html">Vaporize Sheet</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/pierceline.html">PierceLine Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../../../technology/cuttingtools.html">Cutting Tools</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../controls/index.html">Controls</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../controls/lubricationcycle.html">Lubrication Cycle</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/protective.html">Protective Glass Monitoring</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/scrapcut.html">Scrap Cut</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/sheetorigin.html">Go To Sheet Origin</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/heightsensorcal.html">Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzlecentre.html">Nozzle Centre</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/targetshot.html">Target Shot</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/gaspurge.html">Gas Purge</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/hcmanualset.html">HC Manual Set Point</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/parkposition.html">Go To Park Position</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/nozzleclean.html">Nozzle Clean & Height Sensor Calibration</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/edgedetection.html">Edge Detection</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focuscomb.html">Focus Comb</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/focaldistance.html">Focal Distance</a></li>
+    <li><button class="tree blank"></button><a href="../../../controls/pilotdiodepos.html">Pilot Diode Positioning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../productionplan/index.html">Production plan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../productionplan/create.html">Create a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/lock.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/run.html">Run a production plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/sequence.html">Running sequence</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/loading.html">sheet loading</a></li>
+    <li><button class="tree blank"></button><a href="../../../productionplan/material.html">Material stock</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../troubleshooting/index.html">Troubleshooting</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/collisions.html">Frequent collisions</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/workoffset.html">Work offset</a></li>
+    <li><button class="tree blank"></button><a href="../../../troubleshooting/extreme.html">Extreme small contours</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">NC Programming Reference</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../din/index.html">DIN format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../din/3_dinprogramstructure/index.html">DIN Program Structure</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../din/3_dinprogramstructure/programnum.html">Program Number %</a></li>
+        <li><button class="tree blank"></button><a href="../../din/3_dinprogramstructure/blocknumbe.html">Block number N</a></li>
+        <li><button class="tree blank"></button><a href="../../din/3_dinprogramstructure/gfunctions.html">G-functions</a></li>
+        <li><button class="tree blank"></button><a href="../../din/3_dinprogramstructure/mfunctions.html">M-functions</a></li>
+        <li><button class="tree blank"></button><a href="../../din/3_dinprogramstructure/parametera.html">Parameter Array</a></li>
+        <li><button class="tree blank"></button><a href="../../din/3_dinprogramstructure/graphicale.html">Graphical Element – Display Marker Lines</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../din/4_lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/programhea.html">Program Header</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/technology.html">Technology Table (TT) Transfer</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/checkforbo.html">Check for Bound Program Active</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/blocknumbe.html">Block Number</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/startofapa.html">Start of a Part information</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/laserparam.html">Laser parameters selection & Update</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/contoursta.html">Contour Statements</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/programend.html">Program End (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../din/4_lasertechnology/5_remnantcut/index.html">Remnant Cut</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/5_remnantcut/startremna.html">Start Remnant Cut</a></li>
+          <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/5_remnantcut/endremnant.html">End Remnant Cut</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/7_onlypiercinginthecon/index.html">Only Piercing in the Contour</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/9_sampleprogramwithmul/index.html">Sample Program with Multiple Parts</a></li>
+        <li><button class="tree blank"></button><a href="../../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut Sample Program:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">LST format</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="index.html">LST Program Structure</a></li>
+      <li><button class="tree blank"></button><a href="../4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../6_incrementalcommandic/index.html">Incremental Command (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../lsttechno/index.html">Laser Technology commands</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../lsttechno/lasercutting.html">Laser cutting</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/identifyparts.html">Identifying parts</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/multiprogstruc.html">Multiple program structure</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/cuttingdistance.html">Cutting distance</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/kerfcorrection.html">Kerf correction</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/overshootheight.html">Overshoot height</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/timing.html">Timing of parts</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/bevelcut.html">Bevel cut</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/beamsuppression.html">Beam suppression</a></li>
+      <li><button class="tree blank"></button><a href="../../lsttechno/flyingfocus.html">Flying focus position alteration</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">NC Programming Reference</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">LST format</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">LST Program Structure</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>LST Program Structure</h1>
+<div class="sect1">
+<h2 id="_identification_of_main_program_in_lst">Identification of Main Program in LST</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From the LST file the main program is identified with the set of text that
+starts with ‘HP’ and ends with M30.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image1.png" alt="A screenshot of a computer program Description automatically generated" width="457"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_identification_of_sub_programs_in_lst">Identification of Sub programs in LST</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the LST file, the sub programs are called from the main program with the
+syntax <strong>“SP@”</strong>, where @ is the number of sub program, eg: SP1 will call the
+respective sub program!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image2.png" alt="A screenshot of a computer program Description automatically generated" width="399"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_cycle_programs">List of Cycle Programs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The cycle programs are pre-defined in the LST to perform a specific function in
+the program and the list is as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 93%;">
+<colgroup>
+<col style="width: 9%;">
+<col style="width: 40%;">
+<col style="width: 35%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">S.No</th>
+<th class="tableblock halign-center valign-top">Name</th>
+<th class="tableblock halign-center valign-top">Description</th>
+<th class="tableblock halign-center valign-top">DIN support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_POS_LEVEL(40)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates the Head position with the given value</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_TECH(“SHT-1”)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_LOAD(“SHT-1”)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_MICROJOINT(“MIJO-1”)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the soft micro joint with given parameters</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(params)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switches the LASER beam ON with given technology table</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASERCORR_ON(T_LEFT)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activates the tool radius compensation G41/G42 with given value</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">7.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(param)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switched the LASER beam OFF &amp; moves the head up with given parameter</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_PART_END(param)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LEAD_IN(params)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the Lead In after soft micro joint with given parameter</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_WRITE(params)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks the text with given parameters</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SYNC_POS_SUPPRESS_ON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deactivates Frog jump</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">12.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SYNC_POS_SUPPRESS_OFF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activates Frog jump</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">13.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_SHEET_THICK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Position the head with the previous height before the remnant cut</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">14.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_Wait(param)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser Cycle for Corner cooling to prevent burning in. The laser beam is switched OFF</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>The list will be updated with new entries, implementation in DIN , etc.,</em>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_special_commands">List of Special commands</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all" style="width: 93%;">
+<colgroup>
+<col style="width: 9%;">
+<col style="width: 35%;">
+<col style="width: 40%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">S.No</th>
+<th class="tableblock halign-center valign-top">Name</th>
+<th class="tableblock halign-center valign-top">Description</th>
+<th class="tableblock halign-center valign-top">DIN support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ROT RPL=90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rotates the contour by 90 deg</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ROT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cancel the contour rotation</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FLIN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feed rate varies linearly</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FNORM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feed rate normal</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Incremental command</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_identification_of_main_program_in_lst">Identification of Main Program in LST</a>
+  </li>
+  <li level="1">
+   <a href="#_identification_of_sub_programs_in_lst">Identification of Sub programs in LST</a>
+  </li>
+  <li level="1">
+   <a href="#_list_of_cycle_programs">List of Cycle Programs</a>
+  </li>
+  <li level="1">
+   <a href="#_list_of_special_commands">List of Special commands</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">LST format</a></span>
+ <span class="next"><a href="../4_flycut/index.html">FlyLine</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

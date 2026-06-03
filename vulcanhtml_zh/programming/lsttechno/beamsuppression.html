@@ -1,0 +1,1473 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>光束抑制</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎来到 TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/create.html">创建生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/lock.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/run.html">运行生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/sequence.html">运行顺序</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/loading.html">板材装载</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/material.html">材料库存</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">NC 编程参考</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../din/index.html">DIN 格式</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/3_dinprogramstructure/index.html">DIN 程序结构</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/programnum.html">程序号 %</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/blocknumbe.html">程序块号 N</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/gfunctions.html">G 功能</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/mfunctions.html">M 功能</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/parametera.html">参数数组</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/graphicale.html">图形元素 – 显示标记线</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/4_lasertechnology/index.html">激光技术</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programhea.html">程序头</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/technology.html">技术表（TT）传输</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/checkforbo.html">检查边界程序是否激活</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blockjump.html">程序块跳转</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blocknumbe.html">程序块号</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/startofapa.html">零件信息开始</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/laserparam.html">激光参数选择与更新</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/contoursta.html">轮廓指令</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programend.html">程序结束</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../din/4_lasertechnology/5_remnantcut/index.html">残料切割</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/startremna.html">起始残料切割</a></li>
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/endremnant.html">结束残料切割</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/7_onlypiercinginthecon/index.html">仅在轮廓中穿孔</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/9_sampleprogramwithmul/index.html">多零件示例程序</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut 示例程序：</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lst/index.html">LST 格式</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lst/1_lst/index.html">LST 程序结构</a></li>
+      <li><button class="tree blank"></button><a href="../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../lst/6_incrementalcommandic/index.html">增量命令 (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../lst/7_softmicrojointsnanoj/index.html">软微连接与 Nano Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">激光技术命令</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="lasercutting.html">激光切割</a></li>
+      <li><button class="tree blank"></button><a href="identifyparts.html">零件标识</a></li>
+      <li><button class="tree blank"></button><a href="multiprogstruc.html">多程序结构</a></li>
+      <li><button class="tree blank"></button><a href="cuttingdistance.html">切割距离</a></li>
+      <li><button class="tree blank"></button><a href="kerfcorrection.html">切口补偿</a></li>
+      <li><button class="tree blank"></button><a href="overshootheight.html">回退高度</a></li>
+      <li><button class="tree blank"></button><a href="timing.html">零件计时</a></li>
+      <li><button class="tree blank"></button><a href="bevelcut.html">斜角切割</a></li>
+      <li><button class="tree blank"></button><a class="active" href="beamsuppression.html">光束抑制</a></li>
+      <li><button class="tree blank"></button><a href="flyingfocus.html">飞行焦点位置调整</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">NC 编程参考</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">激光技术命令</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="beamsuppression.html">光束抑制</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>光束抑制</h1>
+<div class="sect1">
+<h2 id="_tc_microjoint">TC_MICROJOINT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">微连接/Nano Joints</div>
+<p>微连接是通常只能使用编程系统 TruTops 编程的微型连接片。以这种方式定义的微连接永久固定在 NC 程序中。在机器上加工零件时，它们无法被修改或取消选择。</p>
+</div>
+<div class="paragraph">
+<p>Nano joints 专门在板材下侧的切割零件与废料骨架之间创建小型连接。Nanojoint 仅适用于某些切割工艺和板材厚度（参见数据集表中的"切割数据"）。</p>
+</div>
+<div class="paragraph">
+<p>根据机器不同，也可以直接在机器上编程微连接/nano joints，并根据需要选择或取消选择。有两种不同类型的微连接：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>编程微连接/nano joints，通过 G 功能在轮廓中或轮廓末端定义。轮廓直接在零件程序的 NC 文本中标记。</p>
+</li>
+<li>
+<p>自动微连接/nano joints，始终设置在轮廓末端且不通过 G 功能定义。定义通过 X 和 Y 方向的轮廓尺寸进行。轮廓不在 NC 文本中标记。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>以下要点有效：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>只能在机器上修改的微连接仅适用于矩形管表面或平面加工。</p>
+</li>
+<li>
+<p>编程微连接的数据存储在特定于程序的表中。可以通过控制器的用户界面显示和修改数据。此表可用于分别激活和停用微连接类型。该表通过 NC 循环 TC_MICROJOINT ("表名") 调用。</p>
+</li>
+<li>
+<p>表中微连接的激活状态随程序一起存储。这样，即使使用全自动系统，在每次程序更改后也能保证在相同条件下处理可用程序。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">定义</div>
+<p>直接在控制系统上调用包含微连接数据的表，并在 NC 文本中激活或停用编程微连接或自动微连接。</p>
+</div>
+<div class="paragraph">
+<p>TC_MICROJOINT 循环在 NC 程序中调用包含所有参数和功能激活状态的表。可以在表中修改数据。修改后的表会在 NC 内核中自动更新。</p>
+</div>
+<div class="paragraph">
+<div class="title">编程</div>
+<p>TC_MICROJOINT("表名")：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>自保持（模态）操作。</p>
+</li>
+<li>
+<p>尽早在所需轮廓加工之前调用。</p>
+</li>
+<li>
+<p>通过程序结束或选择新表来取消选择。</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">MICROJOINT 技术表参数</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">参数</th>
+<th class="tableblock halign-left valign-top">值</th>
+<th class="tableblock halign-left valign-top">单位</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表标识符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表的名称，例如 "MIJO-1"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">编程微连接激活</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">编程微连接未激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">编程微连接已激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">自动微连接激活</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自动微连接未激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自动微连接已激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大微连接 小轮廓</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小轮廓微连接尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大微连接 中轮廓</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓微连接尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大微连接 大轮廓</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓微连接尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最小轮廓尺寸 X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X 方向最小轮廓尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大轮廓尺寸 X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X 方向最大轮廓尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最小轮廓尺寸 Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y 方向最小轮廓尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大轮廓尺寸 Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y 方向最大轮廓尺寸</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">190</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">微连接后穿孔类型 (PiercingTypeAfterMicrojoint)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">微连接后穿孔类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">普通穿孔</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">柔和穿孔</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">270</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">自动 Nano joints 激活 (AutomaticNanoJointActive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自动 Nano joints 未激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自动 Nano joints 已激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">280</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">编程 Nano joints 激活 (NanoJointProgramActive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">编程 Nano joints 未激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">编程 Nano joints 已激活</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">290</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Nano joints 稳定性 (NanoJointStabilityLargeContour)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓 Nano joints 的稳定性。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">普通。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">增强。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">降低。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_g821">G821</h3>
+<div class="paragraph">
+<div class="title">定义</div>
+<p>定义可编程的、与轮廓相关的微连接。</p>
+</div>
+<div class="paragraph">
+<p>使用此 G 功能，通过设置微连接标记轮廓内的 NC 程序块。微连接可以设置在轮廓内或轮廓末端。</p>
+</div>
+<div class="paragraph">
+<p>如果微连接设置在轮廓内，则穿孔会自动重新开始。</p>
+</div>
+<div class="paragraph">
+<div class="title">限制</div>
+<p>轮廓内微连接的限制：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>不支持特殊形式的穿孔，例如"回退"。这是由于之后在轮廓中无法进行逼近程序。</p>
+</li>
+<li>
+<p>使用降低的切割参数逼近然后切换到正常参数是不可能的。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+根据机器不同，可以通过 TC_LEAD_IN 循环实现特殊形状（参见 "TC_LEAD_IN"，第 5-34 页）。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">编程</div>
+<p>G821：</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+G821 功能属于一组 G 命令。在一个 NC 程序块中只能使用该组中的一个 G 命令。G820 – G829 属于该组。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>通过微连接表激活或停用编程微连接时考虑。</p>
+</li>
+<li>
+<p>在微连接表中默认未激活。标准：0 = 未激活；1 = 已激活。</p>
+</li>
+<li>
+<p>写入轮廓的 NC 程序块中，在其末端设置微连接。</p>
+</li>
+<li>
+<p>如果激光切割头在两个轮廓之间的定位运动中，激活后立即生效。但如果激光切割头正在加工轮廓，则该功能仅对下一个轮廓加工生效。</p>
+</li>
+<li>
+<p>如果在加工轮廓时停用该功能，则该轮廓中将设置另一个微连接。后续轮廓将不带微连接加工。如果加工头在两个轮廓之间的定位运动中，则后续轮廓将不带微连接加工。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">示例</div>
+<p>轮廓末端的编程微连接：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">程序块</th>
+<th class="tableblock halign-left valign-top">NC 程序</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_MICROJOINT ("MJT1")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">整圆，轮廓末端带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔，轮廓末端带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>轮廓内的编程微连接：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">程序块</th>
+<th class="tableblock halign-left valign-top">NC 程序</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LEAD_IN("LIT-1", T_LEFT)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y40 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">整圆的第 1 个半圆，轮廓内带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">整圆的第 2 个半圆，不带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X40 Y30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔的第 1 部分，轮廓内带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N450</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_g822">G822</h3>
+<div class="paragraph">
+<div class="title">定义</div>
+<p>跳过与轮廓相关的自动微连接。</p>
+</div>
+<div class="paragraph">
+<p>在轮廓末端自动设置微连接的标准是 X 和 Y 方向的轮廓尺寸。如果轮廓在 X 或 Y 方向的最大尺寸在微连接表中定义的范围内，则在每个轮廓末端自动设置微连接。</p>
+</div>
+<div class="paragraph">
+<p>由于控制系统无法区分封闭轮廓和开放轮廓，因此每个开放轮廓必须在编程系统中已经标记为开放轮廓。否则，微连接也将设置在开放轮廓上，即这些开放轮廓将被缩短。</p>
+</div>
+<div class="paragraph">
+<p>使用 G 功能 G822，现在可以在控制器上跳过不需要的自动微连接。</p>
+</div>
+<div class="paragraph">
+<div class="title">编程</div>
+<p>G822：</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+G822 功能属于一组 G 命令。在一个 NC 程序块中只能使用该组中的一个 G 命令。G820 – G829 属于该组。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>通过微连接表激活或停用自动微连接时考虑。该表通过 TC_MICROJOINT ("表名") 调用。</p>
+</li>
+<li>
+<p>在微连接表中默认未激活。标准：0 = 未激活；1 = 已激活。</p>
+</li>
+<li>
+<p>可以为相应轮廓写在单独的程序块中或 NC 程序块末尾，但在 TC_LASER_ON 之后和 TC_LASER_OFF 之前。</p>
+</li>
+<li>
+<p>如果激光切割头在两个轮廓之间的定位运动中，激活后立即生效。但如果激光切割头正在加工轮廓，则该功能仅对下一个轮廓加工生效。</p>
+</li>
+<li>
+<p>如果在加工轮廓时停用该功能，则该轮廓中将设置另一个微连接。后续轮廓将不带微连接加工。如果加工头在两个轮廓之间的定位运动中，则后续轮廓将不带微连接加工。</p>
+</li>
+<li>
+<p>在下一个 TC_LASER_OFF 时清除。</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">示例</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">程序块</th>
+<th class="tableblock halign-left valign-top">NC 程序</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N205</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G822</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">跳过自动微连接 单独的 NC 程序块</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y60 J-10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">整圆，轮廓末端带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"4711",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10 G822</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔，抑制自动微连接 在 NC 程序块末尾</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G821</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔，轮廓末端带微连接</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_g824">G824</h3>
+<div class="paragraph">
+<div class="title">定义</div>
+<p>设置可编程的 Nano joints。</p>
+</div>
+<div class="paragraph">
+<p>Nano joints 仅在切割区域下部固定零件。这是通过短暂降低激光功率来实现的。Nano joints 适用于精密零件，或者如果需要从残余板材中轻松取出零件。</p>
+</div>
+<div class="paragraph">
+<div class="title">编程</div>
+<p>G824：</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+G824 功能属于一组 G 命令。在一个 NC 程序块中只能使用该组中的一个 G 命令。G820 – G829 属于该组。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>通过 Nanojoint 表激活或停用可编程 Nano joints 时考虑。该表通过 TC_MICROJOINT ("表名") 调用。</p>
+</li>
+<li>
+<p>在 Nanojoint 表中默认未激活。标准：0 = 未激活；1 = 已激活。</p>
+</li>
+<li>
+<p>可以为相应轮廓写在单独的程序块中或 NC 程序块末尾，但在 TC_LASER_ON 之后和 TC_LASER_OFF 之前。</p>
+</li>
+<li>
+<p>如果激光切割头在两个轮廓之间的定位运动中，激活后立即生效。但如果激光切割头正在加工轮廓，则该功能仅对下一个轮廓加工生效。</p>
+</li>
+<li>
+<p>如果在加工轮廓时停用该功能，则该轮廓中将设置另一个 Nanojoint。后续轮廓将不带 Nanojoint 加工。如果加工头在两个轮廓之间的定位运动中，则后续轮廓将不带 Nanojoint 加工。</p>
+</li>
+<li>
+<p>在下一个 TC_LASER_OFF 时清除。</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">示例</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">程序块</th>
+<th class="tableblock halign-left valign-top">NC 程序</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G90 X20 Y60 F100000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"HUGO",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G2 X20 Y60 J-10 G824; full circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">整圆，轮廓末端带 Nanojoint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"HUGO",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N410</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X40 Y10 J-10; oblong hole</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>长圆孔，抑制自动 Nanojoint<br>
+在 NC 程序块末尾</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X20 Y10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N430</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X20 Y30 J10 G824</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">长圆孔，轮廓末端带 Nanojoint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N440</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G1 X0 Y0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_lead_in">TC_LEAD_IN</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">定义</div>
+<p>通过 NC 程序中的 TC_LEAD_IN 循环调用，选择微连接后最佳逼近策略的技术参数。</p>
+</div>
+<div class="paragraph">
+<p>该循环适用于以下机器：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruLaser 1000 系列</p>
+</li>
+<li>
+<p>TruLaser Series 3000</p>
+</li>
+<li>
+<p>TruLaser Series 5000</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">编程</div>
+<p>TC_LEAD_IN("逼近表", 逼近方向)：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>逼近表：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>表中包含有关逼近程序参数和方法的所有相关信息。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>逼近方向：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>根据参数设置，编程轮廓在加工方向的左侧或右侧被逼近。</p>
+</li>
+<li>
+<p>TC_LEAD_IN ("逼近表", T_LEFT)：在运动方向左侧逼近编程轮廓。</p>
+</li>
+<li>
+<p>TC_LEAD_IN ("逼近表", T_RIGHT)：在运动方向右侧逼近编程轮廓。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+逼近方向参数标记成品零件和零件废料的范围。
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">LEAD_IN 参数技术表</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">参数</th>
+<th class="tableblock halign-left valign-top">值</th>
+<th class="tableblock halign-left valign-top">单位</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表标识符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表的名称，例如 "LI-1"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">小轮廓逼近策略</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不带预切割的完整逼近。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在直线逼近路径的前 80% 以降低速度逼近，不带预切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">带预切割的逼近，以降低速度逼近直到再次到达穿孔点。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓逼近策略</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID20。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓逼近策略</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID20。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">小轮廓穿孔类型 (PiercingTypeSmall)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">普通穿孔。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">柔和穿孔。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓穿孔类型 (PiercingTypeMedium)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID50。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓穿孔类型 (PiercingTypeLarge)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID50。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">小轮廓逼近方法</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">带距离调节的穿孔和切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不带距离调节的穿孔和切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不带距离调节的穿孔，带距离调节的切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">带距离调节的穿孔，不带距离调节的切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不穿孔，带距离调节的切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不带斜坡循环的穿孔，带距离调节和模拟激光功率控制的切割 (SprintLine)。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不带斜坡循环的穿孔，不带距离调节和模拟激光功率控制的切割 (SprintLine)。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不穿孔，带距离调节和模拟激光功率控制的切割 (SprintLine)。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓逼近方法</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID80。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓逼近方法</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID80。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">小轮廓逼近切割类型</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>编码包含三位数字：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>第 1 位：轮廓</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1：大轮廓。</p>
+</li>
+<li>
+<p>2：中轮廓。</p>
+</li>
+<li>
+<p>3：小轮廓。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>第 2 位：切割速度</p>
+<div class="ulist">
+<ul>
+<li>
+<p>0：正常。</p>
+</li>
+<li>
+<p>1：从穿孔点降低。</p>
+</li>
+<li>
+<p>3：从厚板降低。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>第 3 位：加速度</p>
+</li>
+<li>
+<p>0：正常。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割小轮廓，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">310</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割小轮廓，从穿孔点降低逼近速度，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">330</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割小轮廓，厚板中降低逼近速度，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">120</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">中轮廓逼近切割类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割中轮廓，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割中轮廓，从穿孔点降低逼近速度，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割中轮廓，厚板中降低逼近速度，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">大轮廓逼近切割类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不切割。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割大轮廓，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割大轮廓，从穿孔点降低逼近速度，正常加速度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">切割大轮廓，厚板中降低逼近速度，正常加速度</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140, 150, 160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">蒸发类型</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>蒸发类型<br>
+确定逼近期间如何进行蒸发</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ID 小轮廓 = 140</p>
+</li>
+<li>
+<p>ID 中轮廓 = 150</p>
+</li>
+<li>
+<p>ID 大轮廓 = 160</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">小轮廓蒸发类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不蒸发。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">仅在穿孔点处圆形蒸发。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">整个逼近段蒸发。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓蒸发类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID140。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓蒸发类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">值范围和描述参见 ID140。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小轮廓直线长度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分的长度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓直线长度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分的长度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">190</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓直线长度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分的长度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小轮廓圆弧半径</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分与轮廓进入点之间过渡曲线的半径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">210</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓圆弧半径</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分与轮廓进入点之间过渡曲线的半径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">220</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓圆弧半径</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分与轮廓进入点之间过渡曲线的半径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小轮廓逼近角度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分与刀具路径之间的角度（对应圆弧的角度）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓逼近角度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分与刀具路径之间的角度（对应圆弧的角度）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓逼近角度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">°</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近段直线部分与刀具路径之间的角度（对应圆弧的角度）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">260</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小轮廓预切割长度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近策略 3 中，在逼近段直线部分以降低模式切割的预切割路径长度。预切割长度限制为"直线长度"参数的值。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">270</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中轮廓预切割长度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近策略 3 中，在逼近段直线部分以降低模式切割的预切割路径长度。预切割长度限制为"直线长度"参数的值。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">280</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大轮廓预切割长度</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逼近策略 3 中，在逼近段直线部分以降低模式切割的预切割路径长度。预切割长度限制为"直线长度"参数的值。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/image12.png" alt="image12" width="400">
+</div>
+<div class="title">逼近方向示例</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tc_microjoint">TC_MICROJOINT</a>
+  </li>
+  <li level="2">
+   <a href="#_g821">G821</a>
+  </li>
+  <li level="2">
+   <a href="#_g822">G822</a>
+  </li>
+  <li level="2">
+   <a href="#_g824">G824</a>
+  </li>
+  <li level="1">
+   <a href="#_tc_lead_in">TC_LEAD_IN</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="bevelcut.html">斜角切割</a></span>
+ <span class="next"><a href="flyingfocus.html">飞行焦点位置调整</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

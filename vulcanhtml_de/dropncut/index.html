@@ -1,0 +1,913 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Drop and Cut</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/create.html">Produktionsplan erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/lock.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/run.html">Produktionsplan ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Ablaufsequenz</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/loading.html">Tafelbeladung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/material.html">Materialbestand</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a class="active" href="index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../programming/index.html">NC-Programmierreferenz</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/din/index.html">DIN-Format</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/3_dinprogramstructure/index.html">DIN-Programmstruktur</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">Programmnummer %</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">Satznummer N</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M-Funktionen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">Parameterfeld</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">Grafisches Element – Markierungslinien anzeigen</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../programming/din/4_lasertechnology/index.html">Lasertechnologie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">Programmkopf</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">Technologietabellen-(TT)-Übertragung</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">Prüfung auf aktives Boundary-Programm</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">Block Jump</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">Satznummer</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">Start einer Teilinformation</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">Laserparameter-Auswahl & Aktualisierung</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">Konturanweisungen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">Programmende (G99)</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">Restschnitt</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">Restschnitt-Start</a></li>
+          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">Restschnitt-Ende</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">Nur Einstechen in der Kontur</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">Beispielprogramm mit mehreren Teilen</a></li>
+        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly-Cut-Beispielprogramm:</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lst/index.html">LST-Format</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST-Programmstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">Inkrementalbefehl (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">Soft Micro-Joints & Nano-Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../programming/lsttechno/index.html">Lasertechnologie-Befehle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">Laserschneiden</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">Teile kennzeichnen</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">Mehrfachprogrammstruktur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">Schneidabstand</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">Schnittspaltkorrektur</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">Überfahrhöhe</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">Zeitmessung von Teilen</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">Fasenschnitt</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">Strahlunterdrückung</a></li>
+      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">Änderung der Fokuslage</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Drop and Cut</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Drop and Cut</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Drop-and-Cut-Funktion verwendet eine im Maschineninneren montierte
+Netzwerkkamera, um eine Live-Ansicht des Blechs auf der Palette bereitzustellen.
+Nach der Kalibrierung der Kamera können Sie Teile direkt auf dem Kamerabild in
+der Nachbearbeitung platzieren, und Vulcan erfasst automatisch den
+Arbeitsversatz — eine manuelle Versatz-Eingabe ist nicht mehr erforderlich.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kameramodell_und_spezifikationen">Kameramodell und Spezifikationen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Modellname:</strong> Hikvision DS-2CD1027G2-L</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Spezifikation</th>
+<th class="tableblock halign-left valign-top">Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Kamera</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bildsensor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1/2.8" Progressive Scan CMOS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max. Auflösung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920 x 1080</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min. Beleuchtung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Farbe: 0,001 Lux @ (F1.0, AGC EIN), 0 Lux mit Licht</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verschlusszeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1/3 s bis 1/100.000 s</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tag &amp; Nacht</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24/7-Farbbildgebung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Winkelverstellung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schwenken: 0° bis 360°, Neigen: 0° bis 90°, Drehen: 0° bis 360°</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Objektiv</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objektivtyp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Festbrennweite, 2,8 und 4 mm optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brennweite &amp; FOV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2,8 mm, horizontales FOV: 106°, vertikales FOV: 57°, diagonales FOV: 126°<br>
+4 mm, horizontales FOV: 83°, vertikales FOV: 44°, diagonales FOV: 99°</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objektivanschluss</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M12</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Blendentyp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Blende</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">F1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schärfentiefe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2,8 mm: 1,5 m bis ∞<br>
+4 mm: 2,1 m bis ∞</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">DORI</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DORI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2,8 mm, D: 44 m, O: 17 m, R: 8 m, I: 4 m<br>
+4 mm, D: 56 m, O: 22 m, R: 11 m, I: 5 m</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Beleuchtung</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zusatzlichttyp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Weißlicht</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zusatzlichtreichweite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bis zu 30 m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intelligentes Zusatzlicht</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Video</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hauptstream</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50 Hz: 25 fps (1920 x 1080, 1280 x 720)<br>
+60 Hz: 30 fps (1920 x 1080, 1280 x 720)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Substream</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50 Hz: 25 fps (640 x 480, 640 x 360)<br>
+60 Hz: 30 fps (640 x 480, 640 x 360)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Videokomprimierung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hauptstream: H.265+/H.265/H.264+/H.264<br>
+Substream: H.265/H.264/MJPEG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Videobitrate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 Kbps bis 8 Mbps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H.264-Typ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Baseline Profile, Main Profile, High Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H.265-Typ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bitratensteuerung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CBR, VBR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Region of Interest (ROI)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 fester Bereich für den Hauptstream</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_positionierung_der_kamera_in_der_maschine">Positionierung der Kamera in der Maschine</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Kamera ist im Maschineninneren montiert, an der oberen rechten Innenseite
+der Tür, bei 50 mm. Sie bietet eine Ansicht aus dem Inneren der Maschine. Der
+Blickwinkel ist geneigt, um die Platzierung der halben Blechfläche abzudecken.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cameraposition.png" alt="Kameraposition" width="400">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cameraposition2.png" alt="Kameraposition" width="400">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anschließen_einer_netzwerkkamera_in_vulcan">Anschließen einer Netzwerkkamera in Vulcan</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Um die Kommunikation zwischen der Kamera und Vulcan herzustellen, muss die
+IP-Adresse der Kamera im gleichen Netzwerkbereich wie die IP-Adresse der
+Maschine konfiguriert werden.</p>
+</div>
+<div class="sect2">
+<h3 id="_überprüfen_der_maschinen_ip_adresse">Überprüfen der Maschinen-IP-Adresse</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Wechseln Sie in den Modus <strong>Service User Active</strong>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Öffnen Sie <strong>Einstellungen</strong></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Benutzer wechseln</strong></p>
+</li>
+<li>
+<p>Ändern Sie die Benutzergruppe auf <strong>Service User Active</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Öffnen Sie die <strong>Eingabeaufforderung</strong>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Gehen Sie zu <strong>Windows-Tools</strong></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Eingabeaufforderung</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Geben Sie <code>ipconfig</code> ein und drücken Sie <strong>Enter</strong>. Das System zeigt die
+Netzwerkdetails der Maschine an, einschließlich der im lokalen Netzwerk
+verbundenen IP-Adresse.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineip.png" alt="Maschinen-IP-Adresse" width="800">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konfigurieren_der_kamera_ip_adresse">Konfigurieren der Kamera-IP-Adresse</h3>
+<div class="paragraph">
+<p>Die Kamera muss mit einer IP-Adresse im gleichen Bereich wie die Maschine
+konfiguriert werden.</p>
+</div>
+<div class="paragraph">
+<p><strong>Beispiel:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maschinen-IP: <code>192.168.1.176</code></p>
+</li>
+<li>
+<p>Kamera-IP: <code>192.168.1.xxx</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Stellen Sie sicher, dass die Kamera-IP-Adresse eindeutig ist und nicht
+bereits einem anderen Gerät zugewiesen wurde. Wenden Sie sich an das IT-Team, um
+die Eindeutigkeit zu bestätigen.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Standardmäßig verwendet die Hikvision DS-2CD1027G2-L Kamera die IP
+<code>192.168.1.64</code>, die bereits im korrekten Bereich liegt. Eine manuelle
+Konfiguration ist nicht erforderlich, es sei denn, die IP-Adresse weicht ab.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konfigurieren_der_system_ip_adresse_falls_erforderlich">Konfigurieren der System-IP-Adresse (falls erforderlich)</h3>
+<div class="paragraph">
+<p>Wenn die Kamera eine andere IP-Adresse hat:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Verbinden Sie die Kamera direkt über Ethernet mit einem System.</p>
+</li>
+<li>
+<p>Verwenden Sie die im Kamerahandbuch angegebene Standard-IP-Adresse.</p>
+</li>
+<li>
+<p>Konfigurieren Sie die System-IP im gleichen Bereich:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>IP-Adresse:</strong> <code>192.168.1.176</code></p>
+</li>
+<li>
+<p><strong>Subnetzmaske:</strong> <code>255.255.255.0</code></p>
+</li>
+<li>
+<p><strong>Standard-Gateway:</strong> Nach Bedarf</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/systemip.png" alt="System-IP-Konfiguration" width="600">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Stellen Sie sicher, dass die System-IP-Adresse und die
+Kamera-IP-Adresse im gleichen Netzwerkbereich liegen. Weisen Sie keine
+IP-Adresse zu, die bereits von einem anderen Gerät im Netzwerk verwendet wird.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konfigurieren_der_kamera_in_vulcan">Konfigurieren der Kamera in Vulcan</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigieren Sie zu <code>C:\ProgramData\Metamation\Vulcan\Data</code> und öffnen Sie <code>CamSettings.xml</code> in einem Texteditor.</p>
+</li>
+<li>
+<p>Aktualisieren Sie die Konfigurationsdetails:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;Camera id="1" description="Camera 1" enable="true"&gt;
+  &lt;Configuration&gt;
+    &lt;LiveStream enable="false"
+      url="http://192.168.1.64/ISAPI/Streaming/channels/101/picture" /&gt;
+    &lt;LiveStreamDefault enable="true"
+      url="http://192.168.1.64/ISAPI/Streaming/channels/101/picture" /&gt;
+    &lt;Authentification username="admin" password="your_password" /&gt;
+  &lt;/Configuration&gt;
+&lt;/Camera&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Ersetzen Sie die IP-Adresse im Feld <code>url</code> durch die tatsächliche Kamera-IP.</p>
+</li>
+<li>
+<p>Aktualisieren Sie die Authentifizierungsdaten bei Bedarf.</p>
+</li>
+<li>
+<p>Speichern Sie die Datei und schließen Sie den Editor.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_überprüfen_der_kameraverbindung">Überprüfen der Kameraverbindung</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Öffnen Sie <strong>Vulcan</strong> &#8594; Seite <strong>Kalibrierung</strong>.</p>
+</li>
+<li>
+<p>Bestätigen Sie, dass das Kamerabild korrekt angezeigt wird.</p>
+</li>
+<li>
+<p>Stellen Sie sicher:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Kamera-IP stimmt mit der XML-Konfiguration überein</p>
+</li>
+<li>
+<p>System und Kamera befinden sich im gleichen Netzwerkbereich</p>
+</li>
+<li>
+<p>Benutzername und Passwort sind korrekt</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_korrektur_der_kameraverzeichnung">Korrektur der Kameraverzeichnung</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Vulcan unterstützt derzeit keine Kamera-Entzerrung. Diese wird in einer
+zukünftigen Version implementiert. Vulcan unterstützt alle IP-Kameras, es kann
+jedoch bei verzerrten Kameras zu Abweichungen kommen.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>So korrigieren Sie die Objektivverzeichnung:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Drucken Sie ein Schachbrettmuster aus und kleben Sie es auf eine flache, starre Tafel. Stellen Sie sicher, dass die Oberfläche eben ist und sich nicht verbiegt.</p>
+</li>
+<li>
+<p>Nehmen Sie mehrere Bilder des Schachbretts auf. Beim Aufnehmen:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bewegen Sie die Tafel so, dass verschiedene Teile des Schachbretts in der Mitte, an den Rändern und in den Ecken des Kamerabildes erscheinen.</p>
+</li>
+<li>
+<p>Neigen Sie die Tafel in leicht unterschiedlichen Winkeln, um mehr Variation zu erfassen.</p>
+<div class="paragraph">
+<p>Dies hilft dem Kalibrierungsprozess zu verstehen, wie sich die Kamera über das gesamte Sichtfeld verhält.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_ausführen_der_entzerrungsfunktion">Ausführen der Entzerrungsfunktion</h3>
+<div class="paragraph">
+<p>Führen Sie die aufgenommenen Bilder durch den Entzerrungscode. Der Code berechnet:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>K (intrinsische Matrix)</strong> — repräsentiert die Brennweite und das optische Zentrum der Kamera</p>
+</li>
+<li>
+<p><strong>Verzeichnungskoeffizienten</strong> — repräsentieren die im Objektiv vorhandene Verzeichnung</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Diese Werte beschreiben, wie die Kamera ein Bild erzeugt und wie sie es
+verzerrt. Alle Matrizen können im XML-Format gespeichert und später
+wiederverwendet werden, solange der Kameraaufbau unverändert bleibt (keine
+Bewegung, keine Fokusänderung usw.).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_überprüfen_der_entzerrung">Überprüfen der Entzerrung</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Prüfen Sie nach der Entzerrung, ob die Verzeichnung korrekt behoben wurde und das Ausgabebild genau aussieht.</p>
+</li>
+<li>
+<p>Objektivverzeichnung ist in der Regel an den Rändern und Ecken des Bildes stärker, achten Sie daher besonders auf diese Bereiche.</p>
+</li>
+<li>
+<p>Wenn die Verzeichnung nicht korrekt behoben wurde, wiederholen Sie den Entzerrungsprozess mit besseren Bildern.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schritte_zur_kalibrierung">Schritte zur Kalibrierung</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Gehen Sie zu <strong>Konfigurieren</strong> &#8594; <strong>Kalibrierung</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/calibrate.png" alt="Kalibrierungsseite" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>① Zeigt die Live-Koordinaten der Positionsdiode an.<br>
+② Statusmeldung zur Führung des Benutzers durch den Kalibrierungsprozess.<br>
+③ Zeigt den gespeicherten Begrenzungsbereich an.<br>
+④ Zum Erfassen eines neuen Begrenzungsbereichs.</p>
+</div>
+</li>
+<li>
+<p>Das Live-Bild der Kamera wird auf dem Steuerungsbildschirm angezeigt.</p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>Show Bound</strong>, um die gespeicherte Kalibrierungsgrenze
+anzuzeigen. Dies hilft, den sichtbaren Bereich zu überprüfen und zu bestätigen,
+ob die Kamera korrekt positioniert ist, um den gewünschten Blechbereich zu
+erfassen.</p>
+</li>
+<li>
+<p>Wenn die angezeigte Grenze nicht mit dem gewünschten Blechbereich
+übereinstimmt, klicken Sie auf <strong>Capture</strong>, um zurückzusetzen und neue
+Begrenzungspunkte festzulegen.</p>
+</li>
+<li>
+<p>Fahren Sie mit der Kalibrierung fort, indem Sie vier Referenzpunkte
+nacheinander auf dem Blech messen, die Positionsdiode führen und darauf klicken,
+um eine exakte rechteckige Begrenzung zu bilden.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_erfassungsmodus">Erfassungsmodus</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/capturemode.png" alt="Erfassungsmodus" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>① Gibt die Reihenfolge der zu erfassenden Punkte vor.<br>
+② Zum Verlassen des Erfassungsmodus ohne Speichern der Änderungen.</p>
+</div>
+<div class="paragraph">
+<p>Sobald die Positionsdiode an der gewünschten Position platziert ist und ein Punkt
+auf der Positionsdiode angeklickt wird, wird die Position der Positionsdiode
+automatisch für den entsprechenden Punkt erfasst.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Wenn der Positionsdioden-Punkt beim Bewegen des Laserkopfs auf der
+Kalibrierungsseite nicht aktualisiert wird, fordert das Textfeld zur manuellen
+Eingabe des Maschinenpunkts auf. Dieser muss manuell eingegeben und durch
+Drücken von <strong>Enter</strong> oder Klicken außerhalb des Textfelds bestätigt werden.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Sobald alle vier Punkte eingegeben sind, erscheint ein Bestätigungsdialog. Bei
+Bestätigung wird die Begrenzung hinzugefügt; andernfalls wird die vorherige
+Begrenzung beibehalten. Nach der Bestätigung wird die Begrenzung angezeigt.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Kalibrierung ist ein einmaliger Vorgang, der gültig bleibt, solange
+sich die Kameraposition oder die Palette nicht ändert.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/capturemode2.png" alt="Kalibrierungsbestätigung" width="600">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verwenden_der_kalibrierten_ansicht_in_der_nachbearbeitung">Verwenden der kalibrierten Ansicht in der Nachbearbeitung</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/postproduction.png" alt="Nachbearbeitungsseite" width="600">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sobald die Begrenzung gespeichert ist, wechseln Sie zur <strong>Nachbearbeitung</strong>, indem Sie die gewünschte LST-Datei unter <strong>Programme</strong> auswählen.</p>
+</li>
+<li>
+<p>Die Kameraansicht in der Nachbearbeitung übernimmt die gespeicherte Begrenzung, innerhalb derer Teile hinzugefügt und gespeichert werden können.</p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>Save NC</strong> — der Arbeitsversatz wird in Bezug auf den
+Begrenzungsbereich erfasst. Das gespeicherte Teil kann dann ohne manuelle
+Erfassung des Arbeitsversatzes geschnitten werden.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_kameramodell_und_spezifikationen">Kameramodell und Spezifikationen</a>
+  </li>
+  <li level="1">
+   <a href="#_positionierung_der_kamera_in_der_maschine">Positionierung der Kamera in der Maschine</a>
+  </li>
+  <li level="1">
+   <a href="#_anschließen_einer_netzwerkkamera_in_vulcan">Anschließen einer Netzwerkkamera in Vulcan</a>
+  </li>
+  <li level="2">
+   <a href="#_überprüfen_der_maschinen_ip_adresse">Überprüfen der Maschinen-IP-Adresse</a>
+  </li>
+  <li level="2">
+   <a href="#_konfigurieren_der_kamera_ip_adresse">Konfigurieren der Kamera-IP-Adresse</a>
+  </li>
+  <li level="2">
+   <a href="#_konfigurieren_der_system_ip_adresse_falls_erforderlich">Konfigurieren der System-IP-Adresse (falls erforderlich)</a>
+  </li>
+  <li level="2">
+   <a href="#_konfigurieren_der_kamera_in_vulcan">Konfigurieren der Kamera in Vulcan</a>
+  </li>
+  <li level="2">
+   <a href="#_überprüfen_der_kameraverbindung">Überprüfen der Kameraverbindung</a>
+  </li>
+  <li level="1">
+   <a href="#_korrektur_der_kameraverzeichnung">Korrektur der Kameraverzeichnung</a>
+  </li>
+  <li level="2">
+   <a href="#_ausführen_der_entzerrungsfunktion">Ausführen der Entzerrungsfunktion</a>
+  </li>
+  <li level="2">
+   <a href="#_überprüfen_der_entzerrung">Überprüfen der Entzerrung</a>
+  </li>
+  <li level="1">
+   <a href="#_schritte_zur_kalibrierung">Schritte zur Kalibrierung</a>
+  </li>
+  <li level="2">
+   <a href="#_erfassungsmodus">Erfassungsmodus</a>
+  </li>
+  <li level="2">
+   <a href="#_verwenden_der_kalibrierten_ansicht_in_der_nachbearbeitung">Verwenden der kalibrierten Ansicht in der Nachbearbeitung</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../productionplan/material.html">Materialbestand</a></span>
+ <span class="next"><a href="../troubleshooting/index.html">Fehlerbehebung</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>切口补偿</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="100" height="37" /></div>
+        <div><p>TJSCut-90 reference manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎来到 TJSCut-90</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/create.html">创建生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/lock.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/run.html">运行生产计划</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/sequence.html">运行顺序</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/loading.html">板材装载</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/material.html">材料库存</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../dropncut/index.html">Drop and Cut</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">NC 编程参考</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../din/index.html">DIN 格式</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/3_dinprogramstructure/index.html">DIN 程序结构</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/programnum.html">程序号 %</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/blocknumbe.html">程序块号 N</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/gfunctions.html">G 功能</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/mfunctions.html">M 功能</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/parametera.html">参数数组</a></li>
+        <li><button class="tree blank"></button><a href="../din/3_dinprogramstructure/graphicale.html">图形元素 – 显示标记线</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../din/4_lasertechnology/index.html">激光技术</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programhea.html">程序头</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/technology.html">技术表（TT）传输</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/checkforbo.html">检查边界程序是否激活</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blockjump.html">程序块跳转</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/blocknumbe.html">程序块号</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/startofapa.html">零件信息开始</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/laserparam.html">激光参数选择与更新</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/contoursta.html">轮廓指令</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/programend.html">程序结束</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../din/4_lasertechnology/5_remnantcut/index.html">残料切割</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/startremna.html">起始残料切割</a></li>
+          <li><button class="tree blank"></button><a href="../din/4_lasertechnology/5_remnantcut/endremnant.html">结束残料切割</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/7_onlypiercinginthecon/index.html">仅在轮廓中穿孔</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/9_sampleprogramwithmul/index.html">多零件示例程序</a></li>
+        <li><button class="tree blank"></button><a href="../din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut 示例程序：</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../lst/index.html">LST 格式</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../lst/1_lst/index.html">LST 程序结构</a></li>
+      <li><button class="tree blank"></button><a href="../lst/4_flycut/index.html">FlyLine</a></li>
+      <li><button class="tree blank"></button><a href="../lst/5_tcwrite/index.html">TC_WRITE</a></li>
+      <li><button class="tree blank"></button><a href="../lst/6_incrementalcommandic/index.html">增量命令 (IC)</a></li>
+      <li><button class="tree blank"></button><a href="../lst/7_softmicrojointsnanoj/index.html">软微连接与 Nano Joints</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">激光技术命令</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="lasercutting.html">激光切割</a></li>
+      <li><button class="tree blank"></button><a href="identifyparts.html">零件标识</a></li>
+      <li><button class="tree blank"></button><a href="multiprogstruc.html">多程序结构</a></li>
+      <li><button class="tree blank"></button><a href="cuttingdistance.html">切割距离</a></li>
+      <li><button class="tree blank"></button><a class="active" href="kerfcorrection.html">切口补偿</a></li>
+      <li><button class="tree blank"></button><a href="overshootheight.html">回退高度</a></li>
+      <li><button class="tree blank"></button><a href="timing.html">零件计时</a></li>
+      <li><button class="tree blank"></button><a href="bevelcut.html">斜角切割</a></li>
+      <li><button class="tree blank"></button><a href="beamsuppression.html">光束抑制</a></li>
+      <li><button class="tree blank"></button><a href="flyingfocus.html">飞行焦点位置调整</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">NC 编程参考</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">激光技术命令</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="kerfcorrection.html">切口补偿</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>切口补偿</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">定义</div>
+<p>切口补偿使得可以在编程路径的等距线上加工与零件相关的程序。逼近的路径与编程轮廓保持恒定距离。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_lasercorr_on">TC_LASERCORR_ON</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">定义</div>
+<p>激活切口补偿。</p>
+</div>
+<div class="paragraph">
+<div class="title">编程</div>
+<p>TC_LASERCORR_ON 循环调用在 NC 程序中使用参数调用：</p>
+</div>
+<div class="paragraph">
+<p>TC_LASERCORR_ON (补偿方向)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 TC_LASER_ON 调用之后编程。</p>
+</li>
+<li>
+<p>后续 NC 程序块必须是直线程序块（G01）。补偿必须在直线运动上退出。</p>
+</li>
+<li>
+<p>激光的刀具路径从技术表中的"切口"值计算。切口源自 TC_LASER_ON 的切割参数。</p>
+</li>
+<li>
+<p>由 TC_LASER_OFF 取消（光束关闭，自动关闭切口补偿并恢复激光切割头的最后编程位置）。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">轮廓更改</div>
+<p>如果要在已经展开的补偿上执行带有修改切口的轮廓更改，则不必关闭切口补偿。只需编程一个带有相应切割类型的 TC_LASER_ON 调用。新补偿将在后续运动程序块中对整个程序块进行线性校正。</p>
+</div>
+<div class="paragraph">
+<div class="title">补偿方向</div>
+<p>切口补偿根据设置的参数在编程轮廓的左侧或右侧执行。</p>
+</div>
+<div class="paragraph">
+<div class="title">TC_LASERCORR_ON(T_LEFT)</div>
+<p>激活轮廓左侧的切口补偿：</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image8.jpeg" alt="image8" width="400"></span></p>
+</div>
+<div class="paragraph">
+<div class="title">TC_LASERCORR_ON(T_RIGHT)</div>
+<p>激活轮廓右侧的切口补偿：</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image10.jpeg" alt="image10" width="400"></span></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">示例</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">程序块</th>
+<th class="tableblock halign-left valign-top">NC 程序</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X500 Y100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定位运动。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"1755",10,100)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开启。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASERCORR_ON(T_LEFT)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激活轮廓左侧的切口补偿。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G01 X400 Y100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">补偿展开。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G03 X500 Y200 I100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">轮廓加工。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_ON(1,"1755",10,110)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">轮廓更改。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N160</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G02 X450 Y150 I-50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在第一个移动程序块中修改补偿。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N170</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G03 X400 Y100 J-50</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N180</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC_LASER_OFF(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光关闭，关闭切口补偿并退出补偿。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N190</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">活动 G 功能。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tc_lasercorr_on">TC_LASERCORR_ON</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="cuttingdistance.html">切割距离</a></span>
+ <span class="next"><a href="overshootheight.html">回退高度</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 JFY International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
