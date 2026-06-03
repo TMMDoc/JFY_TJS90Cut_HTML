@@ -231,14 +231,55 @@
                     <article id="article">
                         <h1>Fokuslage</h1>
 <div class="paragraph">
-<p>Wenn dieses Programm aktiviert ist, hilft es beim manuellen Überprüfen der Fokuslage. Es fordert Sie auf, den Fokusdurchmesser und die Fokuslage einzugeben. Der Bediener kann auch den aktiven Fokusdurchmesser und die aktive Fokuslage überwachen.</p>
+<p>Die Einstellung einer optimalen Fokuslage ist entscheidend, um die kleinstmögliche
+Punktgröße zu erreichen und die Intensität und Präzision des Lasers zu maximieren.</p>
+</div>
+<div class="paragraph">
+<p>Es gibt zwei Möglichkeiten, die Änderung der Fokuslage zu überwachen:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Über eine physische Skala</p>
+</li>
+<li>
+<p>Über Softwaresteuerung</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Einige Laserschneidköpfe verfügen über eine integrierte physische Skala, die die
+aktuelle Fokusposition anzeigt. Diese visuelle Anzeige hilft zu überprüfen, ob der
+Fokus-Motorantrieb ordnungsgemäß funktioniert.</p>
+</div>
+<div class="paragraph">
+<p>Einige Systeme ermöglichen die Überwachung der Fokusposition über Softwaresteuerung.</p>
+</div>
+<div class="paragraph">
+<p>Die physische Skala dient weiterhin als zuverlässige Referenz für die manuelle
+Überprüfung.</p>
+</div>
+<div class="paragraph">
+<p><strong>Vorgehensweise:</strong></p>
+</div>
+<div class="paragraph">
+<p>Um die korrekte Funktion des Kollimations-(Fokus-)Motorantriebs zu bestätigen,
+stellen Sie die Fokusposition manuell in den Programmeinstellungen unter
+<strong>Fokuslage</strong> ein. Überprüfen Sie nach Eingabe des gewünschten Wertes, ob sich
+die physische Skala entsprechend der Eingabe bewegt.</p>
+</div>
+<div class="paragraph">
+<p>Dieser Schritt ist eine wichtige Überprüfung vor dem Start eines Schneidprogramms.
+Wenn die physische Skala nicht mit der eingestellten Fokusposition übereinstimmt,
+kann der Fokus-Motorantrieb defekt sein und sollte vor dem Betrieb der Maschine
+überprüft werden.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/focaldistance.png" alt="FocalDistance" width="350">
 </div>
 </div>
-<div id="h000014" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p>Der eingegebene Wert der Fokuslage wird wie folgt angezeigt:</p>
@@ -249,34 +290,11 @@
 </div>
 </li>
 <li>
-<p>Wenn der Fokusdurchmesser als <em>150 µ</em> ausgewählt ist, ist der Fokusverschiebungswert mit <em>2,5 mm</em> vordefiniert.
-Wenn das Programm abgebrochen wird, wird die Fokuslage auf <em>2,5 mm</em> zurückgesetzt.</p>
-<div class="imageblock">
-<div class="content">
-<img src="img/focaldistance2.png" alt="FocalDistance2" width="350">
-</div>
-</div>
-</li>
-<li>
-<p>Wenn der Fokusdurchmesser als <em>210 µm</em> ausgewählt ist, ist der Fokusverschiebungswert mit <em>0 mm</em> vordefiniert.
-Wenn das Programm abgebrochen wird, wird die Fokuslage auf <em>0 mm</em> zurückgesetzt.</p>
-<div class="imageblock">
-<div class="content">
-<img src="img/focaldistance3.png" alt="FocalDistance3" width="350">
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Weitere Einzelheiten finden Sie in der Bedienungsanleitung der Maschine.
-</td>
-</tr>
-</table>
-</div>
+<p>Wenn der Fokusdurchmesser auf 150 µm oder 210 µm eingestellt ist, verwendet
+die Fokusverschiebung den Wert, der dem ausgewählten Fokusdurchmesser aus dem
+Programm <strong>Fokuskamm</strong> zugeordnet ist, um die Fokuslage anzupassen. Daher zeigt
+die Fokuslage auf dem Monitor die Summe aus der eingegebenen Fokuslage und dem
+Fokusverschiebungswert an.</p>
 </li>
 </ul>
 </div>
