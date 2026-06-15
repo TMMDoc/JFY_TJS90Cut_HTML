@@ -11,7 +11,7 @@ UIXlate=False, DebugUIXlate=False, Language=EN
 contents.txt • 264301.024352
 impressum.adoc • Impressum
 Index.adoc • Welcome to {APPNAME}
-manifest.txt • 265603.025631
+manifest.txt • 261103.061125
 Configure\contents.txt • 255909.065930
 Configure\index.adoc • Machine configuration
 Configure\LaserDB.adoc • Laser database
@@ -100,8 +100,6 @@ LTT\LaserData\special.adoc • Special Processes
 programming\DIN\contents.txt • 265730.055706
 programming\DIN\index.adoc • DIN format
 programming\DIN\manifest.txt • 265730.055708
-programming\DIN\raw.adoc • *Revision Date :*
-programming\DIN\x.txt
 programming\LST\contents.txt • 265730.055708
 programming\LST\Index.adoc • LST format
 programming\LSTtechno\BeamSuppression.adoc • Beam suppression
