@@ -9,7 +9,8 @@ Pages=109
 UIXlate=False, DebugUIXlate=False, Language=EN
 
 contents.txt • 264301.024352
-impressum.adoc • Impressum
+impressum.JFY.adoc • Impressum
+impressum.TRUMPF copy.adoc • Impressum
 Index.adoc • Welcome to {APPNAME}
 manifest.txt • 261103.061125
 Configure\contents.txt • 255909.065930
