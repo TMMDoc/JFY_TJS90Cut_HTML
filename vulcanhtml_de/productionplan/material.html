@@ -231,62 +231,35 @@
                     <article id="article">
                         <h1>Materialbestand</h1>
 <div class="paragraph">
-<p>Diese Funktion dient zur Anzeige des Materialstatus auf den Maschinenpaletten basierend auf dem
-Produktionsplanprozess. Der Bediener sollte den aktuellen Status beobachten und
-bei Bedarf hier anpassen.</p>
+<p>Die Seite <strong>Materialbestandsinformation</strong> zeigt den Materialbedarf für
+den ausgewählten Produktionsplan und vergleicht ihn mit dem verfügbaren Lagerbestand.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/p3.png" alt="p3"></span></p>
 </div>
 <div class="paragraph">
-<p><strong>Standort:</strong>
-Innen- und Außenpaletten werden angezeigt.</p>
+<p>Verwenden Sie diese Ansicht, um vor Produktionsbeginn zu überprüfen, ob
+ausreichend Materialbestand vorhanden ist, um die erforderliche Losmenge zu erfüllen.</p>
 </div>
 <div class="paragraph">
-<p><strong>Name:</strong> Die Tafelinformationen werden beim Start des Produktionsplans gelesen und können
-nicht bearbeitet werden.</p>
+<p>Die Tabelle enthält die folgenden Spalten:</p>
 </div>
 <div class="paragraph">
-<p><strong>Aktion:</strong> Die erforderliche Aktion wird angezeigt und kann über die Dropdown-Auswahl
-angepasst werden.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Wird bearbeitet</p>
-</li>
-<li>
-<p>Leer</p>
-</li>
-<li>
-<p>Wird entladen</p>
-</li>
-</ul>
+<p><strong>Benötigtes Material</strong> - Die für die Produktion erforderliche Materialspezifikation.</p>
 </div>
 <div class="paragraph">
-<p>Wird bearbeitet: Dies zeigt an, dass die Tafel als Rohmaterial/
-Wiedereintritt zur Bearbeitung vorgesehen ist.</p>
+<p><strong>Benötigte Menge</strong> - Die Gesamtmenge an Material, die zur Erfüllung des Produktionsloses benötigt wird.</p>
 </div>
 <div class="paragraph">
-<p>Leer:
-Kein Material auf den Maschinenpaletten.</p>
+<p><strong>Menge im Lager</strong> - Die aktuell im Lager verfügbare Menge.</p>
 </div>
 <div class="paragraph">
-<p>Wird entladen: Dies zeigt an, dass die Tafel als fertige
-Tafel/Abfalltafel zur Entladung vorgesehen ist.</p>
+<p><strong>Statusübersicht</strong> - Ob der verfügbare Bestand für die geplante Produktionsmenge ausreicht.</p>
 </div>
 <div class="paragraph">
-<p>Der aktuelle Materialbestandsstatus wird in Echtzeit von der Steuerung basierend auf dem
-laufenden Produktionsplan gelesen. Die Steuerung liest die Informationen beim Start des
-Produktionsplans, und die folgenden Aktionen werden durch Palette/Automatisierung ausgeführt.</p>
-</div>
-<div class="paragraph">
-<p>Dies ist eine sehr wichtige Funktion bei angeschlossener Automatisierung. Wenn der
-Produktionsplan normalerweise abgebrochen wird, können bei der Fortsetzung der Produktion verschiedene Szenarien auftreten.
-Manchmal wird der Auftrag vorübergehend im Einzelauftragsmodus ausgeführt, dann ist die Anpassung des
-Materialbestands für die Bediener sehr nützlich. Nach Abschluss der Anpassung verarbeitet die
-Steuerung die weiteren Aktionen und die Tafeln können wie erwartet
-von der Automatisierung bewegt werden.</p>
+<p>Wenn der verfügbare Lagerbestand geringer ist als die benötigte Menge, zeigt
+die Spalte <strong>Statusübersicht</strong> „Nicht genügend Bestand" an. Sie müssen weiteres
+Material hinzufügen, bevor Sie den Produktionsplan abschließen können.</p>
 </div>
 
                     </article>

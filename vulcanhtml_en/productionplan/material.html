@@ -231,62 +231,35 @@
                     <article id="article">
                         <h1>Material stock</h1>
 <div class="paragraph">
-<p>This function is to provide the Material status on machine pallets based on the
-production plan process. Operator should observe the actual status and compare
-to adjust here if necessary.</p>
+<p>The <strong>Material stock information</strong> page shows the material requirements for
+the selected production plan and compares them against the available inventory.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/p3.png" alt="p3"></span></p>
 </div>
 <div class="paragraph">
-<p><strong>Location:</strong>
-Inside and Outside pallets are displayed.</p>
+<p>Use this screen to verify whether you have sufficient material stock to meet
+the required lot quantity before you start production.</p>
 </div>
 <div class="paragraph">
-<p><strong>Name:</strong> The sheet information will be read once the production plan starts, not
-able to edit.</p>
+<p>The table shows the following columns:</p>
 </div>
 <div class="paragraph">
-<p><strong>Action:</strong> The needed action will be displayed and can be adjusted by drop-down
-selection.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Will be processed</p>
-</li>
-<li>
-<p>Empty</p>
-</li>
-<li>
-<p>Will be unloaded</p>
-</li>
-</ul>
+<p><strong>Required material</strong> - The material specification required for production.</p>
 </div>
 <div class="paragraph">
-<p>Will be processed: This is to indicate the sheet will be set as raw
-material/re-entry to be processed.</p>
+<p><strong>Required quantity</strong> - The total quantity of material needed to fulfill the production lot.</p>
 </div>
 <div class="paragraph">
-<p>Empty:
-No material on the machine pallets.</p>
+<p><strong>Quantity in storage</strong> - The current quantity available in inventory.</p>
 </div>
 <div class="paragraph">
-<p>Will be unloaded: This is to indicate the sheet will be set as finished
-sheet/scrap sheet to be unloaded.</p>
+<p><strong>Status summary</strong> - Whether the available stock is sufficient for the planned production quantity.</p>
 </div>
 <div class="paragraph">
-<p>The current Material Stock status will be real-time read from Control based on
-the running production plan. Control will read the information while production
-plan start, and the following actions will be executed by pallet/automation.</p>
-</div>
-<div class="paragraph">
-<p>This is a very important feature while Automation connected. Normally if the
-production plan be aborted, continue production could face different scenarios.
-Sometimes, the job be produced temporally in single job mode, then the Material
-Stock adjustment is very useful for operators. While adjustment be finished,
-Control will process the further actions and the sheets could be moved by
-Automation as expected.</p>
+<p>If the available inventory is lower than the required quantity, the
+<strong>Status summary</strong> column displays "Not enough stock". You must add more
+material before you can complete the production plan.</p>
 </div>
 
                     </article>
