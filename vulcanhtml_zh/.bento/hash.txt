@@ -1,17 +1,20 @@
 Version=58
-APPNAME=TJSCut-90
+APPNAME=TJS Cut-90
 BRAND=JFY
+CUTTINGUNIT=Cutting Unit
+DFC=SteadyFocus
+DROPNCUT=SmartRemnant
 FLAVOR=JFY
 JFY=
 LANGUAGE=EN
-Folders=27
-Pages=109
+Folders=10
+Pages=65
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 264101.064138
+contents.txt • 260708.060713
 impressum.adoc • 版本说明
 Index.adoc • 欢迎来到 {APPNAME}
-manifest.txt • 261701.061707
+manifest.txt • 261402.061421
 configure\contents.txt • 255909.065930
 configure\index.adoc • 机床配置
 configure\LaserDB.adoc • 激光数据库
@@ -35,7 +38,7 @@ Controls\SheetOrigin.adoc • 转到板材原点
 Controls\TargetShot.adoc • 目标射击
 Controls\traversal.adoc • 横移吹气
 DropnCut\contents.txt • 264301.024352
-DropnCut\index.adoc • Drop and Cut
+DropnCut\index.adoc • {DROPNCUT}
 Intro\contents.txt • 255909.065930
 Intro\ControlPanel.adoc • 控制面板
 Intro\Home.adoc • 用户界面
@@ -118,27 +121,27 @@ Workflow\img\2pt.svg
 programming\DIN\3_DINProgramStructure\Blocknumbe.adoc • 程序块号 N
 programming\DIN\3_DINProgramStructure\contents.txt • 265730.055706
 programming\DIN\3_DINProgramStructure\Gfunctions.adoc • G 功能
-programming\DIN\3_DINProgramStructure\GraphicalE.adoc • 图形元素 – 显示标记线
+programming\DIN\3_DINProgramStructure\GraphicalE.adoc • 显示标记线
 programming\DIN\3_DINProgramStructure\index.adoc • DIN 程序结构
 programming\DIN\3_DINProgramStructure\Mfunctions.adoc • M 功能
 programming\DIN\3_DINProgramStructure\ParameterA.adoc • 参数数组
 programming\DIN\3_DINProgramStructure\ProgramNum.adoc • 程序号 %
 programming\DIN\4_LaserTechnology\BlockJump.adoc • 程序块跳转
 programming\DIN\4_LaserTechnology\BlockNumbe.adoc • 程序块号
-programming\DIN\4_LaserTechnology\CheckforBo.adoc • 检查边界程序是否激活
+programming\DIN\4_LaserTechnology\CheckforBo.adoc • 检查边界程序
 programming\DIN\4_LaserTechnology\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\ContourSta.adoc • 轮廓指令
 programming\DIN\4_LaserTechnology\index.adoc • 激光技术
-programming\DIN\4_LaserTechnology\Laserparam.adoc • 激光参数选择与更新
+programming\DIN\4_LaserTechnology\Laserparam.adoc • 激光参数
 programming\DIN\4_LaserTechnology\ProgramEnd.adoc • 程序结束
 programming\DIN\4_LaserTechnology\ProgramHea.adoc • 程序头
 programming\DIN\4_LaserTechnology\StartofaPa.adoc • 零件信息开始
-programming\DIN\4_LaserTechnology\Technology.adoc • 技术表（TT）传输
+programming\DIN\4_LaserTechnology\Technology.adoc • 技术表传输
 programming\LST\1_LST\contents.txt • 265730.055708
 programming\LST\1_LST\index.adoc • LST 程序结构
 programming\LST\2_AbstractofDINconvers\contents.txt • 265730.055708
-programming\LST\2_AbstractofDINconvers\Cycleprogr.adoc • 循环程序：
-programming\LST\2_AbstractofDINconvers\EndofConto.adoc • 轮廓结束 – M1015：
+programming\LST\2_AbstractofDINconvers\Cycleprogr.adoc • 循环程序
+programming\LST\2_AbstractofDINconvers\EndofConto.adoc • 轮廓结束 – M1015
 programming\LST\2_AbstractofDINconvers\index.adoc • DIN 到 LST 转换
 programming\LST\2_AbstractofDINconvers\Mainprogra.adoc • 主程序
 programming\LST\2_AbstractofDINconvers\Specialcom.adoc • 特殊命令
@@ -152,9 +155,9 @@ programming\LST\5_TCWRITE\index.adoc • TC_WRITE
 programming\LST\6_IncrementalCommandIC\contents.txt • 265730.055708
 programming\LST\6_IncrementalCommandIC\index.adoc • 增量命令 (IC)
 programming\LST\7_SoftMicroJointsNanoJ\contents.txt • 265730.055708
-programming\LST\7_SoftMicroJointsNanoJ\index.adoc • 软微连接与 Nano Joints
+programming\LST\7_SoftMicroJointsNanoJ\index.adoc • 软微连接与 Nanojoints
 programming\DIN\4_LaserTechnology\10_FlyCutSampleProgram\contents.txt • 265730.055706
-programming\DIN\4_LaserTechnology\10_FlyCutSampleProgram\index.adoc • Fly Cut 示例程序：
+programming\DIN\4_LaserTechnology\10_FlyCutSampleProgram\index.adoc • FlyLine 示例程序
 programming\DIN\4_LaserTechnology\5_RemnantCut\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\5_RemnantCut\EndRemnant.adoc • 结束残料切割
 programming\DIN\4_LaserTechnology\5_RemnantCut\index.adoc • 残料切割
@@ -164,6 +167,6 @@ programming\DIN\4_LaserTechnology\6_FlyCutStitchCut\index.adoc • FlyLine
 programming\DIN\4_LaserTechnology\7_OnlyPiercingintheCon\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\7_OnlyPiercingintheCon\index.adoc • 仅在轮廓中穿孔
 programming\DIN\4_LaserTechnology\8_NanoJoints\contents.txt • 265730.055706
-programming\DIN\4_LaserTechnology\8_NanoJoints\index.adoc • Nano Joints
+programming\DIN\4_LaserTechnology\8_NanoJoints\index.adoc • Nanojoints
 programming\DIN\4_LaserTechnology\9_SampleProgramwithMul\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\9_SampleProgramwithMul\index.adoc • 多零件示例程序

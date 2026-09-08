@@ -1,18 +1,21 @@
 Version=58
-APPNAME=TJSCut-90
+APPNAME=TJS Cut-90
 BRAND=JFY
+CUTTINGUNIT=Cutting Unit
+DFC=SteadyFocus
+DROPNCUT=SmartRemnant
 FLAVOR=JFY
 JFY=
 LANGUAGE=EN
-Folders=27
-Pages=109
+Folders=10
+Pages=65
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 264101.054126
+contents.txt • 260608.060651
 Impressum.JFY.adoc • Impressum
 impressum.TRUMPF.adoc • Impressum
 Index.adoc • Willkommen bei {APPNAME}
-manifest.txt • 262701.062727
+manifest.txt • 261402.061421
 configure\contents.txt • 255909.065930
 configure\index.adoc • Maschinenkonfiguration
 configure\LaserDB.adoc • Laserdatenbestand
@@ -36,7 +39,7 @@ Controls\SheetOrigin.adoc • Tafelursprungspunkt anfahren
 Controls\TargetShot.adoc • Zielschuss
 Controls\traversal.adoc • Querblasen
 DropnCut\contents.txt • 264301.024352
-DropnCut\index.adoc • Drop and Cut
+DropnCut\index.adoc • {DROPNCUT}
 Intro\contents.txt • 255909.065930
 Intro\ControlPanel.adoc • Bedienpult
 Intro\Home.adoc • Bedienoberfläche
@@ -119,27 +122,27 @@ Workflow\img\2pt.svg
 programming\DIN\3_DINProgramStructure\Blocknumbe.adoc • Satznummer N
 programming\DIN\3_DINProgramStructure\contents.txt • 265730.055706
 programming\DIN\3_DINProgramStructure\Gfunctions.adoc • G-Funktionen
-programming\DIN\3_DINProgramStructure\GraphicalE.adoc • Grafisches Element – Markierungslinien anzeigen
+programming\DIN\3_DINProgramStructure\GraphicalE.adoc • Markierungslinien anzeigen
 programming\DIN\3_DINProgramStructure\index.adoc • DIN-Programmstruktur
 programming\DIN\3_DINProgramStructure\Mfunctions.adoc • M-Funktionen
 programming\DIN\3_DINProgramStructure\ParameterA.adoc • Parameterfeld
 programming\DIN\3_DINProgramStructure\ProgramNum.adoc • Programmnummer %
-programming\DIN\4_LaserTechnology\BlockJump.adoc • Block Jump
+programming\DIN\4_LaserTechnology\BlockJump.adoc • Block jump
 programming\DIN\4_LaserTechnology\BlockNumbe.adoc • Satznummer
-programming\DIN\4_LaserTechnology\CheckforBo.adoc • Prüfung auf aktives Boundary-Programm
+programming\DIN\4_LaserTechnology\CheckforBo.adoc • Boundary-Programm prüfen
 programming\DIN\4_LaserTechnology\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\ContourSta.adoc • Konturanweisungen
 programming\DIN\4_LaserTechnology\index.adoc • Lasertechnologie
-programming\DIN\4_LaserTechnology\Laserparam.adoc • Laserparameter-Auswahl & Aktualisierung
+programming\DIN\4_LaserTechnology\Laserparam.adoc • Laserparameter
 programming\DIN\4_LaserTechnology\ProgramEnd.adoc • Programmende (G99)
 programming\DIN\4_LaserTechnology\ProgramHea.adoc • Programmkopf
 programming\DIN\4_LaserTechnology\StartofaPa.adoc • Start einer Teilinformation
-programming\DIN\4_LaserTechnology\Technology.adoc • Technologietabellen-(TT)-Übertragung
+programming\DIN\4_LaserTechnology\Technology.adoc • Technologietabellen-Übertragung
 programming\LST\1_LST\contents.txt • 265730.055708
 programming\LST\1_LST\index.adoc • LST-Programmstruktur
 programming\LST\2_AbstractofDINconvers\contents.txt • 265730.055708
-programming\LST\2_AbstractofDINconvers\Cycleprogr.adoc • Zyklusprogramme:
-programming\LST\2_AbstractofDINconvers\EndofConto.adoc • Konturende – M1015:
+programming\LST\2_AbstractofDINconvers\Cycleprogr.adoc • Zyklusprogramme
+programming\LST\2_AbstractofDINconvers\EndofConto.adoc • Konturende – M1015
 programming\LST\2_AbstractofDINconvers\index.adoc • DIN-zu-LST-Konvertierung
 programming\LST\2_AbstractofDINconvers\Mainprogra.adoc • Hauptprogramm
 programming\LST\2_AbstractofDINconvers\Specialcom.adoc • Spezialbefehle
@@ -153,9 +156,9 @@ programming\LST\5_TCWRITE\index.adoc • TC_WRITE
 programming\LST\6_IncrementalCommandIC\contents.txt • 265730.055708
 programming\LST\6_IncrementalCommandIC\index.adoc • Inkrementalbefehl (IC)
 programming\LST\7_SoftMicroJointsNanoJ\contents.txt • 265730.055708
-programming\LST\7_SoftMicroJointsNanoJ\index.adoc • Soft Micro-Joints & Nano-Joints
+programming\LST\7_SoftMicroJointsNanoJ\index.adoc • Soft Microjoints & Nanojoints
 programming\DIN\4_LaserTechnology\10_FlyCutSampleProgram\contents.txt • 265730.055706
-programming\DIN\4_LaserTechnology\10_FlyCutSampleProgram\index.adoc • Fly-Cut-Beispielprogramm:
+programming\DIN\4_LaserTechnology\10_FlyCutSampleProgram\index.adoc • FlyLine-Beispielprogramm
 programming\DIN\4_LaserTechnology\5_RemnantCut\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\5_RemnantCut\EndRemnant.adoc • Restschnitt-Ende
 programming\DIN\4_LaserTechnology\5_RemnantCut\index.adoc • Restschnitt
@@ -165,6 +168,6 @@ programming\DIN\4_LaserTechnology\6_FlyCutStitchCut\index.adoc • FlyLine
 programming\DIN\4_LaserTechnology\7_OnlyPiercingintheCon\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\7_OnlyPiercingintheCon\index.adoc • Nur Einstechen in der Kontur
 programming\DIN\4_LaserTechnology\8_NanoJoints\contents.txt • 265730.055706
-programming\DIN\4_LaserTechnology\8_NanoJoints\index.adoc • Nano Joints
+programming\DIN\4_LaserTechnology\8_NanoJoints\index.adoc • Nanojoints
 programming\DIN\4_LaserTechnology\9_SampleProgramwithMul\contents.txt • 265730.055706
 programming\DIN\4_LaserTechnology\9_SampleProgramwithMul\index.adoc • Beispielprogramm mit mehreren Teilen

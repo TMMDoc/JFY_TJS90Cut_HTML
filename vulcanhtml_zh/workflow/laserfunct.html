@@ -16,13 +16,13 @@
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
         <div id="header-logo"><img src="../img/logo.png" width="100" height="37" /></div>
-        <div><p>TJSCut-90 reference manual</p></div>
+        <div><p>TJS Cut-90 reference manual</p></div>
     </header>
     <div id="site-main">
         <nav id="site-nav">
             <div class="treesite">
  <ul>
-  <li><button class="tree blank"></button><a href="../index.html">欢迎来到 TJSCut-90</a></li>
+  <li><button class="tree blank"></button><a href="../index.html">欢迎来到 TJS Cut-90</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../intro/index.html">介绍</a>
@@ -116,7 +116,7 @@
     <li><button class="tree blank"></button><a href="../productionplan/material.html">材料库存</a></li>
    </ul>
   </li>
-  <li><button class="tree blank"></button><a href="../dropncut/index.html">Drop and Cut</a></li>
+  <li><button class="tree blank"></button><a href="../dropncut/index.html">SmartRemnant</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../troubleshooting/index.html">故障排除</a>
@@ -124,85 +124,6 @@
     <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">频繁碰撞</a></li>
     <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">工作偏移</a></li>
     <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">极小轮廓</a></li>
-   </ul>
-  </li>
-  <li>
-   <button class="tree closed"></button>
-   <a href="../programming/index.html">NC 编程参考</a>
-   <ul class="hide">
-    <li>
-     <button class="tree closed"></button>
-     <a href="../programming/din/index.html">DIN 格式</a>
-     <ul class="hide">
-      <li>
-       <button class="tree closed"></button>
-       <a href="../programming/din/3_dinprogramstructure/index.html">DIN 程序结构</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/programnum.html">程序号 %</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/blocknumbe.html">程序块号 N</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/gfunctions.html">G 功能</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/mfunctions.html">M 功能</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/parametera.html">参数数组</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/3_dinprogramstructure/graphicale.html">图形元素 – 显示标记线</a></li>
-       </ul>
-      </li>
-      <li>
-       <button class="tree closed"></button>
-       <a href="../programming/din/4_lasertechnology/index.html">激光技术</a>
-       <ul class="hide">
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programhea.html">程序头</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/technology.html">技术表（TT）传输</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/checkforbo.html">检查边界程序是否激活</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blockjump.html">程序块跳转</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/blocknumbe.html">程序块号</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/startofapa.html">零件信息开始</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/laserparam.html">激光参数选择与更新</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/contoursta.html">轮廓指令</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/programend.html">程序结束</a></li>
-        <li>
-         <button class="tree closed"></button>
-         <a href="../programming/din/4_lasertechnology/5_remnantcut/index.html">残料切割</a>
-         <ul class="hide">
-          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/startremna.html">起始残料切割</a></li>
-          <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/5_remnantcut/endremnant.html">结束残料切割</a></li>
-         </ul>
-        </li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/6_flycutstitchcut/index.html">FlyLine</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/7_onlypiercinginthecon/index.html">仅在轮廓中穿孔</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/8_nanojoints/index.html">Nano Joints</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/9_sampleprogramwithmul/index.html">多零件示例程序</a></li>
-        <li><button class="tree blank"></button><a href="../programming/din/4_lasertechnology/10_flycutsampleprogram/index.html">Fly Cut 示例程序：</a></li>
-       </ul>
-      </li>
-     </ul>
-    </li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../programming/lst/index.html">LST 格式</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../programming/lst/1_lst/index.html">LST 程序结构</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lst/4_flycut/index.html">FlyLine</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lst/5_tcwrite/index.html">TC_WRITE</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lst/6_incrementalcommandic/index.html">增量命令 (IC)</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lst/7_softmicrojointsnanoj/index.html">软微连接与 Nano Joints</a></li>
-     </ul>
-    </li>
-    <li>
-     <button class="tree closed"></button>
-     <a href="../programming/lsttechno/index.html">激光技术命令</a>
-     <ul class="hide">
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/lasercutting.html">激光切割</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/identifyparts.html">零件标识</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/multiprogstruc.html">多程序结构</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/cuttingdistance.html">切割距离</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/kerfcorrection.html">切口补偿</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/overshootheight.html">回退高度</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/timing.html">零件计时</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/bevelcut.html">斜角切割</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/beamsuppression.html">光束抑制</a></li>
-      <li><button class="tree blank"></button><a href="../programming/lsttechno/flyingfocus.html">飞行焦点位置调整</a></li>
-     </ul>
-    </li>
    </ul>
   </li>
   <li><button class="tree blank"></button><a href="../impressum.html">版本说明</a></li>
@@ -231,7 +152,7 @@
                     <article id="article">
                         <h1>编辑激光工艺</h1>
 <div class="sect1">
-<h2 id="_概述">概述<a id="h000204"></a></h2>
+<h2 id="_概述">概述</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>此选项允许操作员响应和解决机床上可能出现的任何问题。</p>
@@ -242,49 +163,29 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_激光页面">激光页面<a id="h000205"></a></h2>
+<h2 id="_激光页面">激光页面</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>用户可以根据激光功能的要求选择激光页面。
 同样，可以在DIN 文本 G253命令中手动编辑。在任何页面中完成的更改都将在DIN文本和激光功能中实施。</p>
 </div>
-<div id="h000206" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><strong>材料</strong>：指定材料的类型。</p>
 </li>
-</ul>
-</div>
-<div id="h000207" class="ulist">
-<ul>
 <li>
 <p><strong>厚度</strong>：定义材料的厚度。</p>
 </li>
-</ul>
-</div>
-<div id="h000208" class="ulist">
-<ul>
 <li>
 <p><strong>喷嘴直径</strong>：设置用于切割的喷嘴直径。</p>
 </li>
-</ul>
-</div>
-<div id="h000209" class="ulist">
-<ul>
 <li>
 <p><strong>气体类型</strong>：确定切割过程中使用的辅助气体。</p>
 </li>
-</ul>
-</div>
-<div id="h000210" class="ulist">
-<ul>
 <li>
 <p><strong>处理</strong>：指应用到材料上的任何预加工或后加工处理。</p>
 </li>
-</ul>
-</div>
-<div id="h000211" class="ulist">
-<ul>
 <li>
 <p><strong>薄膜</strong>：指定材料表面上是否存在保护膜，这可能会影响切割参数。</p>
 </li>
@@ -293,49 +194,29 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_穿刺">穿刺<a id="h000212"></a></h2>
+<h2 id="_穿刺">穿刺</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>用户可以根据自己的偏好选择穿刺类型。</p>
 </div>
-<div id="h000213" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><strong>高度控制：</strong> 它控制穿刺过程中的距离调节过程。一般情况下，定位到穿刺安全距离后，高度控制将被关闭。 这将避免穿刺过程中由于材料飞溅而造成的切割头抖动，由此提高穿刺质量。在薄板穿刺期间或其他特殊条件下，可以保持高度控制开启，以缩短加工时间。</p>
 </li>
-</ul>
-</div>
-<div id="h000214" class="ulist">
-<ul>
 <li>
 <p><strong>光束：</strong> 它控制从穿刺切换到切割参数时的光束开/关。一般来说，穿刺完成后，光束将被关闭，激光参数更新为切割值，然后光束被接通并启动切割。</p>
 </li>
-</ul>
-</div>
-<div id="h000215" class="ulist">
-<ul>
 <li>
 <p><strong>冷却时间：</strong> 它控制穿刺中的开/关冷却时间参数。在每个穿刺步骤/阶段的结束，将在参数中定义冷却时间。
 在此期间，光束将关闭以冷却材料，然后重新启动，以避免穿刺过程中材料过热。</p>
 </li>
-</ul>
-</div>
-<div id="h000216" class="ulist">
-<ul>
 <li>
 <p><strong>侧吹风：</strong> 它控制ON/OFF侧吹风电磁阀，用于穿刺参数中定义的持续时间。使用高激光功率，以穿刺厚材料，在穿刺结束时，高压空气从侧面吹入以冷却材料、去除飞溅物等，以便切割不受影响。</p>
 </li>
-</ul>
-</div>
-<div id="h000217" class="ulist">
-<ul>
 <li>
 <p><strong>毛刺清洁：</strong> 它控制穿刺结束时毛刺清洁子程序的调用。穿刺完成后，在某些材料应用中，熔渣将在材料顶部形成山形。为了清除这种熔融的材料，将调用一个子程序来移动工作头，使用高压清除熔渣。气体类型和压力在机床参数中定义。</p>
 </li>
-</ul>
-</div>
-<div id="h000218" class="ulist">
-<ul>
 <li>
 <p><strong>频率斜坡：</strong> 它将控制穿刺中的频率斜坡。如果所选穿刺方法为功率/占空比/间隙变化穿刺（PM = 22至27），则激活此位也会形成频率斜坡。它在其他穿刺方法的类型中无效。</p>
 </li>
@@ -344,7 +225,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_切割">切割<a id="h000219"></a></h2>
+<h2 id="_切割">切割</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>用户可以根据自己的偏好进行切割（通过更改流程、轮廓类型）。
@@ -362,7 +243,7 @@
 </div>
 <div class="title">Figure 1. 轮廓切割</div>
 </div>
-<div id="h000220" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><strong>引入：</strong> 控制PLC中的ON/OFF引入功能。在NC程序中，为轮廓的每个切割定义引入长度，可以
@@ -370,31 +251,15 @@
 将使用特定轮廓的起始参数，一旦
 到达定义距离时，它会切换到轮廓参数。</p>
 </li>
-</ul>
-</div>
-<div id="h000221" class="ulist">
-<ul>
 <li>
 <p><strong>预孔：</strong> 在实际切割启动前控制预孔子程序的调用。如果激活，将使用数据库中可用的预孔参数。预孔完成后，参数将切换到轮廓值。</p>
 </li>
-</ul>
-</div>
-<div id="h000222" class="ulist">
-<ul>
 <li>
 <p><strong>飞行控制：</strong> 它控制从PLC到NC的输出在飞行过程中的屏蔽。</p>
 </li>
-</ul>
-</div>
-<div id="h000223" class="ulist">
-<ul>
 <li>
 <p><strong>返回引入：</strong> 控制引入切割的返回功能。如果引入位激活，引入切割完成后工作头将返回到相同的引入路径长度，光束关闭，但高度控制激活。同样，切割从轮廓参数启动，引入长度由两组参数切割，以获得更好的切口宽度和清洁毛刺。</p>
 </li>
-</ul>
-</div>
-<div id="h000224" class="ulist">
-<ul>
 <li>
 <p><strong>残留物切割：</strong> 它将控制板材边缘的残留物切割。如果残留物切割位激活，则M14命令不会开启激光束，高度定位、气体开启等其他功能将被完成。</p>
 </li>
@@ -403,43 +268,27 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_激光结束">激光结束<a id="h000225"></a></h2>
+<h2 id="_激光结束">激光结束</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>它们基于结束时Z轴的缩回距离以及蛙跳、HC冻结、结束参数等。</p>
 </div>
-<div id="h000226" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><strong>Z-缩回：</strong> 用户可以指定切割结束时Z轴的缩回距离。</p>
 </li>
-</ul>
-</div>
-<div id="h000227" class="ulist">
-<ul>
 <li>
 <p><strong>蛙跳：</strong> 控制Z轴的ON/OFF蛙跳功能。通常，切割完成后，首先移动Z轴至退回位置，然后将X和Y轴定位到下一个操作点。启用蛙跳后，Z轴开始移动到退回位置，同时X和Y轴也开始移动。如果Z轴未达到退回位置，但X和Y轴将完成目标位置，则Z轴退回运动将被中止并激活远离位置。由此，X、Y和Z轴位置已准备好进行下一次操作。通过这种方式，
 加工时间得到改善。</p>
 </li>
-</ul>
-</div>
-<div id="h000228" class="ulist">
-<ul>
 <li>
 <p><strong>冻结高度控制：</strong> 它控制切割结束时的高度控制（HC）冻结。冻结激活的距离在数据库参数中定义。如果切割末端没有材料，可能导致刀头移动到板材水平面以下。为避免潜在碰撞，切割结束时刀头的移动将被冻结。</p>
 </li>
-</ul>
-</div>
-<div id="h000229" class="ulist">
-<ul>
 <li>
 <p><strong>结束参数：</strong> 它控制切割结束时“结束参数”的启用/禁用。结束参数要在提前启用的距离在数据库参数中定义。在切割结束时，
 可以即时切换到不同的参数，以便在轴减速时更好地完成作业。</p>
 </li>
-</ul>
-</div>
-<div id="h000230" class="ulist">
-<ul>
 <li>
 <p><strong>光束：</strong> 它将在切割结束时提前一些距离关闭光束，以启用微连接。</p>
 </li>
@@ -448,21 +297,17 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_微连接">微连接<a id="h000231"></a></h2>
+<h2 id="_微连接">微连接</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>小的未切割部分，以将零件固定在板材上，防止移动。</p>
 </div>
-<div id="h000232" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><strong>微连接宽度</strong>：用户可以选择类似轮廓并启用值范围为0至3的微连接。 默认值为+0.7mm。
 小的未切割部分，以将零件固定在板材上，防止移动。</p>
 </li>
-</ul>
-</div>
-<div id="h000233" class="ulist">
-<ul>
 <li>
 <p><strong>微连接宽度</strong>：用户可以选择类似轮廓并启用值范围为0至3的微连接。 默认值为+0.7mm。</p>
 </li>
