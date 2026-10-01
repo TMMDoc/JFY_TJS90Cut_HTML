@@ -54,13 +54,11 @@
    <button class="tree closed"></button>
    <a href="../ltt/index.html">Laser Technology Tables (LTT)</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminology</a></li>
     <li>
      <button class="tree closed"></button>
      <a href="../ltt/laserdata/index.html">Laser Data items</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Piercing</a></li>
-      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
       <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Cutting</a></li>
       <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Special Processes</a></li>
      </ul>
@@ -68,7 +66,6 @@
     <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifying Laser Data</a></li>
     <li><button class="tree blank"></button><a href="../ltt/export.html">LTT Management</a></li>
     <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ramp Cycles</a></li>
-    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
     <li><button class="tree blank"></button><a href="../ltt/dca.html">Acceleration control (DCA)</a></li>
    </ul>
   </li>
@@ -77,10 +74,6 @@
    <a href="../technology/index.html">Technology functions</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporize Sheet</a></li>
-    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
-    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine Sensor</a></li>
-    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
-    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Cutting Tools</a></li>
    </ul>
   </li>
   <li>
@@ -111,7 +104,6 @@
     <li><button class="tree blank"></button><a href="../productionplan/create.html">Create a production plan</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/lock.html">Modification</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/run.html">Run a production plan</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Running sequence</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/loading.html">Sheet loading</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/material.html">Material stock</a></li>
    </ul>
@@ -152,465 +144,9 @@
 <div class="paragraph">
 <p>The SmartRemnant feature uses a network camera mounted inside the machine to
 provide a live view of the sheet on the pallet. After calibrating the camera,
-you can place parts directly onto the camera image in postproduction, and Vulcan
+you can place parts directly onto the camera image in postproduction, and TJS Cut-90
 automatically captures the work offset — eliminating the need for manual offset
 entry.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_camera_model_and_specifications">Camera model and specifications</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Model name:</strong> Hikvision DS-2CD1027G2-L</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Specification</th>
-<th class="tableblock halign-left valign-top">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Camera</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Image Sensor</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1/2.8" Progressive Scan CMOS</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Max. Resolution</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1920 x 1080</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Min. Illumination</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Color: 0.001 Lux @ (F1.0, AGC ON), 0 Lux with light</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Shutter Time</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1/3 s to 1/100,000 s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Day &amp; Night</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">24/7 color imaging</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Angle Adjustment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pan: 0° to 360°, tilt: 0° to 90°, rotate: 0° to 360°</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Lens</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lens Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed focal lens, 2.8 and 4 mm optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Focal Length &amp; FOV</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.8 mm, horizontal FOV: 106°, vertical FOV: 57°, diagonal FOV: 126°<br>
-4 mm, horizontal FOV: 83°, vertical FOV: 44°, diagonal FOV: 99°</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lens Mount</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">M12</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Iris Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aperture</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">F1.0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Depth of Field</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.8 mm: 1.5 m to ∞<br>
-4 mm: 2.1 m to ∞</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">DORI</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DORI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.8 mm, D: 44 m, O: 17 m, R: 8 m, I: 4 m<br>
-4 mm, D: 56 m, O: 22 m, R: 11 m, I: 5 m</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Illuminator</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Supplement Light Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">White Light</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Supplement Light Range</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Up to 30 m</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Smart Supplement Light</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Video</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Main Stream</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">50 Hz: 25 fps (1920 x 1080, 1280 x 720)<br>
-60 Hz: 30 fps (1920 x 1080, 1280 x 720)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sub-Stream</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">50 Hz: 25 fps (640 x 480, 640 x 360)<br>
-60 Hz: 30 fps (640 x 480, 640 x 360)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Video Compression</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Main stream: H.265+/H.265/H.264+/H.264<br>
-Sub-stream: H.265/H.264/MJPEG</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Video Bit Rate</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">32 Kbps to 8 Mbps</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">H.264 Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Baseline Profile, Main Profile, High Profile</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">H.265 Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Main Profile</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bit Rate Control</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CBR, VBR</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Region of Interest (ROI)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 fixed region(s) for main stream</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_positioning_the_camera_in_the_machine">Positioning the camera in the machine</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The camera is mounted inside the machine, positioned on the top inner right side
-of the door, at 50 mm. It provides a view from inside the machine. The viewing
-angle is tilted to align with the placement of half the sheet.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/cameraposition.png" alt="Camera Position" width="400">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/cameraposition2.png" alt="Camera Position" width="400">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_connecting_a_network_camera_in_vulcan">Connecting a network camera in Vulcan</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To establish communication between the camera and Vulcan, the camera IP address
-must be configured within the same network series as the machine IP address.</p>
-</div>
-<div class="sect2">
-<h3 id="_checking_the_machine_ip_address">Checking the machine IP address</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Switch to <strong>Service User Active</strong> mode:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Open <strong>Settings</strong></p>
-</li>
-<li>
-<p>Select <strong>Switch User</strong></p>
-</li>
-<li>
-<p>Change the user group to <strong>Service User Active</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Open the <strong>Command Shell</strong>:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Go to <strong>Windows Tools</strong></p>
-</li>
-<li>
-<p>Select <strong>Command Shell</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Type <code>ipconfig</code> and press <strong>Enter</strong>. The system will display the machine&#8217;s
-network details, including the IP address connected in the local area network.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/machineip.png" alt="Machine IP Address" width="800">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuring_the_camera_ip_address">Configuring the camera IP address</h3>
-<div class="paragraph">
-<p>The camera must be configured with an IP address in the same series as the machine.</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Machine IP: <code>192.168.1.176</code></p>
-</li>
-<li>
-<p>Camera IP: <code>192.168.1.xxx</code></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Ensure the camera IP address is unique and not already assigned to
-another device. Contact the IT team to confirm uniqueness.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-By default, the Hikvision DS-2CD1027G2-L camera uses IP <code>192.168.1.64</code>,
-which is already in the correct series. No manual configuration is required
-unless the IP differs.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuring_the_system_ip_address_if_needed">Configuring the system IP address (if needed)</h3>
-<div class="paragraph">
-<p>If the camera has a different IP address:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Connect the camera directly to a system via Ethernet.</p>
-</li>
-<li>
-<p>Use the default IP address provided in the camera manual.</p>
-</li>
-<li>
-<p>Configure the system IP in the same range:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>IP Address:</strong> <code>192.168.1.176</code></p>
-</li>
-<li>
-<p><strong>Subnet Mask:</strong> <code>255.255.255.0</code></p>
-</li>
-<li>
-<p><strong>Default Gateway:</strong> As required</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/systemip.png" alt="System IP Configuration" width="600">
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Ensure that the system IP address and camera IP address are in the
-same network series. Do not assign an IP address that is already used by another
-device on the network.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuring_the_camera_in_vulcan">Configuring the camera in Vulcan</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Navigate to <code>C:\ProgramData\Metamation\Vulcan\Data</code> and open <code>CamSettings.xml</code> in a text editor.</p>
-</li>
-<li>
-<p>Update the configuration details:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;Camera id="1" description="Camera 1" enable="true"&gt;
-  &lt;Configuration&gt;
-    &lt;LiveStream enable="false"
-      url="http://192.168.1.64/ISAPI/Streaming/channels/101/picture" /&gt;
-    &lt;LiveStreamDefault enable="true"
-      url="http://192.168.1.64/ISAPI/Streaming/channels/101/picture" /&gt;
-    &lt;Authentification username="admin" password="your_password" /&gt;
-  &lt;/Configuration&gt;
-&lt;/Camera&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Replace the IP address in the <code>url</code> field with the actual camera IP.</p>
-</li>
-<li>
-<p>Update authentication details if required.</p>
-</li>
-<li>
-<p>Save the file and close the editor.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_verifying_the_camera_connection">Verifying the camera connection</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Open <strong>Vulcan</strong> &#8594; <strong>Calibration</strong> page.</p>
-</li>
-<li>
-<p>Confirm that the camera feed is displayed correctly.</p>
-</li>
-<li>
-<p>Ensure:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Camera IP matches the XML configuration</p>
-</li>
-<li>
-<p>System and camera are in the same network series</p>
-</li>
-<li>
-<p>Username and password are correct</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_rectifying_camera_distortion">Rectifying camera distortion</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Vulcan does not currently support camera undistortion. It will be
-implemented in a future release. Vulcan supports all IP cameras but may have
-some deviation with distorted cameras.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>To correct lens distortion:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Print a checkerboard pattern and stick it onto a flat, rigid blackboard. Make sure the surface is even and does not bend.</p>
-</li>
-<li>
-<p>Take multiple images of the checkerboard. While capturing:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Move the board so that various parts of the checkerboard appear in the centre, edges, and corners of the camera view.</p>
-</li>
-<li>
-<p>Tilt the board at slightly different angles to capture more variation.</p>
-<div class="paragraph">
-<p>This helps the calibration process understand how the camera behaves across the entire field of view.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="sect2">
-<h3 id="_running_the_undistort_function">Running the undistort function</h3>
-<div class="paragraph">
-<p>Run the captured images through the undistortion code. The code will compute:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>K (intrinsic matrix)</strong> — represents the focal length and optical centre of the camera</p>
-</li>
-<li>
-<p><strong>Distortion coefficients</strong> — represent the lens distortion present in the camera</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These values describe how the camera forms an image and how it distorts. All
-matrices can be saved in XML format and reused later, as long as the camera
-setup remains unchanged (no movement, no focus change, etc.).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_verifying_the_undistortion">Verifying the undistortion</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>After undistortion, check whether the distortion has been corrected properly and the output image looks accurate.</p>
-</li>
-<li>
-<p>Lens distortion is usually stronger near the edges and corners of the image, so pay special attention to those regions.</p>
-</li>
-<li>
-<p>If the distortion is not properly corrected, repeat the undistortion process with better images.</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
@@ -740,39 +276,6 @@ work offset.</p>
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_camera_model_and_specifications">Camera model and specifications</a>
-  </li>
-  <li level="1">
-   <a href="#_positioning_the_camera_in_the_machine">Positioning the camera in the machine</a>
-  </li>
-  <li level="1">
-   <a href="#_connecting_a_network_camera_in_vulcan">Connecting a network camera in Vulcan</a>
-  </li>
-  <li level="2">
-   <a href="#_checking_the_machine_ip_address">Checking the machine IP address</a>
-  </li>
-  <li level="2">
-   <a href="#_configuring_the_camera_ip_address">Configuring the camera IP address</a>
-  </li>
-  <li level="2">
-   <a href="#_configuring_the_system_ip_address_if_needed">Configuring the system IP address (if needed)</a>
-  </li>
-  <li level="2">
-   <a href="#_configuring_the_camera_in_vulcan">Configuring the camera in Vulcan</a>
-  </li>
-  <li level="2">
-   <a href="#_verifying_the_camera_connection">Verifying the camera connection</a>
-  </li>
-  <li level="1">
-   <a href="#_rectifying_camera_distortion">Rectifying camera distortion</a>
-  </li>
-  <li level="2">
-   <a href="#_running_the_undistort_function">Running the undistort function</a>
-  </li>
-  <li level="2">
-   <a href="#_verifying_the_undistortion">Verifying the undistortion</a>
-  </li>
-  <li level="1">
    <a href="#_steps_to_calibrate">Steps to calibrate</a>
   </li>
   <li level="2">
@@ -816,12 +319,6 @@ work offset.</p>
     <script src="../res/files.js"></script>
     <script src="../res/site.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
-  <script>
-    if (!hljs.initHighlighting.called) {
-      hljs.initHighlighting.called = true
-      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
-    }
-  </script>
+    
 </body>
 </html>

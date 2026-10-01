@@ -54,13 +54,11 @@
    <button class="tree closed"></button>
    <a href="../ltt/index.html">Laser Technology Tables (LTT)</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminology</a></li>
     <li>
      <button class="tree closed"></button>
      <a href="../ltt/laserdata/index.html">Laser Data items</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Piercing</a></li>
-      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
       <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Cutting</a></li>
       <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Special Processes</a></li>
      </ul>
@@ -68,7 +66,6 @@
     <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifying Laser Data</a></li>
     <li><button class="tree blank"></button><a href="../ltt/export.html">LTT Management</a></li>
     <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ramp Cycles</a></li>
-    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
     <li><button class="tree blank"></button><a href="../ltt/dca.html">Acceleration control (DCA)</a></li>
    </ul>
   </li>
@@ -77,10 +74,6 @@
    <a href="../technology/index.html">Technology functions</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporize Sheet</a></li>
-    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
-    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine Sensor</a></li>
-    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
-    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Cutting Tools</a></li>
    </ul>
   </li>
   <li>
@@ -111,7 +104,6 @@
     <li><button class="tree blank"></button><a href="create.html">Create a production plan</a></li>
     <li><button class="tree blank"></button><a href="lock.html">Modification</a></li>
     <li><button class="tree blank"></button><a class="active" href="run.html">Run a production plan</a></li>
-    <li><button class="tree blank"></button><a href="sequence.html">Running sequence</a></li>
     <li><button class="tree blank"></button><a href="loading.html">Sheet loading</a></li>
     <li><button class="tree blank"></button><a href="material.html">Material stock</a></li>
    </ul>
@@ -260,110 +252,7 @@ the single program.</p>
 <p>Endurance mode can be used only in Production Plan and will be running in the same pallet. (Pallet changer will be deactivated).</p>
 </li>
 <li>
-<p>Hence, only the pkg.lst file program is supported. If need a particular LST program to be tested in Endurance mode, then convert it to .pkg.lst as follows:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Find below comparison to convert the normal LST (left side) to run in
-Production plan (right side), define the target number minimum as 1.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/endurance1.png" alt="Endurance1" width="800"></span></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The highlighted value '1' is the target number.
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Also, update the Job Name, Production Order Name, Program Name as follows:</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/endurance2.png" alt="Endurance2" width="600"></span></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>DA,'Square','Square_1','0','SQUARE_1',1</p>
-</div>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Here,<br>
-'Square' is the Job Name<br>
-'Square_1' is the Production Order Name<br>
-'SQUARE_1' is the Program Name
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Find below the additional code required to convert to PP mode:</p>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>BEGIN_FERTIGUNG_AUFTRAG_TMP<br>
-C<br>
-ZA,MM,5
-MM,AT,1, 10,1,1,,'Job Name'                            ,,'',T<br>
-MM,AT,1, 20,1,1,,'Production Order Name'               ,,'',T<br>
-MM,AT,1, 30,1,1,,'Production Status'                   ,,'',T<br>
-MM,AT,1, 40,1,1,,'Program Name'                        ,,'',T<br>
-MM,AT,1, 50,1,1,,'Target Number'                       ,,'',Z<br>
-C<br>
-ZA,DA,1<br>
-DA,'Square','Square_1','0','SQUARE_1',1<br>
-C<br>
-ENDE_FERTIGUNG_AUFTRAG_TMP<br>
-C<br>
-ED<br>
-BD<br>
-SET_METRIC<br>
-C</p>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Select the required Job program in Production Plan and enter the number of cycles the program has to run.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/endurance3.png" alt="Endurance3" width="700"></span></p>
-</div>
-</li>
-<li>
-<p>Activate the Endurance mode button and the Hint will appear in the Left side, in active state if switch to normal mode it will be deactivated and activated when back to PP mode automatically, until it is deactivated via the button in PP mode.
-+<span class="image"><img src="img/endurance4.png" alt="Endurance4" width="300"></span></p>
-</li>
-<li>
-<p>Capture the work offset first time, if Edge detect was selected then each time at the start of program edge detect also work.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/endurance5.png" alt="Endurance5" width="200"></span></p>
-</div>
-</li>
-<li>
-<p>At the start of program, a pop-up window appears and enter the cycle interval time here.</p>
-<div class="paragraph">
-<p><span class="image"><img src="img/endurance6.png" alt="Endurance6" width="700"></span></p>
-</div>
-</li>
-<li>
-<p>Now the program runs continuously until it reaches the given target number.</p>
+<p>Hence, only the pkg.lst file program is supported. If need a particular LST program to be tested in Endurance mode, then convert it to .pkg.lst.</p>
 </li>
 </ol>
 </div>
@@ -392,7 +281,7 @@ C</p>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="lock.html">Modification</a></span>
- <span class="next"><a href="sequence.html">Running sequence</a></span>
+ <span class="next"><a href="loading.html">Sheet loading</a></span>
 </nav>
 
         </div>

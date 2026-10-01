@@ -54,13 +54,11 @@
    <button class="tree closed"></button>
    <a href="../ltt/index.html">Laser Technology Tables (LTT)</a>
    <ul class="hide">
-    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminology</a></li>
     <li>
      <button class="tree closed"></button>
      <a href="../ltt/laserdata/index.html">Laser Data items</a>
      <ul class="hide">
       <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Piercing</a></li>
-      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Multistage Piercing</a></li>
       <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Cutting</a></li>
       <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Special Processes</a></li>
      </ul>
@@ -68,7 +66,6 @@
     <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifying Laser Data</a></li>
     <li><button class="tree blank"></button><a href="../ltt/export.html">LTT Management</a></li>
     <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ramp Cycles</a></li>
-    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
     <li><button class="tree blank"></button><a href="../ltt/dca.html">Acceleration control (DCA)</a></li>
    </ul>
   </li>
@@ -77,10 +74,6 @@
    <a href="../technology/index.html">Technology functions</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporize Sheet</a></li>
-    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
-    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine Sensor</a></li>
-    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
-    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Cutting Tools</a></li>
    </ul>
   </li>
   <li>
@@ -111,7 +104,6 @@
     <li><button class="tree blank"></button><a href="../productionplan/create.html">Create a production plan</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/lock.html">Modification</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/run.html">Run a production plan</a></li>
-    <li><button class="tree blank"></button><a href="../productionplan/sequence.html">Running sequence</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/loading.html">Sheet loading</a></li>
     <li><button class="tree blank"></button><a href="../productionplan/material.html">Material stock</a></li>
    </ul>
@@ -151,41 +143,37 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Protective Glass Monitoring</h1>
-<div class="sect1">
-<h2 id="_parametrization">Parametrization</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>The protective glass monitoring is a system that monitors the condition of the
-protective glass. It could prevent you to produce parts of low quality or even
-machine damage.</p>
+<p>Protective glass monitoring checks the condition of the protective glass to
+prevent low-quality parts and possible machine damage.</p>
 </div>
 <div class="paragraph">
-<p>The behavior is defined as follows :</p>
+<p>The behavior is defined as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>When the quality value of the protective glass is lower than the error level
-during cutting: The machine will stop processing, the beam will turn off, and a
-window will pop up on the front of the HMI.</p>
+<p>When the quality value of the protective glass drops below the error level
+during cutting, the machine stops processing, the beam turns off, and a window
+appears on the HMI.</p>
 </li>
 <li>
-<p>If the <strong>Close</strong> button on the window is clicked, the machine will continue
-cutting the current sheet. Before processing the next sheet, it will perform a
-protective glass measurement. If the quality is still below the error level, the
-window will pop up again. Clicking "Close" will allow the machine to continue
-processing, and the window will appear again at the end of the sheet.</p>
+<p>When you click <strong>Close</strong>, the machine continues cutting the current sheet.
+Before processing the next sheet, it performs a protective glass measurement. If
+the quality is still below the error level, the window appears again. Each time
+you click <strong>Close</strong>, the machine continues processing, and the window reappears at
+the end of the sheet.</p>
 </li>
 <li>
-<p>If the glass is contaminated from the beginning, after cutting the first
-contour, the machine will stop and perform a protective glass measurement. If
-the quality is below the error level, a window will pop up. Clicking the <strong>Close</strong>
-button will allow the machine to continue cutting the current sheet.</p>
+<p>If the glass is contaminated from the start, the machine stops after cutting
+the first contour and performs a protective glass measurement. If the quality is
+below the error level, the window appears. Click <strong>Close</strong> to continue cutting the
+current sheet.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>There is offline measurement and a online measurement possible :</p>
+<p>Two measurement types are available:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
@@ -224,59 +212,22 @@ button will allow the machine to continue cutting the current sheet.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Offline Measurement</strong> : Offline measurement is used to check the glass quality
-under stable conditions. During offline measurement, three different levels of
-laser power are emitted, each for a specific time period — typically 500 ms. The
-reflected light from the glass is measured at each power level, and the
+<p><strong>Offline measurement</strong> checks the glass quality under stable conditions. Three
+different laser power levels are emitted, each for a specific time period —
+typically 500 ms. The reflected light is measured at each power level, and the
 normalized reflection luminosity is calculated and compared with a reference
-value, which is obtained using the same method. An offline broken factor is also
-involved in this calculation to determine the glass quality. For the same
-reflection luminosity value, a higher broken factor indicates better glass
-quality. Therefore, only when the glass is significantly dirty will a warning or
-error be triggered.</p>
+value obtained using the same method. An offline broken factor is included in
+this calculation to determine the glass quality. For the same reflection
+luminosity value, a higher broken factor indicates better glass quality.
+Therefore, a warning or error is triggered only when the glass is significantly
+dirty.</p>
 </div>
 <div class="paragraph">
-<p><strong>Online Monitoring</strong> : Online measurement is used to check the glass quality
-during cutting. Whenever there is laser output, the average value of the
-reflected light over a time period is calculated, and a low-pass filter is
-applied to this value. Due to the unstable nature of the laser output and back
-reflection from the cutting sheet, the online value is significantly higher than
-the offline one.</p>
-</div>
-<div class="paragraph">
-<p>The parametrization is done in the setting page :</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/protective.png" alt="protective" width="500"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_luminosity_measurement">Luminosity measurement</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The protective window measurement is based on a luminosity measurement.  If
-condition is <strong>Clean</strong>, protective window status is good to proceed with cutting
-in terms of good cutting results. If condition is <strong>Contaminated</strong>, protective
-window status is poor and its advisable to change the protective window to
-experience good cutting results.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/lumi0.png" alt="lumi0" width="650"></span></p>
-</div>
-<div class="paragraph">
-<p>Depending on the result of quality value percentage, clean or replace the
-protective glass.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>80%-90% &#8594; clean<br></p>
-</li>
-<li>
-<p>&lt; 80% &#8594; replace</p>
-</li>
-</ul>
+<p><strong>Online monitoring</strong> checks the glass quality during cutting. Whenever there is
+laser output, the average value of the reflected light over a time period is
+calculated and a low-pass filter is applied. Due to the unstable nature of the
+laser output and back reflection from the cutting sheet, the online value is
+significantly higher than the offline value.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -284,86 +235,24 @@ protective glass.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>With the above entries, X and Y axis moves towards the positioned value.</p>
+<p>The measure mode provides two options:</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="img/lumierror.png" alt="LumiError" width="400">
-</div>
-</div>
-<div class="paragraph">
-<p>Running the program will follow the data of frequency and duty as per the user
-requirement. Power parameter is pre-defined as step up of  500W, 1000W and
-1500W.</p>
-</div>
-<div class="paragraph">
-<p>Focus diameter, focus distance, and dwell time can also be modified according
-to the user requirements. Entered values can be monitored when the program runs.
-The program holds until the configured dwell time has elapsed and then aborts.</p>
-</div>
-<div class="paragraph">
-<p>Measure mode has offline and reference data. In offline selection, user can run
-the program and check the status of protective window. In reference selection,
-user can cross verify the data and values of quality and linearity and it can be
-saved using save option. Generally, reference selection will be opted when the
-protective window is newer which gives fine set of results.</p>
-</div>
-<div class="paragraph">
-<p>When lumi measure program runs, it takes the log of the data and it can be read
-in <strong>LumiMeasurelog.txt</strong> from the path
-<code>C:\ProgramData\Metamation{APPNAME}\Log\Currentyear\Currentmonth\Currentday</code> or
-in the UI.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/lumi1.png" alt="t" width="300"></span></p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/lumi2.png" alt="lumi2" width="550"></span></p>
-</div>
-<div class="paragraph">
-<p>With reference to the above calculation, the following parameters will be added
-in the MK file to optimize the monitoring function :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Offline broken factor</p>
+<p><strong>Offline</strong> – Run the program and check the status of the protective glass.</p>
 </li>
 <li>
-<p>Online broken factor</p>
+<p><strong>Reference</strong> – Cross-verify the quality and linearity values and save them.
+Use this option for a new protective glass to obtain a reliable reference.</p>
 </li>
-<li>
-<p>Warning limit in percentage</p>
-</li>
-<li>
-<p>Error limit in percentage</p>
-</li>
-<li>
-<p>Delay time in secs to report warning</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/lumi3.png" alt="lumi3" width="750"></span></p>
-</div>
-</div>
+</ul>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc">
- <h3>Contents</h3>
- <ul>
-  <li level="1">
-   <a href="#_parametrization">Parametrization</a>
-  </li>
-  <li level="1">
-   <a href="#_luminosity_measurement">Luminosity measurement</a>
-  </li>
- </ul>
-</aside>
-
+                    <aside id="site-toc"></aside>
                 </div>
             </div>
             <nav class="pagination">
