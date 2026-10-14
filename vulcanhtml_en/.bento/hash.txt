@@ -11,7 +11,7 @@ Folders=10
 Pages=57
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 260718.120725
+contents.txt • 263605.053612
 impressum.JFY.adoc • Corporate Information
 Impressum.TRUMPF.adoc • Corporate Information
 Index.adoc • Welcome to {APPNAME}
@@ -46,7 +46,7 @@ Intro\Home.adoc • User interface
 Intro\index.adoc • Introduction
 Intro\Jog.adoc • Machine Operation
 Intro\Workflow.adoc • Workflow
-LTT\contents.txt • 260317.090304
+LTT\contents.txt • 263605.053612
 LTT\DCA.adoc • Acceleration control (DCA)
 LTT\export.adoc • LTT Management
 LTT\Index.adoc • Laser Technology Tables (LTT)
@@ -56,14 +56,14 @@ Modify\contents.txt • 265704.035730
 Modify\Index.adoc • Modification of a program
 Modify\microjoints.adoc • Modify Microjoints
 Modify\renest.adoc • Re-nest
-ProductionPlan\contents.txt • 265617.115657
+ProductionPlan\contents.txt • 263605.053612
 ProductionPlan\create.adoc • Create a production plan
 ProductionPlan\index.adoc • Production plan
 ProductionPlan\loading.adoc • Sheet loading
 ProductionPlan\lock.adoc • Modification
 ProductionPlan\material.adoc • Material stock
-ProductionPlan\run.adoc • Run a production plan
-Technology\contents.txt • 263617.103646
+ProductionPlan\run.adoc • Run a Production plan
+Technology\contents.txt • 263605.053612
 Technology\Index.adoc • Technology functions
 Technology\vaporize.adoc • Vaporize Sheet
 Troubleshooting\collisions.adoc • Frequent collisions
@@ -73,6 +73,16 @@ Troubleshooting\Extreme.adoc • Extreme small contours
 Troubleshooting\Index.adoc • Troubleshooting
 Troubleshooting\Laserissues.adoc • Laser issues
 Troubleshooting\Workoffset.adoc • Work offset
+UIXlate\BR.txt
+UIXlate\CN.txt
+UIXlate\CS.txt
+UIXlate\DE.txt
+UIXlate\EN.txt
+UIXlate\ES.txt
+UIXlate\FR.txt
+UIXlate\JP.txt
+UIXlate\KO.txt
+UIXlate\Prefixes.txt
 Workflow\contents.txt • 255909.065930
 Workflow\Create.adoc • Create
 Workflow\Edit.adoc • Edit NC Code
@@ -86,7 +96,7 @@ Workflow\Programs.adoc • Select Program
 Workflow\reentry.adoc • Re-entry
 Workflow\Run.adoc • Run
 Workflow\Simulation.adoc • Simulation run
-LTT\LaserData\contents.txt • 263317.103301
+LTT\LaserData\contents.txt • 263605.053612
 LTT\LaserData\Cutting.adoc • Cutting
 LTT\LaserData\index.adoc • Laser Data items
 LTT\LaserData\piercing.adoc • Piercing
