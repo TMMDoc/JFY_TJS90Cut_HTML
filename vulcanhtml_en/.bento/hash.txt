@@ -7,11 +7,11 @@ DROPNCUT=SmartRemnant
 FLAVOR=JFY
 JFY=
 LANGUAGE=EN
-Folders=10
-Pages=57
+Folders=9
+Pages=55
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 263605.053612
+contents.txt • 265915.055921
 impressum.JFY.adoc • Corporate Information
 Impressum.TRUMPF.adoc • Corporate Information
 Index.adoc • Welcome to {APPNAME}
@@ -63,9 +63,6 @@ ProductionPlan\loading.adoc • Sheet loading
 ProductionPlan\lock.adoc • Modification
 ProductionPlan\material.adoc • Material stock
 ProductionPlan\run.adoc • Run a Production plan
-Technology\contents.txt • 263605.053612
-Technology\Index.adoc • Technology functions
-Technology\vaporize.adoc • Vaporize Sheet
 Troubleshooting\collisions.adoc • Frequent collisions
 Troubleshooting\contents.txt • 255909.065930
 Troubleshooting\Diagnostics.adoc • Error data, backup, and restore
